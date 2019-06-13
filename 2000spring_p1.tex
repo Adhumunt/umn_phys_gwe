@@ -14,37 +14,37 @@ much energy (in Joules) was released as heat in the process?
 
 \subsubsection{Answer}
 
-The soltuion method will be a simple energy balance equation. In its initial
+The solution method will be a simple energy balance equation. In its initial
 state, the satellite had gravitation potential energy that contributed to
 its energy equal to
 \begin{align*}
-    V₀ &= \frac{GM_E m}{R_E + h}
+    V_0 &= \frac{GM_E m}{R_E + h}
 \end{align*}
 where $M_E$ and $R_E$ are the mass and radius of the Earth. The kinetic energy
-can be determined by making use of simple circle relations. The centriptal
+can be determined by making use of simple circle relations. The centripetal
 force must be provided by the gravitation force, so
 \begin{align*}
-    \frac{{v₀}²}{R_E + h} &= \frac{GM_E}{(R_E + h)²} \\
-    v₀ &= \sqrt{\frac{GM_E}{R_E + h}}
+    \frac{{v_0}^2}{R_E + h} &= \frac{GM_E}{(R_E + h)^2} \\
+    v_0 &= \sqrt{\frac{GM_E}{R_E + h}}
 \end{align*}
 making the initial kinetic energy
 \begin{align*}
-    T₀ &= \frac{GM_E m}{2(R_E + h)}
+    T_0 &= \frac{GM_E m}{2(R_E + h)}
 \end{align*}
 
 In it's final state, the satellite consists of it's final given velocity's
 kinetic energy and more gravitational potential energy (with respect to the
 center of the Earth). They are given by
 \begin{align*}
-    T_f &= \frac 12 m{v_f}² \\
+    T_f &= \frac 12 m{v_f}^2 \\
     V_f &= \frac{GM_E m}{R_E}
 \end{align*}
 By conservation of energy, any energy different must result from the loss
-of energy between the intial and final states, so the lost energy
+of energy between the initial and final states, so the lost energy
 $E_\mathrm{loss}$ is
 \begin{align*}
-    E_\mathrm{loss} &= T₀ + V₀ - T_f - V_f \\
-    {} &= \frac{GM_E m}{R_E(R_E + h)}(R_E - 2h) - \frac 12 m{v_f}²
+    E_\mathrm{loss} &= T_0 + V_0 - T_f - V_f \\
+    {} &= \frac{GM_E m}{R_E(R_E + h)}(R_E - 2h) - \frac 12 m{v_f}^2
 \end{align*}
 Plugging in all given quantities and constants, we have that
 \begin{align}
@@ -68,12 +68,12 @@ meters per second.
 \subsubsection{Answer}
 
 In the initial state observed from the iron atom's rest frame, the momentum
-is zero. After the emission, the photon has a momentum of $p_γ = E_γ/c$ and
-consequently, the nucleus must recoil with momentum $p_{Fe} = -p_γ$. Knowing
+is zero. After the emission, the photon has a momentum of $p_\gamma = E_\gamma/c$ and
+consequently, the nucleus must recoil with momentum $p_{Fe} = -p_\gamma$. Knowing
 that the energy is non-relativistic, then
 \begin{align*}
-    m_{Fe}v_{Fe} &= \frac{E_γ}{c} \\
-    v_{Fe} &= \frac{E_γ}{57m_p c}
+    m_{Fe}v_{Fe} &= \frac{E_\gamma }{c} \\
+    v_{Fe} &= \frac{E_\gamma }{57m_p c}
 \end{align*}
 where we've approximate the mass of the iron atom by a multiple of the proton
 mass. Plugging in the numbers
@@ -95,9 +95,9 @@ or in units of $c$
     \index{circuits!Voltage and phase in an RL circuit}
 
 A resistance $R$ and an inductance $L$ are connected in series, and an
-alternating voltage $V₀\cos ωt$ is impressed across the combination. The
+alternating voltage $V_0\cos {\omega} t$ is impressed across the combination. The
 resulting steady state voltage across the resistance can be written as $V_R
-\cos(ωt + β)$. Find $V_R$ and $β$, assuming both $V₀$ and $V_R$ to be
+\cos({\omega} t + \beta)$. Find $V_R$ and $\beta$, assuming both $V_0$ and $V_R$ to be
 positive.
 
 \subsubsection{Answer}
@@ -107,47 +107,47 @@ and currents and recovering the correct component at the end. Since the
 source voltage is a cosine, the real component will be kept at the end.
 
 The complex impedance for a resistor is simply the resitance itself, so $Z_R
-= R$. For the inductor, it is $Z_L = iωL$. We then use the complex
+= R$. For the inductor, it is $Z_L = i{\omega} L$. We then use the complex
 impedances together with Ohm's Law and the first Kirchoff rule to solve for
 the complex current $I$.
 \begin{align*}
-    V₀e^{iωt} &= IR + iωLI \\
-    I &= \frac{V₀}{R+iωL} e^{iωt}
+    V_0e^{i{\omega} t} &= IR + i{\omega} LI \\
+    I &= \frac{V_0}{R+i{\omega} L} e^{i{\omega} t}
 \end{align*}
 Then by inserting this solution into the voltage law for inductors, we can
 solve for the complex voltage across the inductor.
 \begin{align*}
     V_L &= L\frac{dI}{dt} \\
-    V_L &= V₀ \frac{iωL}{R+iωL} e^{iωt}
+    V_L &= V_0 \frac{i{\omega} L}{R+i{\omega} L} e^{i{\omega} t}
 \end{align*}
 
 The voltage drops across the resistor and inductor must equal the impressed
 voltage, so we can solve for the unknown voltage across the resistor.
 \begin{align*}
-    V₀e^{iωt} &= V + V_L \\
-    V &= V₀e^{iωt} - V₀\frac{iωL}{R+iωL}e^{iωt} \\
-    V &= V₀ (\frac{R² - iωRL}{R² + ω²L²}) e^{iωt}
+    V_0e^{i{\omega} t} &= V + V_L \\
+    V &= V_0e^{i{\omega} t} - V_0\frac{i{\omega} L}{R+i{\omega} L}e^{i{\omega} t} \\
+    V &= V_0 (\frac{R^2 - i{\omega} RL}{R^2 + {\omega}^2L^2}) e^{i{\omega} t}
 \end{align*}
 In order to make taking the real component simpler, we put the term in
 parentheses in complex exponential form according to the relation $z =
 |z|e^{i \arg z}$.
 \begin{align*}
-    \left| \frac{R² - iωRL}{R² + ω²L²} \right| &=
-	\frac{R\sqrt{R² + ω²L²}}{R² + ω²L²}
+    \left| \frac{R^2 - i{\omega} RL}{R^2 + {\omega}^2L^2} \right| &=
+	\frac{R\sqrt{R^2 + {\omega}^2L^2}}{R^2 + {\omega}^2L^2}
     \\
-    \arg (\frac{R² - iωRL}{R² + ω²L²}) &= \arctan(-\frac{ωL}{R})
+    \arg (\frac{R^2 - i{\omega} RL}{R^2 + {\omega}^2L^2}) &= \arctan(-\frac{{\omega} L}{R})
 \end{align*}
 Therefore the voltage across the resistor has the form
 \begin{align*}
-    V &= V₀ \frac{R\sqrt{R² + ω²L²}}{R² + ω²L²} e^{iωt + \arctan(-ωL/R)} \\
-    V &= V_R e^{iωt + iβ} \\
-    \Re\{V\} &= V_R \cos(ωt + β)
+    V &= V_0 \frac{R\sqrt{R^2 + {\omega}^2L^2}}{R^2 + {\omega}^2L^2} e^{i{\omega} t + \arctan(-{\omega} L/R)} \\
+    V &= V_R e^{i{\omega} t + i\beta} \\
+    \Re\{V\} &= V_R \cos({\omega} t + \beta)
 \end{align*}
 where
 \begin{align}
-    \boxed{ V_R = V₀ \frac{R\sqrt{R² + ω²L²}}{R² + ω²L²} }
+    \boxed{ V_R = V_0 \frac{R\sqrt{R^2 + {\omega}^2L^2}}{R^2 + {\omega}^2L^2} }
     \quad\quad
-    \boxed{ β = \arctan(-\frac{ωL}{R}) \vphantom{\frac{\sqrt{R}}{R}} }
+    \boxed{ \beta = \arctan(-\frac{{\omega} L}{R}) \vphantom{\frac{\sqrt{R}}{R}} }
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -168,13 +168,13 @@ Write your result as a formula in SI units.
 By Ampère's law in integral form, the magnetic field at a radial distance $r$
 away from the wire is given by
 \begin{align*}
-    \vec B = \frac{μ₀I}{2πr} \hat ϕ
+    \vec B = \frac{{\mu}_0I}{2{\pi} r} \hat \phi 
 \end{align*}
 The flux is then the total magnetic field through the loop. Integrating by
 lines of length $a$,
 \begin{align*}
-    Φ = a \int_b^{a+b} \frac{μ₀I}{2πr} dr \\
-    \boxed{Φ = \frac{μ₀Ia}{2π}\ln(\frac{a+b}{a})}
+    \phi  = a \int_b^{a+b} \frac{{\mu}_0I}{2{\pi} r} dr \\
+    \boxed{\phi  = \frac{{\mu}_0Ia}{2{\pi}}\ln(\frac{a+b}{a})}
 \end{align*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -187,29 +187,29 @@ lines of length $a$,
 
 By actually evaluating the integral, show that
 \begin{align*}
-    \int_0^∞ \frac{\cos x}{1 + x²}\,dx &= \frac{π}{2e}
+    \int_0^\infty  \frac{\cos x}{1 + x^2}\,dx &= \frac{{\pi}}{2e}
 \end{align*}
 
 \subsubsection{Answer}
 
 Note that the integrand, so start by changing the limits of integration
 \begin{align*}
-    \int_0^∞ \frac{\cos x}{1 + x²}\,dx &=
-	\frac 12 \int_{-∞}^∞ \frac{\cos x}{1 + x²}\,dx
+    \int_0^\infty  \frac{\cos x}{1 + x^2}\,dx &=
+	\frac 12 \int_{-\infty }^\infty  \frac{\cos x}{1 + x^2}\,dx
 \intertext{Then expand the cosine into is complex exponential definition}
-    {} &= \frac 14 (\int_{-∞}^∞ \frac{e^{ix}}{1 + x²}\,dx +
-	\int_{-∞}^∞ \frac{e^{-ix}}{1 + x²}\,dx) \\
-    {} &= \frac 14 (\int_{-∞}^∞ \frac{e^{ix}}{(x+i)(x-i)}\,dx +
-	\int_{-∞}^∞ \frac{e^{-ix}}{(x+i)(x-i)}\,dx)
+    {} &= \frac 14 (\int_{-\infty }^\infty  \frac{e^{ix}}{1 + x^2}\,dx +
+	\int_{-\infty }^\infty  \frac{e^{-ix}}{1 + x^2}\,dx) \\
+    {} &= \frac 14 (\int_{-\infty }^\infty  \frac{e^{ix}}{(x+i)(x-i)}\,dx +
+	\int_{-\infty }^\infty  \frac{e^{-ix}}{(x+i)(x-i)}\,dx)
 \intertext{Complex contour integration lets us evaluate the integrals as
 limits of the coefficient of a pole as it approaches the pole, so}
-    {} &= \frac 14 (2πi ⋅ \lim_{z→i}(\frac{e^{iz}}{z+i}) - 2πi ⋅
-	\lim_{z→-i}(\frac{e^{-iz}}{z-i}))
+    {} &= \frac 14 (2{\pi} i \cdot  \lim_{z\rightarrow i}(\frac{e^{iz}}{z+i}) - 2{\pi} i  \cdot 
+	\lim_{z\rightarrow -i}(\frac{e^{-iz}}{z-i}))
 \end{align*}
 After simplifying,
 \begin{align}
     \boxed{
-    \int_0^∞ \frac{\cos x}{1 + x²}\,dx = \frac{π}{2e}
+    \int_0^\infty  \frac{\cos x}{1 + x^2}\,dx = \frac{{\pi}}{2e}
     }
 \end{align}
 
@@ -222,20 +222,20 @@ After simplifying,
     \index{dimensional analysis!High-velocity drag force}
 
 The drag force on a very high speed object of area $A$, passing through a gas
-of density $ρ$ at a velocity $v$ is expected to be of the form
+of density $\rho$ at a velocity $v$ is expected to be of the form
 \begin{align*}
-    \text{Force} \sim A^r ρ^s v^t
+    \text{Force} \sim A^r \rho^s v^t
 \end{align*}
 Determine the value of the exponents $r$, $s$, and $t$.
 
 \subsubsection{Answer}
 
 Force needs to have a unit of inverse time squared, therefore $v$ as the only
-variable with a time unit sets $t = 2$. Similarly, $ρ$ is the only one with
+variable with a time unit sets $t = 2$. Similarly, $\rho $ is the only one with
 a mass term, so we also immediately know that $s = 1$. That leaves
 \begin{align*}
-    \left[ \frac{\text{mass}⋅\text{distance}}{\text{time}²} \right]
-	&= \left[ \frac{\text{mass}}{\text{distance}⋅\text{time}²} \right]
+    \left[ \frac{\text{mass}\cdot \text{distance}}{\text{time}^2} \right]
+	&= \left[ \frac{\text{mass}}{\text{distance}\cdot \text{time}^2} \right]
 	\left[ \text{distance} \right]^r
 \end{align*}
 Therefore to have the two side have compatible units, $r = 2$.
@@ -252,29 +252,29 @@ Therefore to have the two side have compatible units, $r = 2$.
     \index{mechanics!Shallow-water wave group velocity}
     \index{waves!Shallow-water wave group velocity}
 
-For waves in shallow water, the relation between frequence $ν$ and wavelength
-$λ$ is
+For waves in shallow water, the relation between frequency $\nu $ and wavelength
+${\lambda}$ is
 \begin{align*}
-    ν &= (\frac{2πT}{ρλ³})^{1/2}
+    \nu  &= (\frac{2{\pi} T}{\rho {\lambda}^3 })^{1/2}
 \end{align*}
-where $ρ$ and $T$ are the density and surface tension of water. What is the
+where $\rho $ and $T$ are the density and surface tension of water. What is the
 group velocity of these waves?
 
 \subsubsection{Answer}
 
-Transforming relation given to use the angular frequency $ω = 2πν$ and
-wave number $k = 2π/λ$,
+Transforming relation given to use the angular frequency ${\omega} = 2{\pi}\nu $ and
+wave number $k = 2{\pi}/{\lambda}$,
 \begin{align*}
-    ω &= \sqrt{ \frac{k³T}{ρ} }
+    {\omega} &= \sqrt{ \frac{k^3 T}{\rho } }
 \end{align*}
 Then the group velocity is simply the partial derivative with respect to $k$:
 \begin{align*}
-    v_g &= \frac{∂ω}{∂k} = \frac 32 \sqrt{\frac{kT}{ρ}}
+    v_g &= \frac{\partial {\omega}}{\partial k} = \frac 32 \sqrt{\frac{kT}{\rho }}
 \end{align*}
-Putting this back into the form which involves only $ν$ and $λ$, we arrive at
+Putting this back into the form which involves only $\nu $ and ${\lambda}$, we arrive at
 the answer
 \begin{align}
-    \boxed{ v_g = \frac 32 \sqrt{\frac{2πT}{ρλ}} }
+    \boxed{ v_g = \frac 32 \sqrt{\frac{2{\pi} T}{\rho {\lambda}}} }
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -298,53 +298,53 @@ normalized) of the following matrix:
 \subsubsection{Answer}
 
 The eigenvalue equation is found from the standard procedure of adding a
-parameter $λ$ into the matrix and taking the determinant equal to zero:
+parameter ${\lambda}$ into the matrix and taking the determinant equal to zero:
 \begin{align*}
-    \det ( \begin{bmatrix}
-	1-λ & 0   & -i   \\
-	0   & 2-λ & 0    \\
-	i   & 0   & -1-λ
-    \end{bmatrix} ) = 0 &= (1-λ)(2-λ)(-1-λ) - i(-i)(2-λ) \\
-    0 &= -(1-λ)(1+λ)(2-λ) - (2-λ) \\
-    0 &= -(2-λ)\left[ (1-λ)(1+λ) + 1 \right]
+    \det{\begin{bmatrix}
+	1-{\lambda} & 0   & -i   \\
+	0   & 2-{\lambda} & 0    \\
+	i   & 0   & -1-{\lambda}
+    \end{bmatrix}} = 0 &= (1-{\lambda})(2-{\lambda})(-1-{\lambda}) - i(-i)(2-{\lambda}) \\
+    0 &= -(1-{\lambda})(1+{\lambda})(2-{\lambda}) - (2-{\lambda}) \\
+    0 &= -(2-{\lambda})\qty[ (1-{\lambda})(1+{\lambda}) + 1]
 \end{align*}
-Solving the two equations $0 = (2 - λ)$ and $(1-λ)(1+λ) = -1$ gives the three
+Solving the two equations $0 = (2 - {\lambda})$ and $(1-{\lambda})(1+{\lambda}) = -1$ gives the three
 eigenvalues
 \begin{align}
     \boxed{
-    λ = \left\{ -\sqrt 2, \sqrt 2, 2 \right\}
+    {\lambda} = \left\{ -\sqrt 2, \sqrt 2, 2 \right\}
     }
 \end{align}
 
-Starting with the eigenvalue $λ=2$, we solve for its eigenvector using the
+Starting with the eigenvalue ${\lambda}=2$, we solve for its eigenvector using the
 usual Gaussian elimination approach:
 \begin{align*}
-    \det ( \begin{bmatrix}
+    \det{\begin{bmatrix}
 	-1  & 0   & -i   \\
 	0   & 0   & 0    \\
 	i   & 0   & -3
-    \end{bmatrix} )
+    \end{bmatrix}}
 \end{align*}
 The second variable is completely unconstrained, so we can set that component
 of the vector to 1. The first and last rows are incompatible, so that means
 that both the first and third variables must be zero. This gives us the
 eigenvector
 \begin{align*}
-    v₃ &= \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}
+    v_3 &= \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}
 \end{align*}
-In a similar manner for the eignevalues $λ = ±\sqrt 2$, we perform Gaussian
+In a similar manner for the eigenvalues ${\lambda} = \pm\sqrt 2$, we perform Gaussian
 elimination. When all free parameters have been set arbitrarily to 1 and other
-constraints considered, we end up with the three eigen vectors:
+constraints considered, we end up with the three eigenvectors:
 \begin{align}
-    \boxed{ λ = -\sqrt 2 \quad\rightarrow\quad v₁ =
+    \boxed{ {\lambda} = -\sqrt 2 \quad\rightarrow\quad v_1 =
 	\begin{bmatrix} 1 \\ 0 \\ -i(1+\sqrt 2) \end{bmatrix} }
 \end{align}
 \begin{align}
-    \boxed{ λ = \sqrt2 \quad\rightarrow\quad v₂ =
+    \boxed{ {\lambda} = \sqrt2 \quad\rightarrow\quad v_2 =
 	\begin{bmatrix} 1 \\ 0 \\ -i(1-\sqrt 2) \end{bmatrix} }
 \end{align}
 \begin{align}
-    \boxed{ λ = 2 \quad\rightarrow\quad v₃ =
+    \boxed{ {\lambda} = 2 \quad\rightarrow\quad v_3 =
 	\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} }
 \end{align}
 
@@ -358,19 +358,19 @@ constraints considered, we end up with the three eigen vectors:
 
 Suppose the electron were to have spin $\frac 32$ instead of spin $\frac 12$.
 What would then be the atomic numbers $Z$ of the \emph{three} lowest-mass
-nobel gases, i.e.~the equivalents of helium, neon, and argon?
+noble gases, i.e.~the equivalents of helium, neon, and argon?
 
 \subsubsection{Answer}
 
 In a spin $\frac 32$ particle, there are 4 possible spin configurations
 corresponding to the spin projections $s_z = \{ -\frac 32, -\frac 12, \frac 12,
-\frac 32\}$. Because of thise, each projection of the orbital angular momentum
+\frac 32\}$. Because of this, each projection of the orbital angular momentum
 can hold 4 electrons instead of just two. This means we can make use of
 spectroscopic notation to easily count up to the atoms of interest.
 \begin{align*}
-    ℓ &= 0 → \text{1 $ℓ_z$ state}	& & 1s⁴ \\
-    ℓ &= 1 → \text{3 $ℓ_z$ states}	& & 1s⁴2p¹²2s⁴ \\
-    ℓ &= 2 → \text{5 $ℓ_z$ states}	& & 1s⁴2p¹²2s⁴3d²⁰3p¹²3s⁴
+    \ell  &= 0 \rightarrow  \text{1 $\ell_z$ state}	& & 1{s^4} \\
+    \ell  &= 1 \rightarrow  \text{3 $\ell_z$ states} & & 1{s^4}2{p^{12}}2s^4 \\
+    \ell  &= 2 \rightarrow  \text{5 $\ell_z$ states} & & 1{s^4}2{p^{12}}2{s^4}3d^{20}3{p^{12}}3s^4
 \end{align*}
 
 Since all shells are filled at each level, we just have to sum the number of

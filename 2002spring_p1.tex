@@ -21,18 +21,18 @@ a constant force on a spring system does not change the dynamics, so it's
 only the change in mass and distance which are relevant. Therefore by simple
 equilibrium requirements,
 \begin{align*}
-    k ΔL &= mg \\
-    k &= \frac{mg}{ΔL}
+    k \Delta L &= mg \\
+    k &= \frac{mg}{\Delta L}
 \end{align*}
 where $m$ and $M$ are the masses of the passengers and empty car respectively
-and $ΔL$ is the difference in the clearance between the unloaded and loaded
+and $\Delta L$ is the difference in the clearance between the unloaded and loaded
 car.
 
 Next, we know that the resonant frequency of a simple harmonic oscillator is
-given by $ω = \sqrt{k/m_\mathrm{tot}}$, so
+given by ${\omega}  = \sqrt{k/m_\mathrm{tot}}$, so
 \begin{align*}
-    ω &= \sqrt{\frac{mg}{(M+m)ΔL}} \\
-    f &= \frac{1}{2π} \sqrt{\frac{mg}{(M+m)ΔL}}
+    {\omega}  &= \sqrt{\frac{mg}{(M+m)\Delta L}} \\
+    f &= \frac{1}{2{\pi} } \sqrt{\frac{mg}{(M+m)\Delta L}}
 \end{align*}
 where the second line has converted from angular to linear frequency. We then
 simply relate that to how often the car hits a tar patch and solve for the
@@ -40,7 +40,7 @@ velocity. Letting $v$ be the velocity of the car and $d$ be the separation
 distance between tar patches,
 \begin{align*}
     \frac{v}{d} &= f \\
-    v &= \frac{d}{2π} \sqrt{\frac{mg}{(M+m)ΔL}}
+    v &= \frac{d}{2{\pi} } \sqrt{\frac{mg}{(M+m)\Delta L}}
 \end{align*}
 Plugging in the numbers,
 \begin{align}
@@ -88,23 +88,23 @@ From the Schrödinger equation, we know that there will be two different types
 of solutions. Within region II, no potential exists, so the solution has
 the form
 \begin{align*}
-    ψ &= A\cos (kx) + B\sin (kx) \\
-    k² &= \frac{2mE}{ℏ²}
+    \psi  &= A\cos (kx) + B\sin (kx) \\
+    k^2 &= \frac{2mE}{{\hbar}^2}
 \end{align*}
 For regions I and III, we assume that the energy $E < V$ since we are only
 interested in the bound solutions and not ones where the particle is free.
 This gives the following exponential solution form:
 \begin{align*}
-    ψ &= Ae^{κx} + Be^{-κx} \\
-    κ² &= \frac{2m(V-E)}{ℏ²}
+    \psi  &= Ae^{\kappa x} + Be^{-\kappa x} \\
+    \kappa^2 &= \frac{2m(V-E)}{{\hbar}^2}
 \end{align*}
 We immediately know that for regions I and III, the wavefunction must go to
-zero at $±∞$, so that immediately removes two terms in the solution. This
+zero at $\pm\infty $, so that immediately removes two terms in the solution. This
 leaves us with the complete set of solutions
 \begin{align*}
-    ψ_{I}   &= Ae^{κx} \\
-    ψ_{II}  &= B\cos(kx) + C\sin(kx) \\
-    ψ_{III} &= De^{-κx}
+    \psi_{I}   &= Ae^{\kappa x} \\
+    \psi_{II}  &= B\cos(kx) + C\sin(kx) \\
+    \psi_{III} &= De^{-\kappa x}
 \end{align*}
 
 We make a further simplification by noting that in this situation where there
@@ -123,48 +123,48 @@ To continue, we make use of the fact that the wavefunction must be continuous
 and differentiably continuous at the boundaries between regions I-II and
 II-III. This means we find that:
 \begin{align*}
-    Ae^{-κL/2} &= B\sin(-\frac{kL}{2})
-    & B\sin(\frac{kL}{2}) &= De^{-κL/2}
+    Ae^{-\kappa L/2} &= B\sin(-\frac{kL}{2})
+    & B\sin(\frac{kL}{2}) &= De^{-\kappa L/2}
     \\
-    Aκe^{-κL/2} &= Bk\cos(-\frac{kL}{2})
-    & Bk\cos(\frac{kL}{2}) &= -Dκe^{-κL/2}
+    A\kappa e^{-\kappa L/2} &= Bk\cos(-\frac{kL}{2})
+    & Bk\cos(\frac{kL}{2}) &= -D\kappa e^{-\kappa L/2}
 \end{align*}
 Dividing the lower equation by the upper equation in both cases leads to the
 condition
 \begin{align*}
-    κ &= -k\cot(\frac{kL}{2})
+    \kappa  &= -k\cot(\frac{kL}{2})
 \end{align*}
 
-If we perform a variable substitution where $v = kL/2$ and $u = κL/2$, the
+If we perform a variable substitution where $v = kL/2$ and $u = \kappa L/2$, the
 equation above takes the slightly simpler form
 \begin{align}
     u = -v\cot v
 	\label{eqn:sp2002p1.2:transcendental}
 \end{align}
 This transformation comes in more useful when we consider the energy equations
-that defined $k$ and $κ$. Substituting into the equation for $k$ and solving
+that defined $k$ and $\kappa $. Substituting into the equation for $k$ and solving
 for $E$ we have that
 \begin{align*}
-    E &= \frac{2v²ℏ²}{mL²}
+    E &= \frac{2v^2{\hbar}^2}{mL^2}
 \end{align*}
-And doing the same for $κ$,
+And doing the same for $\kappa $,
 \begin{align*}
-    V - E &= \frac{2u²ℏ²}{mL²}
+    V - E &= \frac{2u^2{\hbar}^2}{mL^2}
 \end{align*}
 which combined gives the equation of a circle:
 \begin{align*}
-    u² + v² &= \frac{mL²}{2ℏ²}V
+    u^2 + v^2 &= \frac{mL^2}{2{\hbar}^2}V
 	\label{eqn:sp2002p1.2:circle}
 \end{align*}
 Therefore, the only valid solutions occur when both
 (\ref{eqn:sp2002p1.2:transcendental}) and (\ref{eqn:sp2002p1.2:circle}) are
 satisfied. The minimum value for a given cotangent line occurs at the roots
-which occur when $v = (2n+1)π/2$ for any integer $n$. The first excited state
-for $n=1$ then occurs at $v = π/2$ and consequently $u = 0$. Substiting this
+which occur when $v = (2n+1){\pi} /2$ for any integer $n$. The first excited state
+for $n=1$ then occurs at $v = {\pi} /2$ and consequently $u = 0$. Substiting this
 into the equation above and solving for $V$, we find that the threshold energy
 for a second bound state corresponds to a potential depth of
 \begin{align}
-    \boxed{ V = \frac{π²ℏ²}{2mL²} }
+    \boxed{ V = \frac{{\pi} ^2{\hbar}^2}{2mL^2} }
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -173,8 +173,8 @@ for a second bound state corresponds to a potential depth of
 \problem{3}
 \subsubsection{Question}
 % Keywords
-	\index{thermodynamics!Mean free path of helium}
-	\index{statistical mechanics!Mean free path of helium}
+	\index{thermodynamics!Mean Free Path of $H_2$}
+	\index{statistical mechanics!Mean Free Path of $H_2$}
 
 The cross-section for collisions between helium atoms is about \SI{e-16}{
 \cm\squared}. Estimate the mean free path of helium atoms in helium gas at
@@ -184,8 +184,8 @@ atmospheric pressure and temperature.
 
 Consider the path traced out by a helium atom as it travels a path length $L$,
 colliding with other helium atoms along the way. Given that the cross section
-of helium is $σ$, than we can estimate the volume that contains probable
-interactions with our atom of interest as $\mathcal V = σL$. To get the number
+of helium is $\sigma$, than we can estimate the volume that contains probable
+interactions with our atom of interest as $\mathcal V = {\sigma}L$. To get the number
 of interactions, we make use of the fact that we're treating the gas as an
 ideal gas. From the ideal gas law,
 \begin{align*}
@@ -200,15 +200,40 @@ atoms within the volume, and that the collisions are spaced out equally in
 time, we just have to normalize the value by the trajectory's path length to
 get an estimate of the mean free path of helium in a helium gas:
 \begin{align*}
-    λ &= \frac{n\mathcal V}{L} = \frac{σP}{k_B T}
+    {\lambda}^{-1} &= \frac{n\mathcal V}{L} = \frac{{\sigma}P}{k_B T}
 \end{align*}
-Plugging in $σ = \SI{e-16}{\cm\squared}$, $P = \SI{1.013e5}{\Pa}$, $k_B =
+Plugging in ${\sigma} = \SI{e-16}{\cm\squared}$, $P = \SI{1.013e5}{\Pa}$, $k_B =
 \SI{1.38e-23}{\J\per\K}$, and $T = \SI{298}{\K}$, we get
 \begin{align}
     \boxed{
-    λ = \SI{4.06}{\micro\m}
+    {\lambda}^{-1} = \SI{4.06}{\micro\m}
     }
 \end{align}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{4}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Spring 2002 I.P4}
+	\index{electrostatics!Electric field of a Coaxial Capacitor}
+Consider an infinitely long cylindrical coaxial capacitor. The outer conductor has radius $R$ and the applied voltage is $V$. For what radius of the inner conductor will the field strength at its surface be a minimum?
+\subsubsection{Answer}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\problem{5}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Spring 2002 I.P5}
+	\index{statistical mechanics!Blackbody Radiation}
+	\index{thermodynamics!Blackbody Radiation}
+A rigid container is filled with a classical gas of molecular mass $m$. The temperature inside the container is $T$ and the pressure is $P$. Outside there is a vacuum. Suppose that a small hole of area $A$ is punched in the outer wall. At what rate (molecules per unit time per unit area) will gas leave the container? Write the result as a function of $m, P,\text{ and }T$. Some possibly useful information 
+\begin{equation*}
+	\int_0^\infty x^ne^{-\lambda x^2}\dd x = \frac{1}{2}\frac{\Gamma(\frac{n+1}{2})}{\lambda^{(n+1)/2}};\ \Gamma\qty(\frac{1}{2}) = \pi^{1/2}
+\end{equation*}
+\subsubsection{Answer}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Problem 6
@@ -219,7 +244,7 @@ Plugging in $σ = \SI{e-16}{\cm\squared}$, $P = \SI{1.013e5}{\Pa}$, $k_B =
 	\index{mechanics!Tension in a supported rope}
 
 A single closed loop of chain with mass $m$ and length $L$ rests
-horizontally on a smooth frictionless con with half-angle $α$. What is the
+horizontally on a smooth frictionless cone with half-angle ${\alpha}$. What is the
 tension in the chain?
 
 \subsubsection{Answer}
@@ -234,7 +259,7 @@ tension in the chain?
 
 	    % Add the arc and label to the given angle
 	    \draw (0,5.2) arc (-90:-56.31:0.8) coordinate (angle end);
-	    \node [anchor=north west] at ($(0,5.2)!0.25!(angle end)$) {$α$};
+	    \node [anchor=north west] at ($(0,5.2)!0.25!(angle end)$) {${\alpha}$};
 
 	    % Pic an arbitrary point along the surface of the cone to represent
 	    % the chain length element.
@@ -318,21 +343,21 @@ tension in the chain?
 
 	    % Add the known angles
 	    \draw ($(0,0)!1cm!(center left)$) arc (90+\alpha:90-\alpha:1cm);
-	    \node [anchor=south] at (0,1) {$dφ$};
-	    \draw ($(left T end)!1cm!(center left)$) arc (\alpha:0:1cm)
-		node [anchor=north] {$\frac 12 dφ$};
+	    \node [anchor=south] at (0,1) {$d\phi $};
+	    \draw ($(left T end)!1cm!(center left)$) arc ({\alpha}:0:1cm)
+		node [anchor=north] {$\frac 12 d\phi $};
 	\end{tikzpicture}
 	\caption{Top View}
     \end{subfigure}
 \end{figure}
 
 Consider just a small element of the chain of arc length $ds$. It will have
-a corresponding mass $dm = λ\,ds$ where $λ = m/L$. Knowing that it's a statics
+a corresponding mass $dm = {\lambda}\,ds$ where ${\lambda} = m/L$. Knowing that it's a statics
 problem, we can easily determine the normal force by balancing the vertical
 component with that of gravity.
 \begin{align*}
-    F_g &= N \sin α \\
-    N &= \frac{λg\,ds}{\sin α}
+    F_g &= N \sin {\alpha} \\
+    N &= \frac{{\lambda} g\,ds}{\sin {\alpha}}
 \end{align*}
 This leaves the horizontal component of the normal force to be balanced with
 the tension within the chain.
@@ -342,16 +367,16 @@ above with an exagerated curvature. We note that the radial part of the
 normal force must be opposed by the sum of the radial components of the two
 tensions $T$ acting on the end of the chain segment. By geometry, we know that
 the angle with respect to the midpoint's tangent is one half the differential
-angle change $dφ = ds/r$. This means we balance the forces as
+angle change $d\phi  = ds/r$. This means we balance the forces as
 \begin{align*}
-    2T\sin(\frac 12 dφ) &= N \cos α \\
-    2T\sin(\frac 12 dφ) &= λg\,ds \cot α
+    2T\sin(\frac 12 d\phi ) &= N \cos {\alpha} \\
+    2T\sin(\frac 12 d\phi ) &= {\lambda} g\,ds \cot {\alpha}
 \end{align*}
-By the small angle approximation, $\sin (\frac 12 dφ) ≈ \frac 12 dφ$, so after
-substituting for the fact that $dr = L/2π$ and $λ = M/L$,
+By the small angle approximation, $\sin (\frac 12 d\phi ) \approx \frac 12 d\phi $, so after
+substituting for the fact that $dr = L/2{\pi} $ and ${\lambda} = M/L$,
 \begin{align}
     \boxed{
-    T = \frac{Mg}{2π} \cot α
+    T = \frac{Mg}{2{\pi} } \cot {\alpha}
     }
 \end{align}
 
@@ -372,21 +397,21 @@ backwards in the collision?
 We'll be solving the problem using conservation of 4-momentum, so we define
 the following momenta with the assumption that the electron beam is moving
 to the right, and the photons are initially moving to the left. Let the
-unprimed and primed $q^μ$ be the photon's 4-momentum before and after the
-collision respectively, and define the electron's momenta $k^μ$ similarly.
+unprimed and primed $q^{\mu}$ be the photon's 4-momentum before and after the
+collision respectively, and define the electron's momenta $k^{\mu}$ similarly.
 Then in terms of the energies $E$ and 3-momenta $p$ (actually taken to be 1D
-without loss of generality) for each of the photon $γ$ and electron $e$:
+without loss of generality) for each of the photon $\gamma $ and electron $e$:
 \begin{align*}
-    q^μ &= \begin{pmatrix} E_γ/c \\ -E_γ/c \end{pmatrix} &
-	q'^μ &= \begin{pmatrix} E'_γ/c \\ E'_γ/c \end{pmatrix}
+    q^{\mu} &= \begin{pmatrix} E_\gamma /c \\ -E_\gamma /c \end{pmatrix} &
+	q'^{\mu} &= \begin{pmatrix} E'_\gamma /c \\ E'_\gamma /c \end{pmatrix}
     \\
-    k^μ &= \begin{pmatrix} E_e/c \\ p_e \end{pmatrix} &
-	k'^μ &= \begin{pmatrix} E'_e/c \\ p'_e \end{pmatrix}    
+    k^{\mu} &= \begin{pmatrix} E_e/c \\ p_e \end{pmatrix} &
+	k'^{\mu} &= \begin{pmatrix} E'_e/c \\ p'_e \end{pmatrix}    
 \end{align*}
 By conservation of momentum,
 \begin{align*}
-    q'^μ + k'^μ &= q^μ + k^μ \\
-    k'^μ &= q^μ - q'^μ + k^μ
+    q'^{\mu} + k'^{\mu} &= q^{\mu} + k^{\mu} \\
+    k'^{\mu} &= q^{\mu} - q'^{\mu} + k^{\mu}
 \end{align*}
 Solving for the unknown electron momentum after the collision lets us eliminate
 it from the equation; when we square the equation, the squared quantities are
@@ -394,55 +419,55 @@ Lorentz invariant, and therefore the product can be evaluated in any frame. A
 convenient choice is the rest frame where the electron evaluates to its mass
 energy and photons vanish.
 \begin{align*}
-    \underbrace{k'^μ k'_μ}_{m_e c²} &=
-	\underbrace{q^μ q_μ}_{0}
-	- \underbrace{q'^μ q'_μ}_{0}
-	+ \underbrace{k^μ k_μ}_{m_e c²}
-	- q'^μ q_μ + q'^μ k_μ - q^μ k_μ
+    \underbrace{k'^{\mu} k'_{\mu}}_{m_e c^2} &=
+	\underbrace{q^{\mu} q_{\mu}}_{0}
+	- \underbrace{q'^{\mu} q'_{\mu}}_{0}
+	+ \underbrace{k^{\mu} k_{\mu}}_{m_e c^2}
+	- q'^{\mu} q_{\mu} + q'^{\mu} k_{\mu} - q^{\mu} k_{\mu}
 \end{align*}
 This greatly simplifies the rest of the problem to
 \begin{align*}
-    q'^μ q_μ - q'^μ k_μ &= - q^μ k_μ
+    q'^{\mu} q_{\mu} - q'^{\mu} k_{\mu} &= - q^{\mu} k_{\mu}
 \end{align*}
 Inserting the energy and 3-momentum components and performing the inner
 products,
 \begin{align*}
-    2\frac{E_γ E'_γ}{c²} - \frac{E'_γ E_e}{c²} + \frac{E'_γ p_e}{c} &=
-	-\frac{E_γ E_e}{c²} - \frac{E_γ p_e}{c}
+    2\frac{E_\gamma  E'_\gamma }{c^2} - \frac{E'_\gamma  E_e}{c^2} + \frac{E'_\gamma  p_e}{c} &=
+	-\frac{E_\gamma  E_e}{c^2} - \frac{E_\gamma  p_e}{c}
 \end{align*}
-Isolating $E'_γ$ on the left and $E_γ$ on the right,
+Isolating $E'_\gamma $ on the left and $E_\gamma $ on the right,
 \begin{align*}
-    -E'_γ (E_e - p_e c - 2E_γ) &= - E_γ(E_e - p_e c)
+    -E'_\gamma  (E_e - p_e c - 2E_\gamma ) &= - E_\gamma (E_e - p_e c)
 \end{align*}
 which solving for the unknown photon energy gives
 \begin{align}
-    \boxed{ E'_γ = E_γ (1 - \frac{2E_γ}{E_e - p_e c})^{-1} }
+    \boxed{ E'_\gamma  = E_\gamma  (1 - \frac{2E_\gamma }{E_e - p_e c})^{-1} }
 	\label{eqn:2002sp1.7:analytic_soln}
 \end{align}
 
 The solution is formally complete, but actually calculating a numerical answer
-can prove difficult because $E_e ≈ p_e c$. Therefore, we will expand the
+can prove difficult because $E_e \approx p_e c$. Therefore, we will expand the
 solution. Beginning with the definition of the momentum from Einstein's energy
 relation,
 \begin{align*}
-    p_e c &= \sqrt{{E_e}² - {m_e}²c⁴}
+    p_e c &= \sqrt{{E_e}^2 - {m_e}^2c^4}
 \intertext{we can subtract it from $E_e$, leading to the useful form}
-    E_e - p_e c &= E_e ( 1 - \sqrt{1 - \frac{{m_e}²c⁴}{{E_e}²}} )
+    E_e - p_e c &= E_e ( 1 - \sqrt{1 - \frac{{m_e}^2c^4}{{E_e}^2}} )
 \intertext{Expanding the root to first order in its argument,}
-    E_e - p_e c &= E_e ⋅ \frac 12 \frac{{m_e}²c⁴}{{E_e}²} \\
-    {} &= \frac 12 \frac{{m_e}²c⁴}{E_e}
+    E_e - p_e c &= E_e \cdot  \frac 12 \frac{{m_e}^2c^4}{{E_e}^2} \\
+    {} &= \frac 12 \frac{{m_e}^2c^4}{E_e}
 \end{align*}
 
 Plugging this into the solution (\ref{eqn:2002sp1.7:analytic_soln}), the
 photon energy is then approximately given by
 \begin{align}
-    \boxed{ E'_γ ≈ E_γ ( 1 - 4 \frac{E_γ E_e}{{m_e}²c⁴} )^{-1} }
+    \boxed{ E'_\gamma  \approx E_\gamma  ( 1 - 4 \frac{E_\gamma  E_e}{{m_e}^2c^4} )^{-1} }
 	\label{eqn:2002sp1.7:approx_soln}
 \end{align}
 The numerics are much easier to calculate in this case, and we find that the
 final energy of the reflected photon is
 \begin{align}
-    \boxed{ E'_γ = \SI{4.273}{\eV} }
+    \boxed{ E'_\gamma  = \SI{4.273}{\eV} }
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -453,15 +478,15 @@ final energy of the reflected photon is
 % Keywords
 	\index{electrodynamics!LR circuit}
 
-In the figure below, $\mathcal E = \SI{100}{\V}$, $R₁ = \SI{5}{\ohm}$,
-$R₂ = \SI{10}{\ohm}$, $R₃ = \SI{15}{\ohm}$, and $L = \SI{1.0}{\henry}$. Find
-the values of the currents $I₁$ and $I₂$
+In the figure below, $\mathcal E = \SI{100}{\V}$, $R_1 = \SI{5}{\ohm}$,
+$R_2 = \SI{10}{\ohm}$, $R_3 = \SI{15}{\ohm}$, and $L = \SI{1.0}{\henry}$. Find
+the values of the currents $I_1$ and $I_2$
 \begin{enumerate}[a)]
     \item immediately after the switch $S$ is closed,
     \item a long time later,
     \item immediately after switch $S$ is opened again,
     \item and then how long must you wait, after the switch is opened, before
-	$I₂$ falls by a factor of $e$?
+	$I_2$ falls by a factor of $e$?
 \end{enumerate}
 
 \begin{center}
@@ -473,22 +498,22 @@ the values of the currents $I₁$ and $I₂$
 	    ++(0,3)
 		to[closing switch,l_=$S$]
 	    ++(3,0)
-		to[resistor,l_=$R₁$]
+		to[resistor,l_=$R_1$]
 	    ++(3,0)
 		coordinate (I2 I3 break)
-		to[resistor,l_=$R₃$,i=$I₃$]
+		to[resistor,l_=$R_3$,i=$I_3$]
 	    ++(3,0)
 		to[inductor,l_=$L$]
 	    ++(0,-3)
 		--
 	    ++(-3,0)
 		coordinate (I2 I3 combine)
-		to[short,i=$I₁$]
+		to[short,i=$I_1$]
 	    (0,0)
 	;
 	\draw
 	    (I2 I3 break)
-		to[resistor,l_=$R₂$,i=$I₂$]
+		to[resistor,l_=$R_2$,i=$I_2$]
 	    (I2 I3 combine)
 	;
     \end{circuitikz}
@@ -500,116 +525,116 @@ the values of the currents $I₁$ and $I₂$
 Start by applying Kirchoff's rules to the circuit: current is conserved and
 the voltage changes must sum to zero around each loop, so
 \begin{align}
-    I₁ &= I₂ + I₃
+    I_1 &= I_2 + I_3
 	\label{eqn:sp2002p1.8:kirchoff_current} \\
-    0 &= \mathcal E - I₁R₁ - I₂R₂
+    0 &= \mathcal E - I_1R_1 - I_2R_2
 	\label{eqn:sp2002p1.8:kirchoff_leftloop} \\
-    0 &= -I₃R₃ - L \frac{dI₃}{dt} + I₂R₂
+    0 &= -I_3R_3 - L \frac{dI_3}{dt} + I_2R_2
 	\label{eqn:sp2002p1.8:kirchoff_rightloop}
 \end{align}
 
 Since only (\ref{eqn:sp2002p1.8:kirchoff_rightloop}) has a term involving
-a time derivative, we choose to first solve for the current $I₃$. By solving
-for $I₂R₂$ in (\ref{eqn:sp2002p1.8:kirchoff_leftloop}) and substituting,
-we eliminate $I₂$ and have
+a time derivative, we choose to first solve for the current $I_3$. By solving
+for $I_2R_2$ in (\ref{eqn:sp2002p1.8:kirchoff_leftloop}) and substituting,
+we eliminate $I_2$ and have
 \begin{align}
-    0 &= -I₃R₃ - L\frac{dI₃}{dt} + \mathcal E - I₁R₁
+    0 &= -I_3R_3 - L\frac{dI_3}{dt} + \mathcal E - I_1R_1
     \label{eqn:sp2002p1.8:right_noI2}
 \end{align}
-Furthermore, by also substituting the value of $I₂$ into
+Furthermore, by also substituting the value of $I_2$ into
 (\ref{eqn:sp2002p1.8:kirchoff_current}):
 \begin{align}
-    I₁ &= \frac{\mathcal E}{R₁+R₂} + \frac{R₂}{R₁+R₂} I₃
+    I_1 &= \frac{\mathcal E}{R_1+R_2} + \frac{R_2}{R_1+R_2} I_3
     \label{eqn:sp2002p1.8:current_noI2}
 \end{align}
 Then by combining (\ref{eqn:sp2002p1.8:right_noI2}) and
 (\ref{eqn:sp2002p1.8:current_noI2}), we can produce a differential equation
-for $I₃$:
+for $I_3$:
 \begin{align*}
-    -I₃R₃ - L\frac{dI₃}{dt} + \mathcal E - \frac{R₁}{R₁+R₂}\mathcal E -
-	\frac{R₁R₂}{R₁+R₂}I₃ = 0
+    -I_3R_3 - L\frac{dI_3}{dt} + \mathcal E - \frac{R_1}{R_1+R_2}\mathcal E -
+	\frac{R_1R_2}{R_1+R_2}I_3 = 0
     \\
-    -\underbrace{\frac{R₁R₂ + R₁R₃ + R₂R₃}{R₁+R₂}}_{R'}I₃ = L\frac{dI₃}{dt}
-	- \frac{R₂}{R₁+R₂} \mathcal E
+    -\underbrace{\frac{R_1R_2 + R_1R_3 + R_2R_3}{R_1+R_2}}_{R'}I_3 = L\frac{dI_3}{dt}
+	- \frac{R_2}{R_1+R_2} \mathcal E
 \end{align*}
 \begin{align}
-    \frac{dI₃}{dt} = -\frac{R'}{L} I₃ + \frac{1}{L}\frac{R₂}{R₁+R₂}\mathcal E
+    \frac{dI_3}{dt} = -\frac{R'}{L} I_3 + \frac{1}{L}\frac{R_2}{R_1+R_2}\mathcal E
 	\label{eqn:sp2002p1.8:diffeq_I3}
 \end{align}
-Considering just the homogenous part, we easily solve it to find the standard
+Considering just the homogeneous part, we easily solve it to find the standard
 exponential solution
 \begin{align*}
     I_{3h}(t) &= I_{30} e^{-R't/L}
 \end{align*}
-And using the ansatz $I_{3p}(t) = At + B$ for the inhomogenous part,
+And using the ansatz $I_{3p}(t) = At + B$ for the inhomogeneous part,
 \begin{align*}
-    A &= -\frac{R'}{L}At - \frac{R'}{L}B + \frac 1L\frac{R₂}{R₁+R₂}\mathcal E
+    A &= -\frac{R'}{L}At - \frac{R'}{L}B + \frac 1L\frac{R_2}{R_1+R_2}\mathcal E
     \\
     A &= 0 \\
-    B &= \frac{1}{R'}\frac{R₂}{R₁+R₂}\mathcal E
+    B &= \frac{1}{R'}\frac{R_2}{R_1+R_2}\mathcal E
 \end{align*}
 At $t = 0$, the inductor has no current passing through it, so when the switch
 is closed, the current must remain continuous. This gives us the initial
 condition necessary to solve for the unknown $I_{30}$, and after doing so
 and simplifying, the total solution is
 \begin{align}
-    I₃(t) &= \frac{\mathcal E}{R'}\frac{R₂}{R₁+R₂}(1 - e^{-R't/L})
+    I_3(t) &= \frac{\mathcal E}{R'}\frac{R_2}{R_1+R_2}(1 - e^{-R't/L})
 	\label{eqn:sp2002p1.8:I3_charging}
 \end{align}
 
-Then by substiting this solution back into (\ref{eqn:sp2002p1.8:current_noI2})
-we get the solution for $I₁$:
+Then by substituting this solution back into (\ref{eqn:sp2002p1.8:current_noI2})
+we get the solution for $I_1$:
 \begin{align}
-    I₁(t) &= \frac{\mathcal E}{R₁+R₂} \left[ 1 + \frac{1}{R'}
-	\frac{{R₂}²}{R₁+R₂} (1 - e^{-R't/L}) \right]
+    I_1(t) &= \frac{\mathcal E}{R_1+R_2} \left[ 1 + \frac{1}{R'}
+	\frac{{R_2}^2}{R_1+R_2} (1 - e^{-R't/L}) \right]
 	\label{eqn:sp2002p1.8:I1_charging}
 \end{align}
-Finally, combining both inserting both solutions for $I₁$ and $I₃$ into
-(\ref{eqn:sp2002p1.8:kirchoff_current}), the solution for $I₂$ is
+Finally, combining both inserting both solutions for $I_1$ and $I_3$ into
+(\ref{eqn:sp2002p1.8:kirchoff_current}), the solution for $I_2$ is
 \begin{align}
-    I₂(t) &= \frac{\mathcal E}{R₁+R₂} \left[ 1 - \frac{1}{R'}
-	\frac{R₁R₂}{R₁+R₂} (1 - e^{-R't/L}) \right]
+    I_2(t) &= \frac{\mathcal E}{R_1+R_2} \left[ 1 - \frac{1}{R'}
+	\frac{R_1R_2}{R_1+R_2} (1 - e^{-R't/L}) \right]
 	\label{eqn:sp2002p1.8:I2_charging}
 \end{align}
 
 Plugging in all of the given values, we find that the currents at the instant
 the switch is closed are
 \begin{align}
-    \boxed{I₁(0) = \SI{6.66}{\A}\quad\quad\text{$S$ is closed}} \\
-    \boxed{I₂(0) = \SI{6.66}{\A}\quad\quad\text{$S$ is closed}}
+    \boxed{I_1(0) = \SI{6.66}{\A}\quad\quad\text{$S$ is closed}} \\
+    \boxed{I_2(0) = \SI{6.66}{\A}\quad\quad\text{$S$ is closed}}
 \end{align}
-For a long time later, we can let $t \rightarrow ∞$ and find that
+For a long time later, we can let $t \rightarrow \infty $ and find that
 \begin{align}
-    \boxed{I₁(∞) = \SI{9.09}{\A}\quad\quad\text{$S$ is closed}} \\
-    \boxed{I₂(∞) = \SI{5.54}{\A}\quad\quad\text{$S$ is closed}}
+    \boxed{I_1(\infty ) = \SI{9.09}{\A}\quad\quad\text{$S$ is closed}} \\
+    \boxed{I_2(\infty ) = \SI{5.54}{\A}\quad\quad\text{$S$ is closed}}
 \end{align}
 
 Right after the switch is opened, the left loop is taken out of the circuit,
-so we immediately know that the value of $I₁$ is zero.
+so we immediately know that the value of $I_1$ is zero.
 \begin{align}
-    \boxed{I₁(0) = 0\quad\quad\text{$S$ is open	}}
+    \boxed{I_1(0) = 0\quad\quad\text{$S$ is open	}}
 \end{align}
 For the right loop, we start by noting that the steady state current through
 the inductor will be needed. Taking the limit of (\ref
 {eqn:sp2002p1.8:I3_charging}), we have that the new initial condition is
 \begin{align*}
-    I₃(0) &= \frac{\mathcal E}{R'}\frac{R₂}{R₁+R₂}
+    I_3(0) &= \frac{\mathcal E}{R'}\frac{R_2}{R_1+R_2}
 \end{align*}
-$I₂$ now is equal to $-I₃$ since there is no other path for the current to
+$I_2$ now is equal to $-I_3$ since there is no other path for the current to
 traverse. This loop's differential equation is then
 \begin{align*}
-    -(R₂+R₃)I₃ - L\frac{dI₃}{dt} = 0
+    -(R_2+R_3)I_3 - L\frac{dI_3}{dt} = 0
 \end{align*}
 Solving for the exponential and using the initial condition above, the time
 solution is
 \begin{align*}
-    I₃(t) &= \frac{\mathcal E}{R'}\frac{R₂}{R₁+R₂} e^{-(R₂+R₃)t/L} \\
-    I₂(t) &= -\frac{\mathcal E}{R'}\frac{R₂}{R₁+R₂} e^{-(R₂+R₃)t/L}    
+    I_3(t) &= \frac{\mathcal E}{R'}\frac{R_2}{R_1+R_2} e^{-(R_2+R_3)t/L} \\
+    I_2(t) &= -\frac{\mathcal E}{R'}\frac{R_2}{R_1+R_2} e^{-(R_2+R_3)t/L}    
 \end{align*}
-Therefore the current in $I₂$ just after the switch is opened reverses
+Therefore the current in $I_2$ just after the switch is opened reverses
 direction
 \begin{align}
-    \boxed{I₂(0) = \SI{-3.64}{\A}}
+    \boxed{I_2(0) = \SI{-3.64}{\A}}
 \end{align}
 Then by simple exponential relations, we know that the time time to decay by
 a factor of $e$ is given by the reciprocal of the coefficient of $t$, so
@@ -677,7 +702,7 @@ Because this is an ideal [diatomic] classical gas, we combine the equations
 to get that the difference in energy across the path is
 \begin{align*}
     Q_{CA} &= U = \frac 52 nR(T_A - T_C) \\
-    {}&= \frac 52 V₁ (P₂ - P₁)
+    {}&= \frac 52 V_1 (P_2 - P_1)
 \end{align*}
 
 For the remaining stage $B \rightarrow C$, we use the full thermodynamic
@@ -685,28 +710,28 @@ identity:
 \begin{align*}
     dU &= dQ - P\,dV
 \end{align*}
-The pressure $P₁$ is constant, so both integration of $dU$ and $dV$ are simply
+The pressure $P_1$ is constant, so both integration of $dU$ and $dV$ are simply
 the differences in each quantity. Again substituting for the temperature in
 $U$ with the ideal gas law,
 \begin{align*}
-    \frac 52 nR(T_C - T_B) &= Q_{BC} - P₁(V₁ - V₂) \\
-    \frac 52 P₁(V₁ - 2V₁) &= Q_{BC} + P(V₁ - 2V₁) \\
-    Q_{BC} &= -\frac 72 P₁V₁
+    \frac 52 nR(T_C - T_B) &= Q_{BC} - P_1(V_1 - V_2) \\
+    \frac 52 P_1(V_1 - 2V_1) &= Q_{BC} + P(V_1 - 2V_1) \\
+    Q_{BC} &= -\frac 72 P_1V_1
 \end{align*}
 
 We've accounted for all the heat flow in the system. $Q_{BC}$ is negative, so
 this is the heat flow out of the system, while $Q_{CA}$ is positive and is the
-heat flow into the system. By definition then, the efficiency $η$ of the system
+heat flow into the system. By definition then, the efficiency ${\eta}$ of the system
 is
 \begin{align*}
-    η &= 1 - \frac{Q_{out}}{Q_{in}} \\
-    {}&= 1 - \frac{\frac 72 P₁ V₁}{\frac 52 V₁ (P₂ - P₁)} \\
-    {}&= 1 - \frac 57 \frac{P₁}{P₂ - P₁}
+    {\eta} &= 1 - \frac{Q_{out}}{Q_{in}} \\
+    {}&= 1 - \frac{\frac 72 P_1 V_1}{\frac 52 V_1 (P_2 - P_1)} \\
+    {}&= 1 - \frac 57 \frac{P_1}{P_2 - P_1}
 \end{align*}
-Plugging in the given values, we find the efficency to be
+Plugging in the given values, we find the efficiency to be
 \begin{align}
     \boxed{
-    η = 0.146 = \SI{14.6}{\percent}
+    {\eta} = 0.146 = \SI{14.6}{\percent}
     }
 \end{align}
 
@@ -727,19 +752,19 @@ rolls rather than slides?
 Begin first by finding the motion that describes the rolling without slipping
 state. We do this by solving the system's Lagrangian:
 \begin{align*}
-    \mathcal L &= (\frac 12 m{\dot x}² + \frac 12 I{\dot θ}²) - (mgx\sin α)
+    \mathcal L &= (\frac 12 m{\dot x}^2 + \frac 12 I{\dot \theta }^2) - (mgx\sin {\alpha})
 \end{align*}
 where $x$ is the length along the ramp with $x=0$ at the bottom, $I$ is the
-moment of inertia of the hoop, $m$ is its mass, $θ$ is the angle of rotation
-of the hoop about its center, and $α$ is the angle of the incline plane. By
-noting that rolling without slipping requires that $r\dot θ = \dot x$, we
+moment of inertia of the hoop, $m$ is its mass, $\theta $ is the angle of rotation
+of the hoop about its center, and ${\alpha}$ is the angle of the incline plane. By
+noting that rolling without slipping requires that $r\dot \theta  = \dot x$, we
 can reduce the problem to the single variable $x$. The result is the following
-differential equation, where $I = mr²$ has been substituted in:
+differential equation, where $I = mR^2$ has been substituted in:
 \begin{align*}
-    2m \ddot x &= -mg\sin α \\
-    \ddot x &= -\frac 12 g\sin α
+    2m \ddot x &= -mg\sin {\alpha} \\
+    \ddot x &= -\frac 12 g\sin {\alpha}
 \end{align*}
-Therefore we know the linear acceleration will be $a = -\frac 12 g\sin α$ in
+Therefore we know the linear acceleration will be $a = -\frac 12 g\sin {\alpha}$ in
 the non-slipping case.
 
 To find what coefficient of friction produces this motion, we consider the
@@ -747,14 +772,14 @@ forces acting on the hoop with the coordinate system still oriented along and
 perpendicular to the plane. In the perpendicular direction, the normal force
 $N$ is canceled by the perpendicular component of gravity, so
 \begin{align*}
-    N &= mg\cos α
+    N &= mg\cos {\alpha}
 \end{align*}
-In the parallel direction, the frictioanl force and the parallel component of
-gravity must sum to give the requisitve force, namely $ma$.
+In the parallel direction, the frictional force and the parallel component of
+gravity must sum to give the requisite force, namely $ma$.
 \begin{align*}
-    μN - mg\sin α &= a = -\frac 12 mg\sin α \\
-    μmg\cos α &= \frac 12 mg\sin α \\
-    μ &= \frac 12 \tan α
+    {\mu}N - mg\sin {\alpha} &= ma = -\frac 12 mg\sin {\alpha} \\
+    {\mu}mg\cos {\alpha} &= \frac 12 mg\sin {\alpha} \\
+    {\mu} &= \frac 12 \tan {\alpha}
 \end{align*}
 
 \fbox{
@@ -780,15 +805,15 @@ probability that the particle remains in the ground state?
 We start by recalling the solution for a particle in a box. In a 1D box with is
 left edge at the origin, the properly normalized wavefunction is given by
 \begin{align*}
-    ψ(x) &= \sqrt{\frac{2}{L}} \sin (\frac{nπx}{L})
+    \psi (x) &= \sqrt{\frac{2}{L}} \sin (\frac{n{\pi} x}{L})
 \end{align*}
 where $L$ is the size of the box. The Cartesian extension into 3D is simple
-and is respectively for the $L×L×L$ and $2L×L×L$ boxes:
+and is respectively for the $L\times L\times L$ and $2L\times L\times L$ boxes:
 \begin{align*}
-    ψ(x,y,z) &= (\frac{2}{L})^{3/2} \sin(\frac{n_x πx}{L})
-	\sin(\frac{n_y πy}{L}) \sin(\frac{n_y πy}{L}) \\
-    ψ'(x,y,z) &= \frac{1}{\sqrt 2}(\frac{2}{L})^{3/2} \sin(\frac{n_x πx}{2L})
-	\sin(\frac{n_y πy}{L}) \sin(\frac{n_y πy}{L})
+    \psi (x,y,z) &= (\frac{2}{L})^{3/2} \sin(\frac{n_x {\pi} x}{L})
+	\sin(\frac{n_y {\pi} y}{L}) \sin(\frac{n_y {\pi} y}{L}) \\
+    \psi '(x,y,z) &= \frac{1}{\sqrt 2}(\frac{2}{L})^{3/2} \sin(\frac{n_x {\pi} x}{2L})
+	\sin(\frac{n_y {\pi} y}{L}) \sin(\frac{n_y {\pi} y}{L})
 \end{align*}
 
 To find the probability of remaining in the ground state, we simply must
@@ -796,23 +821,23 @@ take the inner product of both wavefunctions in the ground state over an
 appropriate domain; this means that the initial, unexanded box's wavefunction
 is 0 within the new region.
 \begin{align*}
-    \mathscr P &= \braket{ψ_{111}}{ψ'_{111}} \\
-    {} &= \frac{1}{\sqrt{2}} (\frac{2}{L})³ (\int_0^L \sin(\frac{πx}{L})
-	\sin(\frac{πx}{2L}) \,dx) (\int_0^L \sin(\frac{πy}{L})
-	\sin(\frac{πy}{L}) \,dy) (\int_0^L \sin(\frac{πz}{L})
-	\sin(\frac{πz}{L}))
+    \mathscr{P} &= \braket{\psi _{111}}{\psi '_{111}} \\
+    {} &= \frac{1}{\sqrt{2}} (\frac{2}{L})^3  (\int_0^L \sin(\frac{{\pi} x}{L})
+	\sin(\frac{{\pi} x}{2L}) \,dx) (\int_0^L \sin(\frac{{\pi} y}{L})
+	\sin(\frac{{\pi} y}{L}) \,dy) (\int_0^L \sin(\frac{{\pi} z}{L})
+	\sin(\frac{{\pi} z}{L}))
 \end{align*}
 The integrals over $y$ and $z$ are simple and simply evaluate to $L/2$ as
 we'd expect from the normalization factor. To evaluate the integral over $x$,
-use the trigonometric identity $\sin 2θ = 2\sin θ \cos θ$ and a change of
-variables with $u = \sin(πx/2L)$ to arrive at the integral
+use the trigonometric identity $\sin 2\theta  = 2\sin \theta  \cos \theta $ and a change of
+variables with $u = \sin({\pi} x/2L)$ to arrive at the integral
 \begin{align*}
-    \mathscr P &= \frac{2\sqrt 2}{L} \int_0^1 u² ⋅ \frac{2L}{π}\,du \\
+    \mathscr{P} &= \frac{2\sqrt 2}{L} \int_0^1 u^2 \cdot  \frac{2L}{{\pi} }\,du
 \end{align*}
 Evaluating this, we find the probability of remaining the ground state after
 the box is expanded suddenly to be
 \begin{align}
-    \boxed{\mathscr P = \frac{4\sqrt 2}{3π} ≈ 0.60}
+    \boxed{\mathscr{P} = \frac{4\sqrt 2}{3{\pi} } \approx 0.60}
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -827,36 +852,36 @@ the box is expanded suddenly to be
 The frequency $f$ of a deep water gravity wave (i.e. an ordinary ocean wave)
 is given by
 \begin{align*}
-    f =\sqrt{\frac{1}{2π}} ρ^a g^b λ^c
+    f =\sqrt{\frac{1}{2{\pi} }} \rho ^a g^b {\lambda}^c
 \end{align*}
-where $ρ$, $g$, and $λ$ are the water density, gravitational acceleration, and
+where $\rho $, $g$, and ${\lambda}$ are the water density, gravitational acceleration, and
 wavelength of the wave, respectively. What are the values of the exponents
 $a$, $b$, and $c$, and what is the ratio of the wave group velocity to phase
 velocity?
 
 \subsubsection{Answer}
 
-We proceed by dimesional analysis. Immediately we know that $a = 0$ since a
-frequency does not have a mass component, and neither $g$ nor $λ$ have a
-mass term to cancel the one in $ρ$. Furthermore, $g$ is the only one with a
+We proceed by dimensional analysis. Immediately we know that $a = 0$ since a
+frequency does not have a mass component, and neither $g$ nor ${\lambda}$ have a
+mass term to cancel the one in $\rho $. Furthermore, $g$ is the only one with a
 time term, so it's exponent must then by $b = \frac 12$ in order to give $f$
 its $[\si{\s^{-1}}]$ unit. That leaves $c = \frac 12$ in order to cancel
-the $\sqrt{\si{\m}}$ dimensin left over from $g$.
+the $\sqrt{\si{\m}}$ dimension left over from $g$.
 
 \begin{align*}
     \boxed{
-    f = \sqrt{\frac{gλ}{2π}}
+    f = \sqrt{\frac{g{\lambda}}{2{\pi} }}
 	\quad\quad\text{ with }\quad a = 0,\, b = \frac 12,\, c = \frac 12
     }
 \end{align*}
 
 The phase velocity can be derived from the frequency given by noting that
-$v_g = ω/k$ together with $k^{-1} = 2πλ$ and $ω = 2πf$. Put together, this
+$v_p = {\omega} /k$ together with $k^{-1} = 2{\pi} {\lambda}$ and ${\omega}  = 2{\pi} f$. Put together, this
 gives
 \begin{align*}
     v_p &= \frac{1}{k}\sqrt{\frac{g}{k}}
 \end{align*}
-The group velocity is given by $v_g = dω/dk$, so
+The group velocity is given by $v_g = d{\omega} /dk$, so
 \begin{align*}
     v_g &= -\frac{1}{2k}\sqrt{\frac{g}{k}}
 \end{align*}

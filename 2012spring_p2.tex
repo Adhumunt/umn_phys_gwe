@@ -8,10 +8,10 @@
 
 An electron in a hydrogen atom occupies a state:
 \begin{align*}
-	\ket{ψ} &= \sqrt{\frac 13}\ket{3,1,0,+} + \sqrt{\frac 23} \ket{2,1,1,-}
+	\ket{\psi } &= \sqrt{\frac 13}\ket{3,1,0,+} + \sqrt{\frac 23} \ket{2,1,1,-}
 \end{align*}
 where the properly normalized states are specified by the quantum numbers
-$\ket{n,ℓ,m,±}$ and the $±$ specifies whether the spin is up or down.
+$\ket{n,\ell,m,\pm}$ and the $\pm$ specifies whether the spin is up or down.
 
 \makeatletter
 \newcommand{\interitemtext}[1]{%
@@ -32,26 +32,26 @@ $\ket{n,ℓ,m,±}$ and the $±$ specifies whether the spin is up or down.
 		What is the expectation value of the energy in terms of the ground
 		state energy?
 	\item
-		If you meausred the expectation values of the orbital momentum squared
-		$\expect{L²}$, the square of the spin $\expect{S²}$, and their
-		$z$-components $\expect{L_z}$ and $\expect{S_z}$, what would be the
+		If you measured the expectation values of the orbital momentum squared
+		$\expval{L^2}$, the square of the spin $\expval{S^2}$, and their
+		$z$-components $\expval{L_z}$ and $\expval{S_z}$, what would be the
 		result?
 	\item
 		Show that if you measure the position of the electron, the probability
-		density for finding it an an angle specified by $θ$ and $ϕ$
-		integrated over all values of $r$ is independent of $θ$ and $ϕ$. Note,
-		for this part you will need $Y_1^0 = \sqrt{3/4π}\cos θ$ and $Y_1^1 =
-		-\sqrt{3/8π} \sin θ \exp(iϕ)$. You do \emph{not}, however, need to
+		density for finding it an an angle specified by $\theta $ and $\phi $
+		integrated over all values of $r$ is independent of $\theta $ and $\phi $. Note,
+		for this part you will need $Y_1^0 = \sqrt{3/4{\pi}}\cos \theta $ and $Y_1^1 =
+		-\sqrt{3/8{\pi}} \sin \theta  \exp(i\phi )$. You do \emph{not}, however, need to
 		know the radial functions, only that they are properly normalized and
 		orthogonal to each other.
 	\item
 		List all additional possible states that are degenerate with the first
 		state in the linear combination above. Note: this part can be done
 		even if you have not answered the previous parts.
-\interitemtext{Assume now that the state $\ket{ψ}$, given above, is the
+\interitemtext{Assume now that the state $\ket{\psi }$, given above, is the
 initial state of an electron in a hydrogen atom.}
 	\item
-		Write down the elctron's state as a function of time for all $t>0$.
+		Write down the electron's state as a function of time for all $t>0$.
 	\item
 		go through the results you obtained in parts (a) through (c) and
 		determine which of them are time independent.
@@ -60,110 +60,110 @@ initial state of an electron in a hydrogen atom.}
 \subsubsection{Answer}
 \begin{enumerate}
 	\item
-		Calculate the energy by sandwhiching the Hamiltonian between the
+		Calculate the energy by sandwiching the Hamiltonian between the
 		wavefunction:
 		\begin{align*}
-			\expect{E} &= \braopket{ψ}{H}{ψ} \\
+			\expval{E} &= \mel{\psi }{H}{\psi } \\
 			{} &= (\sqrt{\frac 13}\bra{3,1,0,+} + \sqrt{\frac 23}
 				\bra{2,1,1,-})H(\sqrt{\frac 13}\ket{3,1,0,+} + \sqrt{\frac 23}
 				\ket{2,1,1,-}) \\
 			\begin{split}
-			{} &= \frac 13 \braopket{3,1,0,+}{H}{3,1,0,+} + \frac{\sqrt{2}}{3}
-				\braopket{2,1,1,-}{H}{3,1,0,+} \\
-				&\quad + \frac{\sqrt{2}}{3} \braopket{3,1,0,+}{H}{2,1,1,-} +
-				\frac 23 \braopket{2,1,1,-}{H}{2,1,1,-}
+			{} &= \frac 13 \mel{3,1,0,+}{H}{3,1,0,+} + \frac{\sqrt{2}}{3}
+				\mel{2,1,1,-}{H}{3,1,0,+} \\
+				&\quad + \frac{\sqrt{2}}{3} \mel{3,1,0,+}{H}{2,1,1,-} +
+				\frac 23 \mel{2,1,1,-}{H}{2,1,1,-}
 			\end{split}\\
 		\intertext{For every term, the wavefunctions are eigenstates of the
 		Hamiltonian, so we extract the appropriate energy term from every
 		bra-ket sandwhich. Then the middle two terms integrate to zero since
 		states with different $n$ are orthogonal while the first and last terms
 		integrate to unity since they are properly normalized.}
-			\expect{E} &= \frac 13 E₃ + 0 + 0 + \frac 23 E₂ \\
+			\expval{E} &= \frac 13 E_3 + 0 + 0 + \frac 23 E_2 \\
 		\intertext{Each energy is related to the ground state energy by
-		$E_n = E₀/n²$, so}
-			{} &= \frac 13 \frac{E₀}{9} + \frac 23 \frac{E₀}{4}
+		$E_n = E_0/n^2$, so}
+			{} &= \frac 13 \frac{E_0}{9} + \frac 23 \frac{E_0}{4}
 		\end{align*}
 		\begin{align}
 			\boxed{
-			\expect{E} = \frac{11}{54} E₀ ≈ \SI{-2.77}{\eV}
+			\expval{E} = \frac{11}{54} E_0 \approx \SI{-2.77}{\eV}
 			}
 		\end{align}
 	\item
 		For each of the other expectation values, the process is very
 		similar with an appropriate change for eigenvalues; specifically,
 		\begin{align*}
-			L²\ket{n,ℓ,m,±} &= ℓ(ℓ+1)ℏ²\ket{n,ℓ,m,±} \\
-			S²\ket{n,ℓ,m,±} &= \frac 12(\frac 12 + 1)ℏ²\ket{n,ℓ,m,±} \\
-			L_z\ket{n,ℓ,m,±} &= ℓℏ\ket{n,ℓ,m,±} \\
-			S_z\ket{n,ℓ,m,±} &= ±\frac 12 ℏ\ket{n,ℓ,m,±}
+			L^2\ket{n,\ell ,m,\pm} &= \ell (\ell +1){\hbar}^2\ket{n,\ell ,m,\pm} \\
+			S^2\ket{n,\ell ,m,\pm} &= \frac 12(\frac 12 \pm 1){\hbar}^2\ket{n,\ell ,m,\pm} \\
+			L_z\ket{n,\ell ,m,\pm} &= m {\hbar}\ket{n,\ell ,m,\pm} \\
+			S_z\ket{n,\ell ,m,\pm} &= \pm\frac 12 {\hbar}\ket{n,\ell ,m,\pm}
 		\end{align*}
 		The same restrictions that the middle terms integrate to zero because
 		of orthogonality and the first and last terms integrate to unity still
 		applies, so we can almost immediately conclude that
 		\begin{align}
-			\boxed{\expect{L²} = 2ℏ²} \\
-			\boxed{\expect{S²} = \frac{3ℏ²}{4}} \\
-			\boxed{\expect{L_z} = \frac{2ℏ}{3}} \\
-			\boxed{\expect{S_z} = -\frac{ℏ}{6}}
+			\boxed{\expval{L^2} = 2{\hbar}^2} \\
+			\boxed{\expval{S^2} = \frac{{\hbar}^2}{12}} \\
+			\boxed{\expval{L_z} = \frac{2{\hbar}}{3}} \\
+			\boxed{\expval{S_z} = -\frac{{\hbar}}{6}}
 		\end{align}
 	\item
-		In the $\ket{r,θ,ϕ}$ basis,
+		In the $\ket{r,\theta ,\phi }$ basis,
 		\begin{align*}
-			\ket{3,1,0} &= R_{3,1}(r) Y_1^0(θ,ϕ) = R_{31}(r)
-				\sqrt{\frac{3}{4π}}\cos θ \\
-			\ket{2,1,1} &= R_{2,1}(r) Y_1^1(θ,ϕ) = -R_{21}(r)
-				\sqrt{\frac{3}{8π}} e^{iϕ} \sin θ \\
+			\ket{3,1,0} &= R_{3,1}(r) Y_1^0(\theta ,\phi ) = R_{31}(r)
+				\sqrt{\frac{3}{4{\pi}}}\cos \theta  \\
+			\ket{2,1,1} &= R_{2,1}(r) Y_1^1(\theta ,\phi ) = -R_{21}(r)
+				\sqrt{\frac{3}{8{\pi}}} e^{i\phi } \sin \theta  \\
 		\end{align*}
 		This means that the probability density is
 		\begin{align*}
-			\braket{ψ}{ψ} &= \frac 13 \braket{3,1,0}{3,1,0} +
+			\braket{\psi }{\psi } &= \frac 13 \braket{3,1,0}{3,1,0} +
 				\frac{\sqrt{2}}{3} \braket{2,1,1}{3,1,0} +
 				\frac{\sqrt{2}}{3} \braket{3,1,0}{2,1,1} +
 				\frac 23 \braket{2,1,1}{2,1,1} \\
-			{} &= \frac{1}{4π}\cos² θ R_{31}²(r) - \frac{1}{π} \sin θ \cos θ
-				(e^{iϕ} + e^{-iϕ}) R_{21}(r) R_{31}(r) + \frac{1}{4π}
-				\sin² θ R_{21}²(r)
+			{} &= \frac{1}{4{\pi}}\cos^2 \theta  R_{31}^2(r) - \frac{1}{{\pi}} \sin \theta  \cos \theta 
+				(e^{i\phi } + e^{-i\phi }) R_{21}(r) R_{31}(r) + \frac{1}{4{\pi}}
+				\sin^2 \theta  R_{21}^2(r)
 		\end{align*}
 		Integrating over $r$,
 		\begin{align*}
 			\begin{split}
-				∫_0^∞ \braket{ψ}{ψ} \dd r &=
-					∫_0^∞ \frac{1}{4π}\cos² θ R_{31}²(r) -
-					\frac{1}{π} \sin θ\cos θ (e^{iϕ} + e^{-iϕ})
+				\int_0^\infty  \braket{\psi }{\psi } \dd r &=
+					\int_0^\infty  \frac{1}{4{\pi}}\cos^2 \theta  R_{31}^2(r) -
+					\frac{1}{{\pi}} \sin \theta \cos \theta  (e^{i\phi } + e^{-i\phi })
 					R_{21}(r)R_{31}(r)\\
-					&\quad + \frac{1}{4π} \sin² θ R_{21}²(r) \dd r
+					&\quad + \frac{1}{4{\pi}} \sin^2 \theta  R_{21}^2(r) \dd r
 			\end{split}\\
-		\intertext{Integrating over all $r$, we know that $R_{nℓ}R_{n'ℓ'}$
+		\intertext{Integrating over all $r$, we know that $R_{n\ell }R_{n'\ell '}$
 		are orthonormal, so again the first and last terms' $R$ integrates to
 		unity and the middle term integrates to zero.}
-			{} &= \frac{1}{4π}(\cos² θ + \sin² θ)
+			{} &= \frac{1}{4{\pi}}(\cos^2 \theta  + \sin^2 \theta )
 		\end{align*}
-		Therefore we find that the probability density is constant in $θ$ and
-		$ϕ$ when integrated over all $r$.
+		Therefore we find that the probability density is constant in $\theta $ and
+		$\phi $ when integrated over all $r$.
 		\begin{align}
 			\boxed{
-			∫_0^∞ \braket{ψ}{ψ} \dd r = \frac{1}{4π}
+			\int_0^\infty  \braket{\psi }{\psi } \dd r = \frac{1}{4{\pi}}
 			}
 		\end{align}
 	\item
-		The states degenerate with the first term in $ψ$ are all combinations
-		of allowed $ℓ$, $m$, and $±$: $n$ must remain at $n=3$ since it is the
+		The states degenerate with the first term in $\psi $ are all combinations
+		of allowed $\ell $, $m$, and $\pm$: $n$ must remain at $n=3$ since it is the
 		$n$ quantum number which determines the energy of the state. The
-		angular momentum number $ℓ$ has to be in the range $[0, n-1]$, so there
+		angular momentum number $\ell $ has to be in the range $[0, n-1]$, so there
 		are at least 3 cases.
 		\begin{align*}
-			\ket{3,0,m,±} \\
-			\ket{3,1,m,±} \\
-			\ket{3,2,m,±}
+			\ket{3,0,m,\pm} \\
+			\ket{3,1,m,\pm} \\
+			\ket{3,2,m,\pm}
 		\end{align*}
-		Then for each $ℓ$, the projection $m$ can take a range of values
-		$m ∈ [-ℓ,ℓ]$ so using $\{...,-1,0,-1,...\}$ to denote a set of options,
+		Then for each $\ell $, the projection $m$ can take a range of values
+		$m \in [-\ell ,\ell ]$ so using $\{...,-1,0,-1,...\}$ to denote a set of options,
 		\begin{align*}
-			\ket{3,0,m,±} &\rightarrow \ket{3,0,\{0\},±}
+			\ket{3,0,m,\pm} &\rightarrow \ket{3,0,\{0\},\pm}
 				& \text{2 states} \\
-			\ket{3,1,m,±} &\rightarrow \ket{3,1,\{-1,0,1\},±}
+			\ket{3,1,m,\pm} &\rightarrow \ket{3,1,\{-1,0,1\},\pm}
 				& \text{6 states} \\
-			\ket{3,2,m,±} &\rightarrow \ket{3,2,\{-2,-1,0,1,2\},±}
+			\ket{3,2,m,\pm} &\rightarrow \ket{3,2,\{-2,-1,0,1,2\},\pm}
 				& \text{10 states}
 		\end{align*}
 		\begin{center}
@@ -173,13 +173,13 @@ initial state of an electron in a hydrogen atom.}
 		To get the time evolution, we simply use the fact that for each basis
 		eigenstate, we can add the time evolution component
 		\begin{align*}
-			\exp (-\frac{iE_nt}{ℏ})
+			\exp (-\frac{iE_nt}{{\hbar}})
 		\end{align*}
-		to get (in terms of the ground state energy $E₀$)
+		to get (in terms of the ground state energy $E_0$)
 		\begin{align}
 			\boxed{
-			\ket{ψ(t)} = \sqrt{\frac 13}\ket{3,1,0,+} e^{-iE₀t/9ℏ} +
-				\sqrt{\frac 23} \ket{2,1,1,-} e^{-iE₀t/4ℏ}
+			\ket{\psi (t)} = \sqrt{\frac 13}\ket{3,1,0,+} e^{-iE_0t/9{\hbar}} +
+				\sqrt{\frac 23} \ket{2,1,1,-} e^{-iE_0t/4{\hbar}}
 			}
 		\end{align}
 	\item
@@ -187,43 +187,106 @@ initial state of an electron in a hydrogen atom.}
 		the question without worrying about the wavefunction. Ehrenfest's
 		Theorem is
 		\begin{align*}
-			\frac{\dd}{\dd t}\expect{E} &= -\frac iℏ \expect{[Ω,H]} +
-				\expect{\frac{∂Ω}{∂t}}
+			\frac{\dd}{\dd t}\expval{\omega} &= -\frac i{\hbar} \expval{[{\omega},H]} +
+				\expval{\frac{\partial {\omega}}{\partial t}}
 		\end{align*}
-		None of the operators $L²$, $S²$, $L_z$, and $S_z$ are explicit in
+		None of the operators $L^2$, $S^2$, $L_z$, and $S_z$ are explicit in
 		time, so the second term on the right can be dropped. Then because
 		each of these operators commute with the Hamiltonian, the first term
 		on the right is also dropped. Therefore, the expectation values are
 		constant in time, so
 		\begin{align}
-			\boxed{\expect{L²} \quad\text{Time independent}} \\
-			\boxed{\expect{S²} \quad\text{Time independent}} \\
-			\boxed{\expect{L_z} \quad\text{Time independent}} \\
-			\boxed{\expect{S_z} \quad\text{Time independent}}
+			\boxed{\expval{L^2} \quad\text{Time independent}} \\
+			\boxed{\expval{S^2} \quad\text{Time independent}} \\
+			\boxed{\expval{L_z} \quad\text{Time independent}} \\
+			\boxed{\expval{S_z} \quad\text{Time independent}}
 		\end{align}
-		For the probabilty density, we return to the integral in part (c) and
+		For the probability density, we return to the integral in part (c) and
 		insert the appropriate exponential terms. The first and last terms'
 		exponentials cancel each other out, leaving
 		\begin{align*}
 			\begin{split}
-				∫_0^∞ \braket{ψ}{ψ} \dd r &=
-					∫_0^∞ \frac{1}{4π}\cos² θ R_{31}²(r) -
-					\frac{1}{π} \sin θ\cos θ (e^{iϕ} + e^{-iϕ})
+				\int_0^\infty  \braket{\psi }{\psi } \dd r &=
+					\int_0^\infty  \frac{1}{4{\pi}}\cos^2 \theta  R_{31}^2(r) -
+					\frac{1}{{\pi}} \sin \theta \cos \theta  (e^{i\phi } + e^{-i\phi })
 					R_{21}(r)R_{31}(r) \\
-					&\quad · \left[ \exp(\frac{i(E₂-E₃)t}{ℏ}) +
-					\exp(-\frac{i(E₂-E₃)t}{ℏ}) \right] \\
-					&\quad + \frac{1}{4π} \sin² θ R_{21}²(r) \dd r
+					&\quad\cdot \left[ \exp(\frac{i(E_2-E_3)t}{{\hbar}}) +
+					\exp(-\frac{i(E_2-E_3)t}{{\hbar}}) \right] \\
+					&\quad + \frac{1}{4{\pi}} \sin^2 \theta  R_{21}^2(r) \dd r
 			\end{split}
 		\end{align*}
 		The integral is unaffected by the new time factors, though, so
 		integrating over $r$, the middle term still goes to zero and we're
-		left with the same result previously of $1/4π$, therefore
+		left with the same result previously of $1/4{\pi}$, therefore
 		\begin{align}
 			\boxed{
-			∫_0^∞ \braket{ψ}{ψ} \dd r \quad\text{Time independent}
+			\int_0^\infty  \braket{\psi }{\psi } \dd r \quad\text{Time independent}
 			}
 		\end{align}
 \end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 2}
+\problem{2}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Spring 2012 II.P2}
+
+The heat equation $\partial_t T = \frac{\lambda}{c\rho}\partial^2_x T$ describes the flow of heat in one dimension, where $\lambda$ is the thermal conductivity, $\rho$ is the density and $c$ is the specific heat. Derive the dispersion relation for harmonic solutions that obey this equation. For harmonic seasonal variations in surface temperature described by $T = T_0 + T_1\cos(\omega t)$, where $\omega=2\pi$ radians per year, at what depth will the temperature phase lag be $6$ months if $\lambda=1$ W/m$\cdot$K, $c=10^3$ J/kg$\cdot$K and $\rho=2\times 10^3$ kg/m$^3$? It may be useful to remember that $\sqrt{i}=\frac{1}{\sqrt{2}}(1+i)$ 
+
+\subsubsection{Answer}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 3}
+\problem{3}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Spring 2012 II.P3}
+
+A charge $+Q$ is located at the center of a concentric hollow cavity (radius $a$) inside spherical conductor with radius $b$. The conductor is surrounded by a linear dielectric material of permitivity $\epsilon$ out to radius $c$.
+\begin{enumerate}
+	\item Derive expressions for electric fields in the four regions, $0<r<a,$ $a<r<b,$ $b<r<c,$ $r>c$.
+	\item Find the potential at $r=a$ (relative to the potential at infinity).
+	\item Show that the polarization density in the dielectric can be expressed as $\mathbf{P}=[(\epsilon-\epsilon_0)Q/(4\pi \epsilon r^2)]\hat{\mathbf{r}}$.
+	\item What is the bound charge in the dielectric?
+	\item What is the bound surface charge (at $r=b$ and $r=c$) in the dielectric? 
+\end{enumerate}
+\subsubsection{Answer}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 4}
+\problem{4}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Spring 2012 II.P4}
+	\index{Lagrangian!Bead on a Wire}
+A bead of mass $m$ slides on a straight wire. The wire rotates with an angular frequency $\omega$ around an axis perpendicular to the wire. The bead is connected to the axis by a spring of natural length $L$ and spring constant $k$.
+\begin{enumerate}
+	\item Give the Lagrangian of the system.
+	\item Derive the equation of motion of the bead.
+	\item Under what conditions will the bead have a stable equilibrium position along the wire? 
+\end{enumerate}
+
+\subsubsection{Answer}
+
+
+
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Problem 5
@@ -234,23 +297,23 @@ initial state of an electron in a hydrogen atom.}
 	\index{thermodynamics!Magnetic moments}
 	\index{statistical mechanics!Magnetic moments}
 
-Coinsider $N$ non-interacting, stationary particles, each with magnetic
-moment $\vec μ$ at temperature $T$ in a uniform external magnetic field
-$\vec B$. Their energy is $-\vec μ · \vec B$. Calculate the partition
+Consider $N$ non-interacting, stationary particles, each with magnetic
+moment $\mathbf{\mu}$ at temperature $T$ in a uniform external magnetic field
+$\mathbf{B}$. Their energy is $-\mathbf{\mu}\cdot\mathbf{B}$. Calculate the partition
 function $Z$, the internal energy, and magnetization for two distinct cases
 (a and b below):
 \begin{enumerate}
 	\item
-		The mgnetic moment of each particle can be oriented only parallel or
+		The magnetic moment of each particle can be oriented only parallel or
 		anti-parallel to the magnetic field.
 	\item
 		The magnetic moment of each particle can rotate freely.
 	\item
-		Show that, in both cases, the total magnetization $\vec M$ can be
-		written as a derivative of the parition function.
+		Show that, in both cases, the total magnetization $\mathbf{M}$ can be
+		written as a derivative of the partition function.
 	\item
 		In each case, calculate the fluctuations of magnetization
-		$\expect{(Δ\vec u)²}$.
+		$\expval{(\Delta \mathbf{u})^2}$.
 \end{enumerate}
 
 \subsubsection{Question}
@@ -260,98 +323,98 @@ function $Z$, the internal energy, and magnetization for two distinct cases
 		Since there are only two energy states, the sum is simply over the
 		two Boltzmann factors:
 		\begin{align*}
-			Z₁ &= e^{μB/kT} + e^{-μB/kT}
+			Z_1 &= e^{{\mu} B/kT} + e^{-{\mu} B/kT}
 		\end{align*}
 		This can be simplified using trigonometric identities to
 		\begin{align*}
-			Z₁ &= 2 \cosh (\frac{μB}{kT})
+			Z_1 &= 2 \cosh (\frac{{\mu} B}{kT})
 		\end{align*}
 		For fixed site particles, the partition function for $N$ particles
 		is simply $Z = Z^N$, so
 		\begin{align}
 			\boxed{
-			Z = 2^N \cosh^N (\frac{μB}{kT})
+			Z = 2^N \cosh^N (\frac{{\mu} B}{kT})
 			}
 		\end{align}
 		The total energy can be calculated either by finding the expectation
-		energy per particle $\expect{ε}$ and multiplying by $N$ using the
+		energy per particle $\expval{\varepsilon }$ and multiplying by $N$ using the
 		Boltzmann factors directly, or by using the thermodynamic identity
 		\begin{align*}
-			 U &= kT² \frac{∂\ln Z}{∂T}
+			 U &= kT^2 \frac{\partial \ln Z}{\partial T}
 		\end{align*}
 		Doing so,
 		\begin{align*}
-			U &= kT² \frac{N}{2\cosh(\frac{μB}{kT})} · 2\sinh(\frac{μB}{kT})
-				· (-\frac{μB}{kT²})
+			U &= kT^2 \frac{N}{2\cosh(\frac{{\mu} B}{kT})}\cdot 2\sinh(\frac{{\mu} B}{kT})
+				{\cdot} (-\frac{{\mu} B}{kT^2})
 		\end{align*}
 		\begin{align}
 			\boxed{
-			U = -NμB \tanh (\frac{μB}{kT})
+			U = -N{\mu} B \tanh (\frac{{\mu} B}{kT})
 			}
 		\end{align}
 		To find the Magnetization, we use the Boltzmann factors directly since
 		we don't know a thermodynamic relation. Let
 		\begin{align*}
-			\expect{m} &= \sum_μ μ \frac{e^{-ε_μ/kT}}{Z₁} \\
-			{} &= \frac{1}{Z₁}( -μ e^{μB/kT} + μ e^{-μB/kT} ) \\
-			{} &= -μ \frac{2\sinh(\frac{μB}{kT})}{2\cosh(\frac{μB}{kT})}
+			\expval{m} &= \sum_{\mu} {\mu} \frac{e^{-\varepsilon _{\mu}/kT}}{Z_1} \\
+			{} &= \frac{1}{Z_1}( -{\mu} e^{{\mu} B/kT} + {\mu} e^{-{\mu} B/kT} ) \\
+			{} &= -{\mu} \frac{2\sinh(\frac{{\mu} B}{kT})}{2\cosh(\frac{{\mu} B}{kT})}
 		\end{align*}
-		So knowing that $\expect{M} = N\expect{m}$,
+		So knowing that $\expval{M} = N\expval{m}$,
 		\begin{align}
 			\boxed{
-			\expect{M} = -Nμ \tanh(\frac{μB}{kT})
+			\expval{M} = -N{\mu} \tanh(\frac{{\mu} B}{kT})
 			}
 		\end{align}
 	\item
 		In the continuous case, the sum needs to be changed into an integral,
 		remembering to keep $Z$ unitless. This requires dividing by the volume
-		of the energy state, which in this case is $μB$. (Justification: think
-		of the energy vector $\vec μ · \vec B = μB\cos θ$ on the unit circle
-		of length $μB$. From geometry, the unitless $\dd θ$ is related to
-		$\dd ε$ by the factor $μB$.)
+		of the energy state, which in this case is ${\mu} B$. (Justification: think
+		of the energy vector $\vec {\mu}\cdot \vec B = {\mu} B\cos \theta $ on the unit circle
+		of length ${\mu} B$. From geometry, the unitless $\dd \theta $ is related to
+		$\dd \varepsilon $ by the factor ${\mu} B$.)
 		\begin{align*}
-			Z₁ &= ∫_{-μB}^{μB} e^{-ε/kT} \frac{\dd ε}{μB} \\
-		\intertext{Letting $u = -\frac{ε}{kT}$,}
-			Z₁ &= -\frac{kT}{μB} ∫_{μB/kT}^{-μB/kT} e^u \dd u \\
-			{} &= 2 \frac{kT}{μB} \sinh (\frac{μB}{kT})
+			Z_1 &= \int_{-{\mu} B}^{{\mu} B} e^{-\varepsilon /kT} \frac{\dd \varepsilon }{{\mu} B} \\
+		\intertext{Letting $u = -\frac{\varepsilon }{kT}$,}
+			Z_1 &= -\frac{kT}{{\mu} B} \int_{{\mu} B/kT}^{-{\mu} B/kT} e^u \dd u \\
+			{} &= 2 \frac{kT}{{\mu} B} \sinh (\frac{{\mu} B}{kT})
 		\end{align*}
 		Therefore the partition function for all $N$ particles is
 		\begin{align}
 			\boxed{
-			Z = (\frac{2kT}{μB})^N \sinh^N(\frac{μB}{kT})
+			Z = (\frac{2kT}{{\mu} B})^N \sinh^N(\frac{{\mu} B}{kT})
 			}
 		\end{align}
 		The total energy is found in the same way as the previous case, giving
 		\begin{align}
 			\boxed{
-			U = NkT - NμB \coth (\frac{μB}{kT})
+			U = NkT - N{\mu} B \coth (\frac{{\mu} B}{kT})
 			}
 		\end{align}
 		For the magnetization, we also calculate the expectation value from
 		integrating the probability distribution, again making sure to keep
 		the correct units. This time we work with the relevant projection of
-		the magnetic moment $m = μ\cos θ$ so that when combined with the energy
-		$ε = -μB\cos θ$, the magnetization per particle in each state is $m =
-		-ε/B$.
+		the magnetic moment $m = {\mu}\cos \theta $ so that when combined with the energy
+		$\varepsilon  = -{\mu} B\cos \theta $, the magnetization per particle in each state is $m =
+		-\varepsilon /B$.
 		\begin{align*}
-			\expect{m} &= ∫_{-μB}^{μB} -\frac{ε}{B} \frac{e^{-ε/kT}}{Z₁}
-				\frac{\dd ε}{μB} \\
-			{} &= \frac{1}{μZ₁}(\frac{kT}{B})² ∫_{-μB/kT}^{μB/kT} e^u \dd u \\
-			{} &= \frac{kT}{B} \frac{2\sinh(\frac{μB}{kT})}
-				{2\sinh(\frac{μB}{kT})} \\
+			\expval{m} &= \int_{-{\mu} B}^{{\mu} B} -\frac{\varepsilon }{B} \frac{e^{-\varepsilon /kT}}{Z_1}
+				\frac{\dd \varepsilon }{{\mu} B} \\
+			{} &= \frac{1}{{\mu}Z_1}(\frac{kT}{B})^2 \int_{-{\mu} B/kT}^{{\mu} B/kT} e^u \dd u \\
+			{} &= \frac{kT}{B} \frac{2\sinh(\frac{{\mu} B}{kT})}
+				{2\sinh(\frac{{\mu} B}{kT})} \\
 			{} &= \frac{kT}{B}
 		\end{align*}
-		The total magnetization $\expect{M} = N\expect{m}$ is
+		The total magnetization $\expval{M} = N\expval{m}$ is
 		\begin{align}
 			\boxed{
-			\expect{M} = \frac{NkT}{B}
+			\expval{M} = \frac{NkT}{B}
 			}
 		\end{align}
 		Note that this is to be expected for the continuous case limit which
 		corresponds to the classical limit. We'd expect the total energy to
 		be related to the magnetization by $U = MB$. Rearranging the terms,
 		\begin{align*}
-			\expect{M}B &= NkT \\
+			\expval{M}B &= NkT \\
 			U &= NkT
 		\end{align*}
 		which is the expected result from the equipartition theorem for a
@@ -362,45 +425,45 @@ function $Z$, the internal energy, and magnetization for two distinct cases
 		be presented here. Begin by writing the first starting integral
 		from the previous problem
 		\begin{align*}
-			\expect{m} &= ∫_{-μB}^{μB} m \frac{e^{-ε/kT}}{Z₁}
-				\frac{\dd ε}{μB}
+			\expval{m} &= \int_{-{\mu} B}^{{\mu} B} m \frac{e^{-\varepsilon /kT}}{Z_1}
+				\frac{\dd \varepsilon }{{\mu} B}
 		\end{align*}
-		The $Z₁$ can be pulled outside the integral since it is a constant.
-		Then note that per our definition $ε = -mB$, it follows that
+		The $Z_1$ can be pulled outside the integral since it is a constant.
+		Then note that per our definition $\varepsilon  = -mB$, it follows that
 		\begin{align*}
-			\frac{∂ε}{∂B} &= -m
+			\frac{\partial \varepsilon }{\partial B} &= -m
 		\end{align*}
 		We identify the integral above to be a result of using the chain
 		rule, so we undo that and get
 		\begin{align*}
-			\expect{m} &= \frac{1}{Z₁} ∫_{-μB}^{μB} \frac{∂}{∂B}( -e^{-ε/kT} )
-				\frac{\dd ε}{μB}
+			\expval{m} &= \frac{1}{Z_1} \int_{-{\mu} B}^{{\mu} B} \frac{\partial }{\partial B}( -e^{-\varepsilon /kT} )
+				\frac{\dd \varepsilon }{{\mu} B}
 		\intertext{Changing the order of integration and differentiation,}
-			{} &= \frac{1}{Z₁} \frac{∂}{∂B}( ∫_{-μB}^{μB} -e^{-ε/kT}
-				\frac{\dd ε}{μB} )
+			{} &= \frac{1}{Z_1} \frac{\partial }{\partial B}( \int_{-{\mu} B}^{{\mu} B} -e^{-\varepsilon /kT}
+				\frac{\dd \varepsilon }{{\mu} B} )
 		\intertext{The term within the brackets is simply the definition of
 		the partition function, so}
-			\expect{m} &= \frac{1}{Z₁} \frac{∂Z₁}{∂B} = \frac{∂\ln Z₁}{∂B}
+			\expval{m} &= \frac{1}{Z_1} \frac{\partial Z_1}{\partial B} = \frac{\partial \ln Z_1}{\partial B}
 		\end{align*}
-		To then get the total magnetization $\expect{M}$, we use several
+		To then get the total magnetization $\expval{M}$, we use several
 		properties of differentiation and logarithms:
 		\begin{align*}
-			\expect{M} &= N\expect{m} \\
-			{} &= N \frac{∂\ln Z₁}{∂B} \\
-			{} &= \frac{∂ (N\ln Z₁)}{∂B} \\
-			{} &= \frac{∂\ln (Z₁)^N}{∂B}
+			\expval{M} &= N\expval{m} \\
+			{} &= N \frac{\partial \ln Z_1}{\partial B} \\
+			{} &= \frac{\partial  (N\ln Z_1)}{\partial B} \\
+			{} &= \frac{\partial \ln (Z_1)^N}{\partial B}
 		\end{align*}
 		Giving us the final expression
 		\begin{align}
 			\boxed{
-			\expect{M} = \frac{∂\ln Z}{∂B}
+			\expval{M} = \frac{\partial \ln Z}{\partial B}
 			}
 		\end{align}
 	\item
 		Using the definition
 		\begin{align*}
-			\expect{(Δμ)²} &= \expect{μ²} - \expect{μ}²
+			\expval{(\Delta {\mu})^2} &= \expval{{\mu}^2} - \expval{{\mu}}^2
 		\end{align*}
-		we already know $\expect{μ}²$ for both cases from the previous
-		problems, so we must only calculate $\expect{μ²}$.
+		we already know $\expval{{\mu}}^2$ for both cases from the previous
+		problems, so we must only calculate $\expval{{\mu}^2}$.
 \end{enumerate}

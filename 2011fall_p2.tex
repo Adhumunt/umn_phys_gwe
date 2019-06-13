@@ -7,9 +7,9 @@
 	\index{Lagrangian!Pendulum from free horizontal support}
 	\index{mechanics!Pendulum from free horizontal support}
 
-Mass $m₁$ moves freely along a fixed, long, horizontal rod. The position of
-$m₁$ on the rod is $x$. A massless string of length $ℓ$ is attached to $m₁$
-at the end and to mass $m₂$ at the other. Mass $m₂$ executes pendulum motion
+Mass $m_1$ moves freely along a fixed, long, horizontal rod. The position of
+$m_1$ on the rod is $x$. A massless string of length $\ell $ is attached to $m_1$
+at the end and to mass $m_2$ at the other. Mass $m_2$ executes pendulum motion
 in the vertical plane containing the rod.
 \begin{enumerate}
 	\item
@@ -17,106 +17,194 @@ in the vertical plane containing the rod.
 	\item
 		Derive the equations of motion and the corresponding conservation laws.
 	\item
-		Assume that $x(0)=x₀$, $\dot x(0)=0$, $φ(0)=φ₀$ $(|φ₀| ≪ 1)$,
-		and $\dot φ(0)=0$. Find $x(t)$ and $φ(t)$ for $t > 0$.
+		Assume that $x(0)=x_0$, $\dot x(0)=0$, $\phi (0)=\phi_0$ $(|\phi_0| {\ll} 1)$,
+		and $\dot \phi (0)=0$. Find $x(t)$ and $\phi (t)$ for $t > 0$.
 \end{enumerate}
 
 
 \subsubsection{Answer (1)}
-For the sliding support mass $m₁$:
+For the sliding support mass $m_1$:
 \begin{align*}
-	T₁ &= \frac{1}{2}m₁ \dot{x}² \\
-	V₁ &= 0
+	T_1 &= \frac{1}{2}m_1 \dot{x}^2 \\
+	V_1 &= 0
 \end{align*}
-For the pendulum mass $m₂$:
+For the pendulum mass $m_2$:
 \begin{align*}
-	T₂ &= \frac{1}{2}m₂ \dot{y}² + \frac{1}{2}m₂(\dot x + \dot x₂)² \\
-	V₂ &= -m₂gy₂ \\
-\intertext{Then using $x₂ = ℓ\sin φ$ and $y₂ = -ℓ\cos φ$,}
-	T₂ &= \frac{1}{2}m₂ \left( ℓ²\dot φ² + \dot x² + 2ℓ\dot φ\dot x \cos φ
+	T_2 &= \frac{1}{2}m_2 \dot{y}^2 + \frac{1}{2}m_2(\dot x + \dot x_2)^2 \\
+	V_2 &= -m_2gy_2 \\
+\intertext{Then using $x_2 = \ell \sin \phi $ and $y_2 = -\ell \cos \phi $,}
+	T_2 &= \frac{1}{2}m_2 \left( \ell ^2\dot \phi ^2 + \dot x^2 + 2\ell \dot \phi \dot x \cos \phi 
 		\right) \\
-	V₂ &= -m₂ g y₂
+	V_2 &= -m_2 g y_2
 \end{align*}
 Putting the Lagrangian together equals the first line. Applying the small
 angle approximation gives the second line where the kinetic energy term
-involving $\cos φ$ can be simply expanded as $\cos φ ≈ 1$, but the potential
-energy term must be expanded to second order so that $\cos φ ≈ 1 -
-\frac{1}{2}φ²$.
+involving $\cos \phi $ can be simply expanded as $\cos \phi  \approx 1$, but the potential
+energy term must be expanded to second order so that $\cos \phi  \approx 1 -
+\frac{1}{2}\phi ^2$.
 
 \begin{align}
 	\boxed{
-	\sL = \frac{1}{2} (m₁ + m₂)\dot x² + \frac{1}{2} m₂ \left(
-		ℓ²\dot φ² + 2ℓ\dot φ\dot x\cos φ \right) + m₂gℓ\cos φ
+	\mathcal{L} = \frac{1}{2} (m_1 + m_2)\dot x^2 + \frac{1}{2} m_2 \left(
+		\ell ^2\dot \phi ^2 + 2\ell \dot \phi \dot x\cos \phi  \right) + m_2g\ell \cos \phi 
 	}
 	\\
 	\boxed{
-	\sL ≈ \frac{1}{2} (m₁ + m₂)\dot x² + \frac{1}{2} m₂ \left(
-		ℓ²\dot φ² + 2ℓ\dot φ\dot x \right) + m₂gℓ - \frac{1}{2}m₂gℓφ²
+	\mathcal{L} \approx \frac{1}{2} (m_1 + m_2)\dot x^2 + \frac{1}{2} m_2 \left(
+		\ell ^2\dot \phi ^2 + 2\ell \dot \phi \dot x \right) + m_2g\ell  - \frac{1}{2}m_2g\ell \phi ^2
 	}
 \end{align}
 
 \subsubsection{Answer (2)}
 Constructing the Euler-Lagrange equations for $x$ and $\dot x$:
 \begin{align*}
-	\frac{∂\sL}{∂x} &= 0 &
-		\frac{∂\sL}{∂\dot x} &= (m₁ + m₂)\dot x + m₂ℓ\dot φ
+	\frac{\partial \mathcal{L}}{\partial x} &= 0 &
+		\frac{\partial \mathcal{L}}{\partial \dot x} &= (m_1 + m_2)\dot x + m_2\ell \dot \phi 
 	\\
 	{}&{}&
-	\frac{d}{dt}\left[ \frac{∂\sL}{∂\dot x} \right]
-		&= (m₁ + m₂)\ddot x + m₂ℓ\ddot φ
+	\frac{d}{dt}\left[ \frac{\partial \mathcal{L}}{\partial \dot x} \right]
+		&= (m_1 + m_2)\ddot x + m_2\ell \ddot \phi 
 \end{align*}
 \begin{align}
-	(m₁ + m₂)\ddot x + m₂ℓ\ddot φ = 0
+	(m_1 + m_2)\ddot x + m_2\ell \ddot \phi  = 0
 \end{align}
-and for $φ$ and $\dot φ$:
+and for $\phi $ and $\dot \phi $:
 \begin{align*}
-	\frac{∂\sL}{∂φ} &= -m₂gℓφ &
-		\frac{∂\sL}{∂\dot φ} &= m₂ℓ²\dot φ + m₂ℓ\dot x
+	\frac{\partial \mathcal{L}}{\partial \phi } &= -m_2g\ell \phi  &
+		\frac{\partial \mathcal{L}}{\partial \dot \phi } &= m_2\ell ^2\dot \phi  + m_2\ell \dot x
 	\\
 	{}&{}&
-	\frac{d}{dt}\left[ \frac{∂\sL}{∂\dot φ} \right]
-		&= m₂ℓ²\ddot φ + m₂ℓ\ddot x
+	\frac{d}{dt}\left[ \frac{\partial \mathcal{L}}{\partial \dot \phi } \right]
+		&= m_2\ell ^2\ddot \phi  + m_2\ell \ddot x
 \end{align*}
 \begin{align}
-	-m₂gℓφ - m₂ℓ²\ddot φ + m₂ℓ\ddot x = 0
+	-m_2g\ell \phi  - m_2\ell ^2\ddot \phi  + m_2\ell \ddot x = 0
 \end{align}
 
 The equations of motion are:
 \begin{align}
 	\boxed{
-	\ddot x + \frac{m₂}{m₁+m₂} ℓ \ddot φ = 0
+	\ddot x + \frac{m_2}{m_1+m_2} \ell  \ddot \phi  = 0
 	} \\
 	\boxed{
-	\ddot φ + \frac{1}{ℓ}\ddot x + \frac{g}{ℓ}φ = 0
+	\ddot \phi  + \frac{1}{\ell }\ddot x + \frac{g}{\ell }\phi  = 0
 	}
 \end{align}
 
 \subsubsection{Answer (3)}
 Solve for $\ddot x$ and substitute into the other differential equation
 \begin{align}
-	\ddot φ - \frac{1}{ℓ}\frac{m₂}{m₁+m₂} ℓ \ddot φ + \frac{g}{ℓ}φ &= 0\nonumber
+	\ddot \phi  - \frac{1}{\ell }\frac{m_2}{m_1+m_2} \ell  \ddot \phi  + \frac{g}{\ell }\phi  &= 0\nonumber
 	\\
-	\frac{m₁}{m₁+m₂} \ddot φ + \frac{g}{ℓ}φ &= 0\nonumber
+	\frac{m_1}{m_1+m_2} \ddot \phi  + \frac{g}{\ell }\phi  &= 0\nonumber
 	\\
-	\ddot φ + \frac{g}{ℓ}\frac{m₁+m₂}{m₁} φ &= 0
+	\ddot \phi  + \frac{g}{\ell }\frac{m_1+m_2}{m_1} \phi  &= 0
 \end{align}
 This is just the differential equation for a simple harmonic oscillator, so
 considering the given boundary conditions,
 \begin{align}
 	\boxed{
-	φ(t) = φ₀\cos(ωt)
-		\quad\quad\text{where } ω² = \frac{g}{ℓ}\frac{m₁+m₂}{m₁}
+	\phi (t) = \phi _0\cos({\omega} t)
+		\quad\quad\text{where } {\omega}^2 = \frac{g}{\ell }\frac{m_1+m_2}{m_1}
 	}
 \end{align}
 
-Then differentiating $φ(t)$ twice and substituting into the first equation,
+Then differentiating $\phi (t)$ twice and substituting into the first equation,
 \begin{align*}
-	\ddot x &= ℓφ₀ω²\frac{m₂}{m₁+m₂}\cos(ωt)
+	\ddot x &= \ell \phi _0{\omega}^2\frac{m_2}{m_1+m_2}\cos({\omega} t)
 \end{align*}
 Then integrating twice and applying the boundary conditions,
 \begin{align}
 	\boxed{
-	x(t) = x₀ - \frac{g}{ω²}\frac{m₂}{m₁}\cos(ωt)
+	x(t) = x_0 - \frac{g}{{\omega}^2}\frac{m_2}{m_1}\cos({\omega} t)
 	}
 \end{align}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 2}
+\problem{2}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Spring 2011 II.P2}
+A light bulb has a tungsten filament formed into a coil of 60 turns. The coil is a straight column of 3 mm in diameter and 20 mm in length. The bulb is rated 75 W for an AC source of 110 V with a frequency of 60 Hz. Find the current in the bulb as a function of time $t$ after it is connected to the AC source at $t = 0$. Assume that the voltage of the source is of the form $V(t) = V_0 \cos(\omega t)$ and the resistance of the filament stays constant.
+\subsubsection{Answer}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 3}
+\problem{3}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Spring 2011 II.P3}
+
+A particle of mass $m$ is in the potential
+\begin{equation}
+V(x)= \begin{cases}
+		-\Omega_0\delta(x) &-a/2<x<a/2\\
+		\infty, &\text{otherwise}
+\end{cases}
+\end{equation}
+where $\delta(x)$ is the Dirac delta function and $\Omega_0$ and $a$ are positive parameters.
+\begin{enumerate}
+	\item For the energy eigenstates that have wave functions with odd parity, find these wave functions and the corresponding eigenvalues.
+	\item For the rest of the energy eigenstates, find the approximate eigenvalues by treating $-\Omega_0\delta(x)$ as a perturbation. What is required of $\Omega_0$ for the approximation to be valid? 
+	\item For a special value of $\Omega_0$, the energy of the ground state is exactly zero. Find this special value of $\Omega_0$
+\end{enumerate}
+\subsubsection{Answer}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 4}
+\problem{4}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Spring 2011 II.P4}
+
+For the simple harmonic oscillator with the Hamiltonian
+\begin{equation*}
+	H_{\text{sho}} = \frac{P^2}{2m} + \frac{1}{2}m\omega^2 X^2 
+\end{equation*}
+where $P$ and $X$ are the momentum and position operators, the wave functions for the energy eigenstates are $\phi_n(x/a)$, where $n$ is a non-negative integer, $a$ is a constant with the dimension R of length, and $\int_{-\infty}^{\infty}\abs{\psi_{n}(x/a)}^2\dd x =1$. Now consider two distinguishable particles of mass m with the total Hamiltonian
+\begin{equation*}
+	H = \frac{P_1^2}{2m}+\frac{P_2^2}{2m} + \frac{1}{2}m\omega^2\qty[X_1^2+X_2^2+(X_1-X_2)^2].
+\end{equation*}
+\begin{enumerate}
+	\item Find the normalized wave functions for the eigenstates of $H$ in terms of $\psi_{n^\prime}(\eta)$ and $\psi_{n^{\prime\prime}}$ by choosing two appropriate dimensionless position variables $\eta$ and $\xi$.
+	\item Find the eigenalues of $H$.
+	\item How would the answers to the above two problems change if the two particles are identical and have spin 0?
+\end{enumerate}
+
+\subsubsection{Answer}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 5}
+\problem{5}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Spring 2011 II.P5}
+
+Consider only the rotational motion of a diatomic molecule with moment of inertia $I$.
+\begin{enumerate}
+	\item What is the specific heat for a classical system of $N$ such molecules?
+	\item In the quantum mechanical case, the energy levels for an individual molecule are
+	\begin{equation*}
+		E_{lm} = \frac{l(l+1)\hbar^2}{2I}
+	\end{equation*}
+	where $l = 0, 1, 2, \cdots$ and for each $l, m = -l, -l+1,\cdots, l$. For a system of $N$ such molecules, express the partition function $Z$ and the energy $E$ as sums of well-defined quantities.
+	\item Calculate the specific heat in the low-temperature and high-temperature limits for the quantum mechanical case.
+	\item For what range of temperature is the classical result in (1) valid?
+\end{enumerate}
+
+\subsubsection{Answer}
 

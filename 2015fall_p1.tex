@@ -1,0 +1,163 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 1}
+\problem{1}
+\subsubsection{Question}
+% Keywords
+	\index{electrostatics!Method of Images}
+A positive point charge $q$ is fixed at a distance $a = 10$ cm above a grounded and conducting plane. An equal negative charge $-q$ is at a distance $b$ above the plane, on the segment perpendicular to the plane that goes from the plane to the positive charge. Compute the value of $b$ for which no force is acting on the negative charge, neglecting gravity.
+
+\subsubsection{Answer}
+The trick with this problem is that the charge at $b$ is placed in between the conducting plane and the charge at $a$. First, for convenience, let us name each of these point charges. Take $P_1 = (q,a)$, and $P_2=(-q,b)$. To solve this problem, use the method of images to remove the conducting plane and place charges $P_3 = (q,-b)$ and $P_4 = (-q,-a)$. Since the force on $(-q,b)$ should be zero, apply the superposition principle along with Coulomb's law to find
+\begin{equation*}
+	0=\sum_{i}\mathbf{F}(P_i,P_1) = (-q)\sum_{i}\mathbf{E}(P_i,P_1).
+\end{equation*}
+Thus the sum of the electric fields should vanish. Since these point charges are colinear, this significantly reduces the problem. Then
+\begin{align*}
+	\mathbf{E}_{12} + \mathbf{E}_{32} + \mathbf{E}_{42} &= \frac{q}{4\pi \epsilon_0}\qty[\frac{(-\hat{\mathbf{z}})}{(a-b)^2} - \frac{(\hat{\mathbf{z}})}{(b-(-a))^2} + \frac{\hat{\mathbf{z}}}{(b-(-b))^2}] = 0\\
+	&\implies -\frac{1}{(b-a)^2} - \frac{1}{(b+a)^2} + \frac{1}{(2b)^2} =0
+\end{align*}
+This is an algebraic problem now. After the dust settles, we find the equation $-7b^4 - 10 a^2b^2 + a^4 = 0.$ The solutions are
+\begin{align*}
+	b^2 = \frac{5a^2\pm a^2\sqrt{32}}{-7} \implies b \approx 65.7 \text{ cm}
+\end{align*}
+where we have taken the negative solution and used $a=10$ cm.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 2}
+\problem{2}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Fall 2015 I.P2}
+Consider a free Fermi gas consisting of $N$ spin $\frac{1}{2}$ particles of mass $m$ in 2 dimensions confined to a square with area $A = L^2$. 
+\begin{enumerate}
+	\item Find the Fermi energy $\epsilon_F$ (in terms of $N$, $A$, and $m$).
+	\item Derive a formula for the density of states. (Hint: You should find that it is a constant, independent of $\epsilon$).
+	\item Find the average energy per particle in terms of $\epsilon_F$.
+\end{enumerate}
+\subsubsection{Answer}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 3}
+\problem{3}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Fall 2015 I.P3}
+An electron in a hydrogen atom does not fall to the proton because of quantum motion (which may be accounted for by the Heisenberg uncertainty relation for an electron localized in the volume with size $r$). This is true because the absolute value of the Coulomb potential energy goes to minus infinity with decreasing distance to the center $r$ relatively slowly, like $-1/r$. Is such an ``atom'' stable for any potential behaving as $-1/r^s$? If not, find the range of values of $s$ at which the ``atom'' is stable, so that ``the electron'' does not fall to the center.
+\subsubsection{Answer}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 4}
+\problem{4}
+\subsubsection{Question}
+% Keywords
+	\index{thermodynamics!Mean Free Path of $N_2$ and Particle Velocity}
+	\index{statistical mechanics!Mean Free Path of $N_2$ and Particle Velocity}
+
+Estimate the average velocity (in \si{\m\per\s}) and the mean free path (in \si{\m}) of nitrogen molecules in this room. Hint: Recall that atmospheric pressure is about $10^5$ N/m$^2$.
+\subsubsection{Answer}
+See solution for \nameref{prob:F2000I08}. These problems are identical.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 5}
+\problem{5}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Fall 2015 I.P5}
+A coaxial cable of length $l=1$ m is made of two thin coaxial copper cylinders with diameters $a = 1$ cm and $b = 2$ cm separated by air. At one end of the cable the internal and external cylinders are connected by a short wire. At the other end internal and external cylinders are connected to opposite poles of a battery. The current runs on the external cylinder to the opposite end of the cable and then returns back to the battery via the internal cylinder. Calculate the cable inductance $L$ in H (Henry).
+\subsubsection{Answer}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 6}
+\problem{6}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Fall 2015 I.P6}
+A particle of mass $m$ can move in 1 spatial dimension $x$. Its wave function is
+\begin{equation*}
+	\psi(x,t) = N e^{-a\abs{x}-ibt}
+\end{equation*}
+where $t$ is time, and $N,$ $a,$ and $b$ are positive constants. Find the potential $V(x)$ which governs the motion of this particle. (Hint: Take into account the discontinuity in the slope of the wave function at $x = 0$.)
+\subsubsection{Answer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 7}
+\problem{7}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Fall 2015 I.P7}
+Consider the arrangement shown at right with a rectangular cart with mass $M$ that can move horizontally along a rail on massless pulleys. A sphere with mass $m$ is attached too the cart by a massless string of length $L$. If the string is always taut and there are no dissipative forces, what is the period of small oscillations for the sphere?
+\subsubsection{Answer}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 8}
+\problem{8}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Fall 2015 I.P8}
+Consider a particle which has only two energy states, $E_1 = 0$, $E_2 = \epsilon$.
+\begin{enumerate}
+	\item Compute the aver energy $\expval{E}$ of such particle in a reservoir with temperature $T$.
+	\item Calculate the heat capacity $C_V$ of a system of $N$ such non-interacting particles.
+\end{enumerate}
+\subsubsection{Answer}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 9
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 9}
+\problem{9}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Fall 2015 I.P9}
+A solid cylinder with a uniform density has a mass $M$ and radius $R$ is released with zero initial speed from the top of an inclined surface, as shown in the figure. 
+\begin{enumerate}
+	\item Calculate explicitly that moment of inertia off the cylinder.
+	\item How long does it take for it to reach the bottom of the surface, assuming that it rolls without sliding?
+	\item Suppose a hollow cylindrical shell with the same mass $M$ and radius $R$ is released at the same time as the cylinder. Does it reach the bottom of the inclined surface sooner or later than the cylinder? Explain your reasoning.
+\end{enumerate}
+\subsubsection{Answer}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 10
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 10}
+\problem{10}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Fall 2015 I.P10}
+A particular Cerenkov particle detector consists of a tank full of water. A tau passes through the detector and collides with a nucleus of a hydrogen atom in the detector. The tau-antineutrino and proton annihilate in the collision to produce an anti‐tau and a neutron.
+\begin{enumerate}
+	\item What is that minimum energy the tau‐antineutrino needs to have in the rest frame of the detector in order for this interaction to happen?
+	\item Using the minimum energy from part (a), what is the magnitude and direction (with respect to the incoming anti‐neutrino) of the momentum of the produced anti‐tau?
+\end{enumerate}
+That anti‐tau has a mass of $1.8$ GeV/$c^2$. The proton and neutron each have a mass of $0.90$ GeV/$c^2$. Assume the antineutrino is massless.
+\subsubsection{Answer}
+

@@ -4,10 +4,11 @@
 \problem{1}
 \subsubsection{Question}
 % Keywords
-	\index{mechanics!Bead on a hoop}
+	\index{Lagrangian!Bead on a Wire}
+    \index{mechanics!Small Oscillations}
 
 A particle of mass $m$ is constrained to move without friction on a circular
-wire of radius $R$ rotating with constant angular frequency $ω$ about a
+wire of radius $R$ rotating with constant angular frequency ${\omega}$ about a
 vertical diameter. Gravity can not be neglected.
 \begin{enumerate}[a)]
     \item
@@ -37,7 +38,7 @@ vertical diameter. Gravity can not be neglected.
             arc (-90:-60:0.5cm)
             coordinate (arc end);
         \draw ($(arc start)!0.5!(arc end)$)
-            node [anchor=north] {$\,\,θ$};
+            node [anchor=north] {$\,\,\theta $};
     \end{tikzpicture}
 \end{figure}
 
@@ -48,108 +49,108 @@ the kinetic and potential energies. For the kinetic energy, there is an energy
 associated with the rotation about the axis and one along the bead. These
 combined to give
 \begin{align*}
-    T &= \frac 12 m (Rω\sin θ)² + \frac 12 m (R\dot θ)² \\
-    {} &= \frac 12 m R² ω² \sin² θ + \frac 12 m R² {\dot θ}²
+    T &= \frac 12 m (R{\omega}\sin \theta )^2 + \frac 12 m (R\dot \theta )^2 \\
+    {} &= \frac 12 m R^2 {\omega}^2 \sin^2 \theta  + \frac 12 m R^2 {\dot \theta }^2
 \end{align*}
 The potential energy is all gravitational, so
 \begin{align*}
-    V &= -mgR\cos θ
+    V &= -mgR\cos \theta 
 \end{align*}
 where the zero point was taken to be at the center of the hoop to avoid adding
 extra constant terms to the Lagrangian. Combining the two, we get
 \begin{align}
     \boxed{
-    \mathcal L = \frac 12 mR²ω²\sin² θ + \frac 12 mR²{\dot θ}² + mgR\cos θ
+    \mathcal L = \frac 12 mR^2{\omega}^2\sin^2 \theta  + \frac 12 mR^2{\dot \theta }^2 + mgR\cos \theta 
     }
 \end{align}
-Taking the appropriate derivatives in $θ$, the equation of motion is
+Taking the appropriate derivatives in $\theta $, the equation of motion is
 \begin{align}
     \boxed{
-    \ddot θ = ω² \sin θ \cos θ - \frac{g}{R}\sin θ
+    \ddot \theta  = {\omega}^2 \sin \theta  \cos \theta  - \frac{g}{R}\sin \theta 
     }
 \end{align}
 
 In order to determine any possible stable points, we note that a stable point
 is a place where the angle does not change in time. Since this also equates to
-$\ddot θ = 0$, we set the equation above equal to zero and solve for the angles
-which satisfy this condition. They end up being the trivial $θ = \{0, π\}$
+$\ddot \theta  = 0$, we set the equation above equal to zero and solve for the angles
+which satisfy this condition. They end up being the trivial $\theta  = \{0, {\pi}\}$
 where the sine function is zero as well as
 \begin{align*}
-    \cos θ₀ &= \frac{g}{Rω²}
+    \cos \theta _0 &= \frac{g}{R{\omega}^2}
 \end{align*}
 The three stable points are then
 \begin{align}
-    \boxed{ θ₀ = \left\{ 0, \arccos(\frac{g}{Rω²}), π \right\} }
+    \boxed{ \theta _0 = \left\{ 0, \arccos(\frac{g}{R{\omega}^2}), {\pi} \right\} }
 \end{align}
 
 To determine the stability of each, we must determine whether we get
 oscillatory or exponential solutions to the differential equation of motion.
-To do this, we suppose the angle $θ$ is composed of the equilibrium angle
-$θ₀$ and a small perturbation $δ$. Expanding the equation in terms of this,
+To do this, we suppose the angle $\theta $ is composed of the equilibrium angle
+$\theta _0$ and a small perturbation $\Delta $. Expanding the equation in terms of this,
 \begin{align*}
-    \ddot δ = ω²\sin(θ₀+δ)\cos(θ₀+δ) - \frac{g}{R}\sin(θ₀+δ)
+    \ddot \Delta  = {\omega}^2\sin(\theta _0+\Delta )\cos(\theta _0+\Delta ) - \frac{g}{R}\sin(\theta _0+\Delta )
 \end{align*}
 Using several trigonometric expansions, the equation can be expanded into the
 form
 \begin{align*}
-    \ddot δ = ω²\left[ \cos θ₀\sin θ₀ (\cos²δ - \sin²δ) + \cos δ\sin δ
-        (\cos²θ₀ - \sin²θ₀) \right] - \frac{g}{R}\left[ \sin θ₀\cos δ +
-        \cos θ₀\sin δ \right]   
+    \ddot \Delta  = {\omega}^2\left[ \cos \theta _0\sin \theta _0 (\cos^2\Delta  - \sin^2\Delta ) + \cos \Delta \sin \Delta 
+        (\cos^2\theta _0 - \sin^2\theta _0) \right] - \frac{g}{R}\left[ \sin \theta _0\cos \Delta  +
+        \cos \theta _0\sin \Delta  \right]   
 \end{align*}
 
-For the case where $θ₀ = 0$,
+For the case where $\theta _0 = 0$,
 \begin{align*}
-    \ddot δ &= ω² \cos δ \sin δ - \frac{g}{R} \sin δ
-\intertext{Expanding to first order in $δ ≈ 0$,}
-    \ddot δ &= -(\frac{g}{R} - ω²)δ
+    \ddot \Delta  &= {\omega}^2 \cos \Delta  \sin \Delta  - \frac{g}{R} \sin \Delta 
+\intertext{Expanding to first order in $\Delta  \approx 0$,}
+    \ddot \Delta  &= -(\frac{g}{R} - {\omega}^2)\Delta 
 \end{align*}
-Therefore, the equilibrium point $θ₀ = 0$ is only stable if $ω <
+Therefore, the equilibrium point $\theta _0 = 0$ is only stable if ${\omega} <
 \sqrt{\frac{g}{R}}$.
 
-Likewise for for $θ₀ = π$,
+Likewise for for $\theta _0 = {\pi}$,
 \begin{align*}
-    \ddot δ &= (\frac{g}{R} + ω²) δ
+    \ddot \Delta  &= (\frac{g}{R} + {\omega}^2) \Delta 
 \end{align*}
-The coefficient on $δ$ will never be negative, so the angle $θ₀ = π$ will
+The coefficient on $\Delta $ will never be negative, so the angle $\theta _0 = {\pi}$ will
 be unstable under all conditions.
 
-For the final angle where $θ₀ = \arccos(\frac{g}{Rω²})$, we must do several
-substitutions and expansions. $\cos θ₀$ is trivial. $\sin θ₀$ ends up being
-$\sqrt{Rω² - g²}/(Rω²)$ by triangle relations. If we substitute these in plus
-do an expansion to first order for small $δ$, we get the equation
+For the final angle where $\theta _0 = \arccos(\frac{g}{R{\omega}^2})$, we must do several
+substitutions and expansions. $\cos \theta _0$ is trivial. $\sin \theta _0$ ends up being
+$\sqrt{R{\omega}^2 - g^2}/(R{\omega}^2)$ by triangle relations. If we substitute these in plus
+do an expansion to first order for small $\Delta $, we get the equation
 \begin{align*}
-    \ddot δ &= ω² \left[ \frac{g\sqrt{Rω²-g²}}{R²ω²} + δ \frac{2g²-Rω²}{R²ω²}
-        \right] - \frac{g}{R} \left[\frac{\sqrt{Rω²-g²}}{R²ω²} + δ
-        \frac{g}{Rω²} \right]
+    \ddot \Delta  &= {\omega}^2 \left[ \frac{g\sqrt{R{\omega}^2-g^2}}{R^2{\omega}^2} + \Delta  \frac{2g^2-R{\omega}^2}{R^2{\omega}^2}
+        \right] - \frac{g}{R} \left[\frac{\sqrt{R{\omega}^2-g^2}}{R^2{\omega}^2} + \Delta 
+        \frac{g}{R{\omega}^2} \right]
 \end{align*}
-If we consider only the homogeneous terms dependent on $δ$,
+If we consider only the homogeneous terms dependent on $\Delta $,
 \begin{align*}
-    \ddot δ &= \frac{g² - Rω²}{R²ω²} δ
+    \ddot \Delta  &= \frac{g^2 - R{\omega}^2}{R^2{\omega}^2} \Delta 
 \end{align*}
-This equation is stable if and only if the coefficient on $δ$ is negative, so
-it must be that $ω > \frac{g}{\sqrt{R}}$.
+This equation is stable if and only if the coefficient on $\Delta $ is negative, so
+it must be that ${\omega} > \frac{g}{\sqrt{R}}$.
 
 In summary, the equilibrium points have the following conditions:
 \begin{align}
-    \boxed{ θ₀ = 0 \quad\quad \text{Stable iff } ω < \sqrt{\frac gR} }
+    \boxed{ \theta _0 = 0 \quad\quad \text{Stable iff } {\omega} < \sqrt{\frac gR} }
 \end{align}
 \begin{align}
-    \boxed{ θ₀ = \arccos(\frac{g}{Rω²}) \quad\quad \text{Stable iff }
-        ω > \frac{g}{\sqrt{R}} }
+    \boxed{ \theta _0 = \arccos(\frac{g}{R{\omega}^2}) \quad\quad \text{Stable iff }
+        {\omega} > \frac{g}{\sqrt{R}} }
 \end{align}
 \begin{align}
-    \boxed{ θ₀ = π  \quad\quad \text{Never stable} }
+    \boxed{ \theta _0 = {\pi}  \quad\quad \text{Never stable} }
 \end{align}
 
 
 About the two stable points, we simply use the coefficient that has already
 been isolated to determine the frequency of the oscillations about that point.
 \begin{align}
-    \boxed{ ω₁ = \sqrt{\frac{g}{R} - ω²} \quad\quad\text{for $θ₀ = 0$} }
+    \boxed{ {\omega}_1 = \sqrt{\frac{g}{R} - {\omega}^2} \quad\quad\text{for $\theta _0 = 0$} }
 \end{align}
 \begin{align}
-    \boxed{ ω₂ = \sqrt{\frac{Rω² - g²}{R²ω²}}\quad\quad\text{for $θ₀ =
-        \arccos(\frac{g}{Rω²})$} }
+    \boxed{ {\omega}_2 = \sqrt{\frac{R{\omega}^2 - g^2}{R^2{\omega}^2}}\quad\quad\text{for $\theta _0 =
+        \arccos(\frac{g}{R{\omega}^2})$} }
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -164,17 +165,17 @@ been isolated to determine the frequency of the oscillations about that point.
 The general solution of the Laplace's equation for an electrostatic problem
 having azimuthal symmetry can be written as
 \begin{align*}
-    V(r,θ) &= \sum_{ℓ=0}^∞ (A_ℓ r^ℓ + \frac{B_ℓ}{r^{ℓ+1}}) P_ℓ(\cos θ)
+    V(r,\theta ) &= \sum_{\ell =0}^\infty  (A_\ell  r^\ell  + \frac{B_\ell }{r^{\ell +1}}) P_\ell (\cos \theta )
 \end{align*}
-Now consider the follwoing problem. A solid spherical conductor of radius $R$
+Now consider the following problem. A solid spherical conductor of radius $R$
 having charge $Q$ is placed in an otherwise uniform electric field $\vec E
-= E₀\hat z$.
+= E_0\hat z$.
 \begin{enumerate}[(a)]
     \item
-        Qualtitatively describe the electric field inside and outside of the
+        Qualitatively describe the electric field inside and outside of the
         sphere.
     \item
-        Solve the problem and find the electric potential in th eregion outside
+        Solve the problem and find the electric potential in the region outside
         the sphere.
 \end{enumerate}
 
@@ -214,54 +215,54 @@ grounded sphere in a uniform electric field.
 Since we are only concerned with the potential outside the sphere, we can use
 Gauss' Law to get the potential due to the charge $Q$. It is
 \begin{align*}
-    V_Q(r,θ) &= \frac{Q}{4πε₀r} & r &> R
+    V_Q(r,\theta ) &= \frac{Q}{4{\pi}\varepsilon _0r} & r &> R
 \end{align*}
 
 The uniform field is the considered by satisfying the appropriate boundary
-conditions to solve for the coefficients $A_ℓ$ and $B_ℓ$ in the general
+conditions to solve for the coefficients $A_\ell $ and $B_\ell $ in the general
 solution given above. We start by converting the given electric field to a
 potential. In Cartesian coordinates,
 \begin{align*}
-    \vec E = E₀\hat z = -\vec ∇V_∞ \quad\quad\Rightarrow\quad\quad V_∞ &= -E₀z
+    \vec E = E_0\hat z = -\vec \nabla V_\infty  \quad\quad\Rightarrow\quad\quad V_\infty  &= -E_0z
 \end{align*}
-which when converted to spherical coordinates gives the potential as $r→∞$
+which when converted to spherical coordinates gives the potential as $r\rightarrow \infty $
 \begin{align*}
-    V_∞ &= -E₀r\cos θ
+    V_\infty  &= -E_0r\cos \theta 
 \end{align*}
-In the infinite distance limit, $B_ℓ/r^{ℓ+1} → 0$ so the boundary condition
+In the infinite distance limit, $B_\ell /r^{\ell +1} \rightarrow  0$ so the boundary condition
 equation becomes
 \begin{align*}
-    -E₀r\cos θ &= \sum_{ℓ=0}^∞ A_ℓ r^ℓ P_ℓ(\cos θ) \\
-\intertext{By the orthogonality of the Legendre polynomials, only $A₁$ is
+    -E_0r\cos \theta  &= \sum_{\ell =0}^\infty  A_\ell  r^\ell  P_\ell (\cos \theta ) \\
+\intertext{By the orthogonality of the Legendre polynomials, only $A_1$ is
 non-zero:}
-    -E₀r\cos θ &= A₁r\cos θ \\
-    A₁ &= -E₀
+    -E_0r\cos \theta  &= A_1r\cos \theta  \\
+    A_1 &= -E_0
 \end{align*}
 
 The general solution has thus been simplified to
 \begin{align*}
-    V₀(r,θ) &= -E₀r\cos θ + \sum_{ℓ=0}^∞ \frac{B_ℓ}{r^{ℓ+1}}P_ℓ(\cos θ)
+    V_0(r,\theta ) &= -E_0r\cos \theta  + \sum_{\ell =0}^\infty  \frac{B_\ell }{r^{\ell +1}}P_\ell (\cos \theta )
 \end{align*}
 By our choice of making use of the superposition principle, we have set the
 potential to be zero at the surface, so at $r = R$, the boundary conditions
-lets us solve for the values of the $B_ℓ$:
+lets us solve for the values of the $B_\ell $:
 \begin{align*}
-    0 &= -E₀R\cos θ + \sum_{ℓ=0}^∞ \frac{B_ℓ}{R^{ℓ+1}}P_ℓ(\cos θ)
+    0 &= -E_0R\cos \theta  + \sum_{\ell =0}^\infty  \frac{B_\ell }{R^{\ell +1}}P_\ell (\cos \theta )
 \intertext{The Legendre polynomial orthogonality again eliminates all
-coefficients except $B₁$.}
-    E₀R\cos θ &= \frac{B₁}{R²}\cos θ \\
-    B₁ &= E₀R³
+coefficients except $B_1$.}
+    E_0R\cos \theta  &= \frac{B_1}{R^2}\cos \theta  \\
+    B_1 &= E_0R^3 
 \end{align*}
 This gives us the solution to the grounded sphere as
 \begin{align*}
-    V₀(r,θ) &= -E₀r\cos θ \left[ 1 - (\frac{R}{r})³ \right]
+    V_0(r,\theta ) &= -E_0r\cos \theta  \left[ 1 - (\frac{R}{r})^3  \right]
 \end{align*}
 
 Therefore by superposition of both solutions, the potential in this situation
 at all points outside the sphere is
 \begin{align}
-    \boxed{ V(r,θ) = \frac{Q}{4πε₀r} - E₀r\cos θ \left[ 1 -
-        (\frac{R}{r})³ \right] }
+    \boxed{ V(r,\theta ) = \frac{Q}{4{\pi}\varepsilon _0r} - E_0r\cos \theta  \left[ 1 -
+        (\frac{R}{r})^3  \right] }
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -273,10 +274,10 @@ at all points outside the sphere is
 	\index{quantum!Reflection and transmission through a barrier}
 
 Consider the transmission of a beam of particles of mass $m$ and momentum $p
-= ℏk$, in one dimension, incident on a rectangular potential barrier of
-height $V₀$ and extending from $x = 0$ to $x = L$, in the special case that
+= {\hbar}k$, in one dimension, incident on a rectangular potential barrier of
+height $V_0$ and extending from $x = 0$ to $x = L$, in the special case that
 the energy $E$ of the incident particle \emph{is exactly equal} to the
-barrier height $V₀$.
+barrier height $V_0$.
 \begin{enumerate}[(a)]
     \item
         Calculate the transmission and reflection coefficients $T$ and $R$.
@@ -285,8 +286,7 @@ barrier height $V₀$.
         conserved? Do $T$ and $R$ have the expected limiting values for $L$
         very large or very small?
     \item
-        For what values of the de Broglie wavelength of th eparticles is th
-        etransmitted fraction equal to $1/2$?
+        For what values of the de Broglie wavelength of the particles is the transmitted fraction equal to $1/2$?
 \end{enumerate}
 
 \subsubsection{Answer}
@@ -306,28 +306,28 @@ below:
         % Label the special values of note
         \draw (2,0) node[anchor=north] {$x = 0$};
         \draw (5,0) node[anchor=north] {$x = L$};
-        \draw (5,1.5) node[anchor=west] {$V = V₀$};
+        \draw (5,1.5) node[anchor=west] {$V = V_0$};
         % Show the indicent particle beam
         \draw[very thick,->] (0,1.5)
-            node[anchor=east] {$E = V₀$}
+            node[anchor=east] {$E = V_0$}
             -- (1.9,1.5);
         % Label the regions
-        \draw (1,   0.75) node {\Large Ⅰ};
-        \draw (3.5, 0.75) node {\Large Ⅱ};
-        \draw (6,   0.75) node {\Large Ⅲ};
+        \draw (1,   0.75) node {\Large I};
+        \draw (3.5, 0.75) node {\Large II};
+        \draw (6,   0.75) node {\Large III};
     \end{tikzpicture}
 \end{figure}
 
-Ignoring normalization for a minute, we know that in regions Ⅰ and Ⅲ that
+Ignoring normalization for a minute, we know that in regions I and III that
 the wavefunction is that of a free particle:
 \begin{align*}
-    ψ(x) &= Ae^{ikx} + B^{-ikx}
-        & k² &= \frac{2mE}{ℏ²}
+    \psi (x) &= Ae^{ikx} + B^{-ikx}
+        & k^2 &= \frac{2mE}{{\hbar}^2}
 \end{align*}
-In region Ⅱ, the energy $E$ cancels with the potential $V$ in the Schrödinger
+In region II, the energy $E$ cancels with the potential $V$ in the Schr\"odinger
 equation, so the solution takes the form of a first order polynomial
 \begin{align*}
-    ψ(x) &= Ax + B
+    \psi (x) &= Ax + B
 \end{align*}
 
 We will only be concerned with the reflection and transmission coefficients,
@@ -335,27 +335,27 @@ and knowing that they are defined in terms of a ratio of the wavefunction
 amplitude for the reflected and transmitted components with respect to the
 incident amplitude, we simplify our solution by directly setting the incident
 particle amplitude to unity. Furthermore, we know that there is no leftward
-traveling component in region Ⅲ. Assigning each component a unique and
+traveling component in region III. Assigning each component a unique and
 appropriate unknown coefficient, the three wavefunctions are
 \begin{align*}
-    ψ_{\text{Ⅰ}} &= e^{ikx} + re^{-ikx}\\
-    ψ_{\text{Ⅱ}} &= ax + b\\
-    ψ_{\text{Ⅲ}} &= te^{ikx}
+    \psi _{\text{I}} &= e^{ikx} + re^{-ikx}\\
+    \psi _{\text{II}} &= ax + b\\
+    \psi _{\text{III}} &= te^{ikx}
 \end{align*}
 
 We find the values for $r$ and $t$ by applying continuity boundary conditions
 at the interfaces between each solution. Starting at $x = 0$,
 \begin{align*}
-    ψ_{\text{Ⅰ}}(0) &= ψ_{\text{Ⅱ}}(0)
-        & ψ_{\text{Ⅰ}}'(0) &= ψ_{\text{Ⅱ}}'(0) \\
+    \psi _{\text{I}}(0) &= \psi _{\text{II}}(0)
+        & \psi _{\text{I}}'(0) &= \psi _{\text{II}}'(0) \\
     1 + r &= b
         & ik(1-r) &= a
 \end{align*}
-Then putting the values into $ψ_{\text{Ⅰ}}$ and solving the boundary conditions
+Then putting the values into $\psi _{\text{I}}$ and solving the boundary conditions
 at $x = L$,
 \begin{align*}
-    ψ_{\text{Ⅱ}}(L) &= ψ_{\text{Ⅲ}}(L)
-        & ψ_{\text{Ⅱ}}'(L) &= ψ_{\text{Ⅲ}}'(L) \\
+    \psi _{\text{II}}(L) &= \psi _{\text{III}}(L)
+        & \psi _{\text{II}}'(L) &= \psi _{\text{III}}'(L) \\
     ik(1-r)L + 1+r &= te^{ikL}
         & ik(1-r) &= ikte^{ikL}
 \end{align*}
@@ -372,10 +372,10 @@ insert it into the condition on the left:
 We then just take the complex square of both amplitudes to get the reflection
 and transmission coefficients:
 \begin{align}
-    \boxed{ R = |r|² = \frac{k²L²}{4 + k²L²} }
+    \boxed{ R = |r|^2 = \frac{k^2L^2}{4 + k^2L^2} }
 \end{align}
 \begin{align}
-    \boxed{ T = |t|² = \frac{4}{4 + k²L²} }
+    \boxed{ T = |t|^2 = \frac{4}{4 + k^2L^2} }
 \end{align}
 
 These satisfy the requisite properties: the probabilities sum to unity so all
@@ -387,14 +387,14 @@ barrier grows to infinite depth, all particles are reflected.
 \end{align}
 \begin{align}
     \boxed{
-    T \underset{L→0}{\longrightarrow} 1 \quad\quad
-        T \underset{L→∞}{\longrightarrow} 0
+    T \underset{L\rightarrow 0}{\longrightarrow} 1 \quad\quad
+        T \underset{L\rightarrow \infty }{\longrightarrow} 0
     }
 \end{align}
 \begin{align}
     \boxed{
-    R \underset{L→0}{\longrightarrow} 0 \quad\quad
-        R \underset{L→∞}{\longrightarrow} 1
+    R \underset{L\rightarrow 0}{\longrightarrow} 0 \quad\quad
+        R \underset{L\rightarrow \infty }{\longrightarrow} 1
     }
 \end{align}
 
@@ -403,19 +403,19 @@ through the barrier by changing the energy of the particles. To do so, we set
 the transmission probability to $\frac 12$ and solve for the particles'
 corresponding de Broglie wavelength.
 \begin{align*}
-    \frac 12 &= \frac{4}{4+k²L²} \\
-    4 &= k²L² \\
-    k² &= \frac{4}{L²}
-\intertext{Making use of the definition of $k²$ in terms of the energy,}
-    \frac{2mE}{ℏ²} &= \frac{4}{L²}
+    \frac 12 &= \frac{4}{4+k^2L^2} \\
+    4 &= k^2L^2 \\
+    k^2 &= \frac{4}{L^2}
+\intertext{Making use of the definition of $k^2$ in terms of the energy,}
+    \frac{2mE}{{\hbar}^2} &= \frac{4}{L^2}
 \intertext{Then writing the energy in terms of the de Broglie wavelength:}
-    \frac{2m}{ℏ²} \frac{4π²ℏ²}{2mλ²} &= \frac{4}{L²}
+    \frac{2m}{{\hbar}^2} \frac{4{\pi}^2{\hbar}^2}{2m{\lambda}^2} &= \frac{4}{L^2}
 \end{align*}
 
 Therefore, the particles' incident momentum can be tuned and half the particles
 will be transmitted when
 \begin{align}
-    \boxed{ λ = πL }
+    \boxed{ {\lambda} = {\pi}L }
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -438,20 +438,20 @@ very deep and narrow potential well. Let $\ket{n}$ denote an eigenstate of a
         total Hamiltonian $H$ with eigenvalue $E$. What is its degeneracy?
         Then show that the state $\ket{k}$ defined as
         \begin{align*}
-            \ket{k} = \sum_{n=-∞}^∞ e^{ink} \ket{n}
+            \ket{k} = \sum_{n=-\infty }^\infty  e^{ink} \ket{n}
         \end{align*}
-        with $-π < k < π$ is an eigenstate of both $H$ and the translation
+        with $-{\pi} < k < {\pi}$ is an eigenstate of both $H$ and the translation
         operator $T$ defined as $T\ket{n} = \ket{n+1}$. Find the respective
         eigenvalues.
     \item
         Assume now that neighboring sites are weakly coupled so that the
         total Hamiltonian can now be written as
         \begin{align*}
-            H = \sum_{n=-∞}^∞ ( \ket{n}E\bra{n} - \ket{n+1}D\bra{n} -
+            H = \sum_{n=-\infty }^\infty  ( \ket{n}E\bra{n} - \ket{n+1}D\bra{n} -
                 \ket{n}D\bra{n+1} )
         \end{align*}
         where the coupling parameter $D$ is real and we assume that
-        $\braket{n}{n'} = δ_{n,n'}$. Show that $\ket{n}$ is no longer an
+        $\braket{n}{n'} = \Delta _{n,n'}$. Show that $\ket{n}$ is no longer an
         eigenstate of $H$ but that $\ket{k}$ still is. Find the eigenvalue.
 \end{enumerate}
 
@@ -466,7 +466,7 @@ If we then operate on a state $\ket{n}$ with the total Hamiltonian,
 \begin{align*}
     H\ket{n} &= (\sum_i H_i)\ket{n} \\
     {} &= \sum_i H_i\ket{n} \\
-    H\ket{n} &= H_i δ_{i,n} \ket{n}
+    H\ket{n} &= H_i \Delta _{i,n} \ket{n}
 \end{align*}
 Only the $n$-th Hamiltonian will operate on $\ket{n}$, so the state is in fact
 an eigenstate of the total Hamiltonian with an eigenvalue of $E$.
@@ -504,7 +504,7 @@ effect on the state $\ket{k}$.
     {} &= \sum_n e^{i(n+1)k}e^{-ik} \ket{n+1} \\
     {} &= e^{-ik} \sum_n e^{i(n+1)k} \ket{n+1} 
 \end{align*}
-and since $n ∈ (-∞,∞)$, the distinction between $n$ and $n+1$ is
+and since $n \in  (-\infty ,\infty )$, the distinction between $n$ and $n+1$ is
 inconsequential to the definition of $\ket{k}$. Therefore
 \begin{align}
     \boxed{ T\ket{k} = e^{-ik}\ket{k} }
@@ -520,13 +520,13 @@ eigenstates of the total Hamiltonian as shown by explicit calculation:
         - \ket{n'}D\bra{n'+1} \right] \ket{n} \\
     {} &= \sum_{n'} \ket{n'}E\braket{n'}{n} -
         \ket{n'+1}D\braket{n'}{n} - \ket{n'}D\braket{n'+1}{n} \\
-    {} &= \sum_{n'} δ_{n,n'}(E\ket{n'} - D\ket{n'+1}) - Dδ_{n,n'+1}\ket{n'} \\
+    {} &= \sum_{n'} \Delta _{n,n'}(E\ket{n'} - D\ket{n'+1}) - D\Delta _{n,n'+1}\ket{n'} \\
     {} &= E\ket{n} - D\ket{n+1} - D\ket{n-1}
 \end{align*}
-There are now three wavefunctions left with two different coeffients, so the
+There are now three wavefunctions left with two different coefficients, so the
 problem is not an eigenvalue problem.
 \begin{align}
-    \boxed{ E\ket{n} - D\ket{n+1} - D\ket{n-1} = H\ket{n} ≠ λ\ket{n} }
+    \boxed{ E\ket{n} - D\ket{n+1} - D\ket{n-1} = H\ket{n} {\ne} {\lambda}\ket{n} }
 \end{align}
 
 Operating on the Bloch wavefunction, though
@@ -535,8 +535,8 @@ Operating on the Bloch wavefunction, though
         - \ket{n'}D\bra{n'+1} \right] (\sum_n e^{ink}\ket{n}) \\
     {} &= \sum_{n,n'} \ket{n'}Ee^{ink}\braket{n'}{n} -
         \ket{n'+1}De^{ink}\braket{n'}{n} - \ket{n'}De^{ink}\braket{n'+1}{n} \\
-    {} &= \sum_{n,n'} Ee^{ink}δ_{n,n'}\ket{n'} - De^{ink}δ_{n,n'}\ket{n'+1} -
-        De^{ink}δ_{n,n'+1}\ket{n'} \\
+    {} &= \sum_{n,n'} Ee^{ink}\Delta _{n,n'}\ket{n'} - De^{ink}\Delta _{n,n'}\ket{n'+1} -
+        De^{ink}\Delta _{n,n'+1}\ket{n'} \\
 \intertext{Consuming the summation over $n'$ to select a non-zero term in the
 Kronecker delta leaves}
     {} &= \sum_{n} Ee^{ink}\ket{n} - De^{ink}\ket{n+1} - De^{ink}\ket{n-1}
@@ -563,16 +563,16 @@ is still an eigenstate of this new Hamiltonian with an eigenvalue of $E - 2D
 % Keywords
 	\index{thermodynamics!Mixing gases}
 
-Two monatomic ideal gases, each occupying a volume $V = \SI{1}{\m³}$, are
-separated by a removeable insulating partition. They have different
-temperatures $T₁ = \SI{350}{\K}$ and $T₂ = \SI{450}{\K}$, and different
-pressures $p₁ = \SI{e3}{\N\per\m²}$ and $p₂ = \SI{5e3}{\N\per\m²}$. The
+Two mono-atomic ideal gases, each occupying a volume $V = \SI{1}{\m^3 }$, are
+separated by a removable insulating partition. They have different
+temperatures $T_1 = \SI{350}{\K}$ and $T_2 = \SI{450}{\K}$, and different
+pressures $p_1 = \SI{e3}{\N\per\m^2}$ and $p_2 = \SI{5e3}{\N\per\m^2}$. The
 partition is removed, and the gases are allowed to mix while remaining
 thermally isolated from the outside.
 \begin{enumerate}[(a)]
     \item
         What are the final temperature $T_f$ (in \si{\K}) and pressures $p_f$
-        (in \si{\N\per\m²})?
+        (in \si{\N\per\m^2})?
     \item
         What is the net change in entropy due to mixing (in \si{\J\per\K})?
 \end{enumerate}
@@ -583,21 +583,21 @@ Starting with conservation of energy, the total internal energy after the
 partition is removed must be the same as the sum of the internal energies of
 both starting gases.
 \begin{align*}
-    U &= U₁ + U₂ \\
-    \frac 32 Nk_B T_f &= \frac 32 N₁k_B T₁ + \frac 32 N₂k_B T₂ \\
-    T_f &= \frac{N₁T₁ + N₂T₂}{N₁ + N₂}
+    U &= U_1 + U_2 \\
+    \frac 32 Nk_B T_f &= \frac 32 N_1k_B T_1 + \frac 32 N_2k_B T_2 \\
+    T_f &= \frac{N_1T_1 + N_2T_2}{N_1 + N_2}
 \end{align*}
 where we made use of the fact that particle number must also be a conserved
-quantity so that $N = N₁ + N₂$. The original particle numbers $N₁$ and $N₂$
+quantity so that $N = N_1 + N_2$. The original particle numbers $N_1$ and $N_2$
 can be determined from the ideal gas law in the initial state:
 \begin{align*}
-    p₁V &= N₁k_B T₁             &   p₂V &= N₂ k_B T₂ \\
-    N₁ &= \frac{p₁V}{k_B T₁}    &   N₂ &= \frac{p₂V}{k_B T₂}
+    p_1V &= N_1k_B T_1             &   p_2V &= N_2 k_B T_2 \\
+    N_1 &= \frac{p_1V}{k_B T_1}    &   N_2 &= \frac{p_2V}{k_B T_2}
 \end{align*}
 Plugging these into the final temperature $T_f$ above and simplifying gives
 the value in terms of known quantities as
 \begin{align*}
-    T_f &= \frac{p₁ + p₂}{p₁T₂ + p₂T₁} T₁T₂
+    T_f &= \frac{p_1 + p_2}{p_1T_2 + p_2T_1} T_1T_2
 \end{align*}
 which when the numbers are plugged in gives a final temperature of
 \begin{align}
@@ -606,72 +606,72 @@ which when the numbers are plugged in gives a final temperature of
 We can then plug this temperature into a formulation of the ideal gas law
 for the system after the partition has been removed to get the final pressure.
 \begin{align*}
-    p_f (2V) &= (N₁+N₂) k_B T_f \\
-    p_f &= \frac{(N₁+N₂)k_B}{2V} \frac{N₁T₁ + N₂T₂}{N₁+N₂} \\
-    p_f &= \frac{k_B}{2V}(N₁T₁ + N₂T₂)
+    p_f (2V) &= (N_1+N_2) k_B T_f \\
+    p_f &= \frac{(N_1+N_2)k_B}{2V} \frac{N_1T_1 + N_2T_2}{N_1+N_2} \\
+    p_f &= \frac{k_B}{2V}(N_1T_1 + N_2T_2)
 \end{align*}
-Again substitution for $N₁$ and $N₂$ in terms of the original pressures and
+Again substitution for $N_1$ and $N_2$ in terms of the original pressures and
 temperatures gives
 \begin{align*}
-    p_f &= \frac{p₁ + p₂}{2}
+    p_f &= \frac{p_1 + p_2}{2}
 \end{align*}
 which when the values are plugged in
 \begin{align}
-    \boxed{ p_f = \SI{3e3}{\N\per\m²} }
+    \boxed{ p_f = \SI{3e3}{\N\per\m^2} }
 \end{align}
 
-From the Sackur-Tetrode euation, we can calculate the change in the entropy
+From the Sackur-Tetrode equation, we can calculate the change in the entropy
 from the beginning state to the final one. We start by simplifying the
 equation to isolate constant factors:
 \begin{align*}
     S &= Nk_B \left\{\frac 52 + \ln\left[ \frac{V}{N}
-		(\frac{4πmU}{3Nh²})^{3/2} \right] \right\} \\
+		(\frac{4{\pi} mU}{3Nh^2})^{3/2} \right] \right\} \\
     {} &= \frac 52 Nk_B + Nk_B \ln\left[ \frac{V}{N}
-		(\frac{4πmU}{3Nh²})^{3/2} \right] \\
-    {} &= Nk_B \left\{ \frac 52 + \frac 32 \ln(\frac{4πm}{3h²})
+		(\frac{4{\pi} mU}{3Nh^2})^{3/2} \right] \\
+    {} &= Nk_B \left\{ \frac 52 + \frac 32 \ln(\frac{4{\pi} m}{3h^2})
         + \ln\left[ \frac{V}{N}(\frac{U}{N})^{3/2} \right] \right\}
 \end{align*}
 Then with the change in entropy defined as
 \begin{align*}
-    ΔS = S - S₁ - S₂
+    \Delta S = S - S_1 - S_2
 \end{align*}
 we start calculating the sum term-by-term. For the first two constant terms,
-the fact that $N = N₁ + N₂$ causes these terms to cancel with those in $S₁$
-and $S₂$. That leaves us just with the last term.
+the fact that $N = N_1 + N_2$ causes these terms to cancel with those in $S_1$
+and $S_2$. That leaves us just with the last term.
 \begin{align*}
-    ΔS &= (N₁+N₂)k_B
+    \Delta S &= (N_1+N_2)k_B
         \ln\left[\frac{2V}{N}(\frac{\frac 32 Nk_B T_f}{N})^{3/2}\right]
-        - N₁k_B\ln\left[\frac{V}{N₁}(\frac{\frac 32 N₁k_B T₁}{N₁})^{3/2}\right]
-        - N₂k_B\ln\left[\frac{V}{N₂}(\frac{\frac 32 N₂k_B T₂}{N₂})^{3/2}\right]
+        - N_1k_B\ln\left[\frac{V}{N_1}(\frac{\frac 32 N_1k_B T_1}{N_1})^{3/2}\right]
+        - N_2k_B\ln\left[\frac{V}{N_2}(\frac{\frac 32 N_2k_B T_2}{N_2})^{3/2}\right]
     \\
 \intertext{By the ideal gas law, $V/N = k_BT/p$ which simplifies the expression
 to}
-    {} &= N₁k_B\ln\left[
-            \frac{2k_B T_f}{p_f}(\frac 32 k_B T_f)^{3/2} ⋅
-            \frac{p₁}{k_B T₁}(\frac{1}{\frac 32 k_B T₁})^{3/2}
-        \right] + N₂k_B\ln\left[
-            \frac{2k_B T_f}{p_f}(\frac 32 k_B T_f)^{3/2} ⋅
-            \frac{p₂}{k_B T₂}(\frac{1}{\frac 32 k_B T₂})^{3/2}
+    {} &= N_1k_B\ln\left[
+            \frac{2k_B T_f}{p_f}(\frac 32 k_B T_f)^{3/2} \cdot 
+            \frac{p_1}{k_B T_1}(\frac{1}{\frac 32 k_B T_1})^{3/2}
+        \right] + N_2k_B\ln\left[
+            \frac{2k_B T_f}{p_f}(\frac 32 k_B T_f)^{3/2} \cdot 
+            \frac{p_2}{k_B T_2}(\frac{1}{\frac 32 k_B T_2})^{3/2}
         \right]
     \\
-    {} &= N₁k_B\ln\left[
-            \frac{p₁}{p_f}(\frac{T_f}{T₁})^{5/2}
-        \right] + N₂k_B\ln\left[
-            \frac{p₂}{p_f}(\frac{T_f}{T₂})^{5/2}
-        \right] + (N₁+N₂)k_B \ln 2
+    {} &= N_1k_B\ln\left[
+            \frac{p_1}{p_f}(\frac{T_f}{T_1})^{5/2}
+        \right] + N_2k_B\ln\left[
+            \frac{p_2}{p_f}(\frac{T_f}{T_2})^{5/2}
+        \right] + (N_1+N_2)k_B \ln 2
 \end{align*}
 Using the ideal gas law again to manipulate the coefficients $Nk_B = pV/T$,
 \begin{align*}
-    ΔS &= V\left\{ \frac{p₁}{T₁}\ln\left[
-            \frac{p₁}{p_f}(\frac{T_f}{T₁})^{5/2}
-        \right] + \frac{p₂}{T₂}\ln\left[
-            \frac{p₂}{p_f}(\frac{T_f}{T₂})^{5/2}
+    \Delta S &= V\left\{ \frac{p_1}{T_1}\ln\left[
+            \frac{p_1}{p_f}(\frac{T_f}{T_1})^{5/2}
+        \right] + \frac{p_2}{T_2}\ln\left[
+            \frac{p_2}{p_f}(\frac{T_f}{T_2})^{5/2}
         \right] + \frac{p_f}{T_f} \ln 2 \right\}
 \end{align*}
 Plugging in the values for all these numbers as given or we determined, the
 change in entropy is
 \begin{align}
-    \boxed{ ΔS = \SI{7.55}{\J/\K} }
+    \boxed{ \Delta S = \SI{7.55}{\J/\K} }
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -700,17 +700,17 @@ back to Earth.
 
 \subsubsection{Answer}
 
-Let $β = v/c$.
+Let $\beta = v/c$.
 
 \begin{enumerate}[(a)]
     \item
         Let $t'_{sent} = \SI{1}{\hour}$ be the time at which the rocket sent
         the signal according to its own clock. Because from the Earth's
         reference frame the rocket's clocks are running slow, the clocks on
-        Earth must show a time greater than the rocket's by a factor of $γ$.
+        Earth must show a time greater than the rocket's by a factor of $\gamma $.
         \begin{align*}
-            t_{sent} &= γt'_{sent} \\
-            {} &= \frac{\SI{1}{\hour}}{\sqrt{1 - β²}}
+            t_{sent} &= \gamma t'_{sent} \\
+            {} &= \frac{\SI{1}{\hour}}{\sqrt{1 - \beta^2}}
         \end{align*}
         \begin{align}
             \boxed{ t_{sent} = \frac 54 \,\si{\hour} = \SI{1.25}{\hour} }
@@ -721,7 +721,7 @@ Let $β = v/c$.
         times the time (in Earth's reference frame), so together,
         \begin{align*}
             t_{ret} &= \frac{vt_{sent}}{c} \\
-            {} &= βt_{sent} \\
+            {} &= \beta t_{sent} \\
             t_{ret} &= \frac 34 \,\si{\hour} = \SI{0.75}{\hour}
         \end{align*}
         The total round trip time is then
@@ -731,12 +731,12 @@ Let $β = v/c$.
     \item
         Because the rocket is flying away from the Earth, the distance behind
         it towards the earth appears to have been length expanded by a factor
-        of $γ$ compared to the distance that Earth would report. Therefore the
+        of $\gamma $ compared to the distance that Earth would report. Therefore the
         time for the signal to be sent from the rocket to Earth appears to the
         rocket to be
         \begin{align*}
-            t'_{ret} &= \frac{γx}{c} \\
-            {} &= γt_{ret} \\
+            t'_{ret} &= \frac{\gamma x}{c} \\
+            {} &= \gamma t_{ret} \\
             t'_{ret} &= \frac{15}{16} \,\si{\hour} = \SI{0.9375}{\hour}
         \end{align*}
         Added to the 1 hour that the rocket observes as the time before it

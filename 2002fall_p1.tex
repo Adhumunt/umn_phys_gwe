@@ -7,7 +7,7 @@
 	\index{mechanics!Water jet distance}
 
 A cylindrical bucket is placed on the ground and filled with water to a
-height of \SI{150}{\cm}. HOw high from the ground should one punch a hole in
+height of \SI{150}{\cm}. How high from the ground should one punch a hole in
 the side of the bucket to make a stream of water that strikes the ground at
 the greatest distance from the bucket? What is that distance?
 
@@ -18,7 +18,7 @@ of the water jet, we first need to determine what the velocity of the water
 exiting the hole is as a function of the hole's depth below the surface of the
 water. To do this, we make use of Bernoulli's principle.
 \begin{align*}
-    \frac{v²}{2} + gz + \frac{p₀}{ρ} = \text{constant}
+    \frac{v^2}{2} + gz + \frac{p_0}{\rho } = \text{constant}
 \end{align*}
 We begin by determining the value of the constant by evaluating the equation
 at the surface of the water where we know all the properties. The water is
@@ -26,33 +26,33 @@ at the ambient air pressure, the height is given in the problem statement,
 and the velocity can be assumed to be zero in the limit that the hole leaks
 at a rate too slowly to change the height of the surface. Doing so,
 \begin{align*}
-    \text{constant} = gz₀ + \frac{p₀}{ρ}
+    \text{constant} = gz_0 + \frac{p_0}{\rho }
 \end{align*}
 
 Then at some height $z'$ below the surface of the water, we puncture a hole.
 Again the water is moving into a body at atmospheric pressure, so we again
-use $p₀$. That leaves the velocity we're searching for remaining, so equating
+use $p_0$. That leaves the velocity we're searching for remaining, so equating
 with the surface value,
 \begin{align*}
-    gz₀ + \frac{p₀}{ρ} &= \frac 12 v² + gz' + \frac{p₀}{ρ} \\
-    v² &= 2g(z₀ - z')
+    gz_0 + \frac{p_0}{\rho } &= \frac 12 v^2 + gz' + \frac{p_0}{\rho } \\
+    v^2 &= 2g(z_0 - z')
 \end{align*}
 
 Now we're ready to solve the kinematic equation. Begin as usual by finding the
 time of flight from the vertical components.
 \begin{align*}
-    0 = z' - \frac 12 gt²
+    0 = z' - \frac 12 gt^2
 	\quad\quad\rightarrow\quad\quad
     t = \sqrt{\frac{2z'}{g}}
 \end{align*}
 Then solving the horizontal equation:
 \begin{align*}
-    ℓ &= vt = 2\sqrt{z'(z₀ - z')}
+    \ell  &= vt = 2\sqrt{z'(z_0 - z')}
 \end{align*}
 Then finding the extrema:
 \begin{align*}
-    \frac{dℓ}{dz'} &= 0 = \frac{z₀ - 2z'}{\sqrt{z'(z₀-z')}} \\
-    z' &= \frac 12 z₀
+    \frac{d\ell }{dz'} &= 0 = \frac{z_0 - 2z'}{\sqrt{z'(z_0-z')}} \\
+    z' &= \frac 12 z_0
 \end{align*}
 That height that maximizes distance, and that distance, is
 \begin{align}
@@ -61,7 +61,7 @@ That height that maximizes distance, and that distance, is
     }
     &&
     \boxed{
-    ℓ  = \SI{150}{\cm}
+    \ell  = \SI{150}{\cm}
     }
 \end{align}
 
@@ -87,8 +87,8 @@ Take time $t=0$ to be the moment the projectile collides with the mass $m$,
 and let the subsequent transfer of momentum be instantaneous. In this case,
 the initial conditions of the problem are then:
 \begin{align*}
-    x₁(0) &= 0			& \dot x₁(0) &= u \\
-    x₂(0) &= L			& \dot x₂(0) &= 0
+    x_1(0) &= 0			& \dot x_1(0) &= u \\
+    x_2(0) &= L			& \dot x_2(0) &= 0
 \end{align*}
 where $u$ is the initial velocity of the combined project-mass system. We get
 $u$ from conservation of mometum:
@@ -100,70 +100,70 @@ $u$ from conservation of mometum:
 Now solve the mechanics problem using the Lagrangian approach. Both masses have
 kinetic energy, and the spring stores potential energy, so
 \begin{align*}
-    T &= m{\dot x₁}² + m{\dot x₂}² \\
-    V &= \frac 12 m (x₂ - x₁)² \\
-    L &= m ({\dot x₁}² + {\dot x₂}²) - \frac 12 k({x₁}² + {x₂}² + 2x₁x₂)
+    T &= m{\dot x_1}^2 + m{\dot x_2}^2 \\
+    V &= \frac 12 m (x_2 - x_1)^2 \\
+    L &= m ({\dot x_1}^2 + {\dot x_2}^2) - \frac 12 k({x_1}^2 + {x_2}^2 + 2x_1x_2)
 \end{align*}
 Setting up the differential equation, we get
 \begin{align*}
-    \frac{∂L}{∂x₁} &= -kx₁ + kx₂	& \frac{d}{dt}
-	\left[\frac{∂L}{∂\dot x₁}\right] &= 2m \ddot x₁ \\
-    \frac{∂L}{∂x₂} &=  kx₁ - kx₂	& \frac{d}{dt}
-	\left[\frac{∂L}{∂\dot x₁}\right] &= 2m \ddot x₂ \\
+    \frac{\partial L}{\partial x_1} &= -kx_1 + kx_2	& \frac{d}{dt}
+	\left[\frac{\partial L}{\partial \dot x_1}\right] &= 2m \ddot x_1 \\
+    \frac{\partial L}{\partial x_2} &=  kx_1 - kx_2	& \frac{d}{dt}
+	\left[\frac{\partial L}{\partial \dot x_1}\right] &= 2m \ddot x_2 \\
 \end{align*}
-Leading to the system of equations where $ω² = k/2m$,
+Leading to the system of equations where ${\omega}^2 = k/2m$,
 \begin{align*}
-    \begin{bmatrix} \ddot x₁ \\ \ddot x₂ \end{bmatrix} &=
-	\begin{bmatrix} -ω² & ω² \\ ω² & -ω² \end{bmatrix}
-	\begin{bmatrix} x₁ \\ x₂ \end{bmatrix}
+    \begin{bmatrix} \ddot x_1 \\ \ddot x_2 \end{bmatrix} &=
+	\begin{bmatrix} -{\omega}^2 & {\omega}^2 \\ {\omega}^2 & -{\omega}^2 \end{bmatrix}
+	\begin{bmatrix} x_1 \\ x_2 \end{bmatrix}
 \end{align*}
-Solving the eigensystem, we find the eigenfrequencies to be $λ = \{0, -2ω²\}$.
-Letting ${ω'}² = 2ω²$, the eigenfunction equations are then
+Solving the eigensystem, we find the eigenfrequencies to be ${\lambda} = \{0, -2{\omega}^2\}$.
+Letting ${{\omega}'}^2 = 2{\omega}^2$, the eigenfunction equations are then
 \begin{align*}
-    \ddot ψ₁ &= 0
+    \ddot \psi _1 &= 0
 	& \rightarrow&&
-	ψ₁ &= A₁t + B₁ \\
-    \ddot ψ₂ &= -2ω² ψ₂
+	\psi _1 &= A_1t + B_1 \\
+    \ddot \psi _2 &= -2{\omega}^2 \psi _2
 	& \rightarrow&&
-	ψ₂ &= A₂\cos(ω't) + B₂\sin(ω't)
+	\psi _2 &= A_2\cos({\omega}'t) + B_2\sin({\omega}'t)
 \end{align*}
-From the eigenvectors, we express the solutions of $x₁$ and $x₂$ in terms of
-$ψ₁$ and $ψ₂$:
+From the eigenvectors, we express the solutions of $x_1$ and $x_2$ in terms of
+$\psi _1$ and $\psi _2$:
 \begin{align*}
-    \begin{bmatrix} x₁ \\ x₂ \end{bmatrix} &=
+    \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} &=
 	\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
-	\begin{bmatrix} ψ₁ \\ ψ₂ \end{bmatrix}
+	\begin{bmatrix} \psi _1 \\ \psi _2 \end{bmatrix}
 \end{align*}
 \begin{align*}
-    x₁ &= A₁t + B₁ + A₂\cos(ω't) + B₂\sin(ω't) \\
-    x₂ &= A₁t + B₁ - A₂\cos(ω't) - B₂\sin(ω't)
+    x_1 &= A_1t + B_1 + A_2\cos({\omega}'t) + B_2\sin({\omega}'t) \\
+    x_2 &= A_1t + B_1 - A_2\cos({\omega}'t) - B_2\sin({\omega}'t)
 \end{align*}
 Applying the boundary conditions, we find that
 \begin{align*}
-    x₁(t) &= \frac 14 vt + \frac 12 L - \frac 12 L\cos(ω't) +
-	\frac{v}{4ω'}\sin(ω't) \\
-    x₂(t) &= \frac 14 vt + \frac 12 L + \frac 12 L\cos(ω't) -
-	\frac{v}{4ω'}\sin(ω't)
+    x_1(t) &= \frac 14 vt + \frac 12 L - \frac 12 L\cos({\omega}'t) +
+	\frac{v}{4{\omega}'}\sin({\omega}'t) \\
+    x_2(t) &= \frac 14 vt + \frac 12 L + \frac 12 L\cos({\omega}'t) -
+	\frac{v}{4{\omega}'}\sin({\omega}'t)
 \end{align*}
-The distance $ℓ(t) = x₂(t) - x₁(t)$ between the two masses maximizes when
+The distance $\ell (t) = x_2(t) - x_1(t)$ between the two masses maximizes when
 \begin{align*}
-    \frac{dℓ}{dt} = 0 &= \frac{d}{dt} \left[ L\cos(ω't) -
-	\frac{v}{2ω'}\sin(ω't) \right] \\
-    t &= -\frac{1}{ω'} \arctan (\frac{v}{2Lω'})
+    \frac{d\ell }{dt} = 0 &= \frac{d}{dt} \left[ L\cos({\omega}'t) -
+	\frac{v}{2{\omega}'}\sin({\omega}'t) \right] \\
+    t &= -\frac{1}{{\omega}'} \arctan (\frac{v}{2L{\omega}'})
 \end{align*}
-Plugging back into the function $ℓ(t)$,
+Plugging back into the function $\ell (t)$,
 \begin{align*}
-    ℓ &= L\cos \left[ -\arctan (\frac{v}{2Lω'}) \right] - \frac{v}{2ω'}
-	\sin \left[ -\arctan (\frac{v}{2Lω'}) \right] \\
-    ℓ &= L \frac{2Lω'}{\sqrt{v² + 4L² {ω'}²}} + \frac{v}{2ω'}
-	\frac{v}{\sqrt{v² + 4L² {ω'}²}} \\
-    ℓ &= \frac{\sqrt{v² + 4L² {ω'}²}}{2ω'}
+    \ell  &= L\cos \left[ -\arctan (\frac{v}{2L{\omega}'}) \right] - \frac{v}{2{\omega}'}
+	\sin \left[ -\arctan (\frac{v}{2L{\omega}'}) \right] \\
+    \ell  &= L \frac{2L{\omega}'}{\sqrt{v^2 + 4L^2 {{\omega}'}^2}} + \frac{v}{2{\omega}'}
+	\frac{v}{\sqrt{v^2 + 4L^2 {{\omega}'}^2}} \\
+    \ell  &= \frac{\sqrt{v^2 + 4L^2 {{\omega}'}^2}}{2{\omega}'}
 \end{align*}
-Finally, substituting back in $ω' = \sqrt{2k/m}$ and simplifying, we get the
+Finally, substituting back in ${\omega}' = \sqrt{2k/m}$ and simplifying, we get the
 final solution that maximum distance between the two masses is
 \begin{align}
     \boxed{
-    ℓ = \sqrt{L² + \frac{\frac 12 mv²}{8k}}
+    \ell  = \sqrt{L^2 + \frac{\frac 12 mv^2}{8k}}
     }
 \end{align}
 which agrees qualitatively with the fact that a larger spring constant should
@@ -178,36 +178,36 @@ projectile with a greater velocity would increase it.
 % Keywords
 	\index{quantum!Average $x$ and $y$ momenta}
 
-In the state $ψ_{ℓ,m}$ with angular momentum $ℓ$ and its projection $m$,
-determine the average values ${l_x}²$ and ${l_y}²$.
+In the state $\psi_{\ell ,m}$ with angular momentum $\ell $ and its projection $m$,
+determine the average values ${l_x}^2$ and ${l_y}^2$.
 
 \subsubsection{Answer}
 
 Begin by noting that the angular momentum operators are related as,
 \begin{align*}
-    L² &= {L_x}² + {L_y}² + {L_z}²
+    L^2 &= {L_x}^2 + {L_y}^2 + {L_z}^2
 \end{align*}
 If we assume that the average $x$ and $y$ components will be equal based on
 symmetry where only the $z$ direction is identifiable, then we can let
-$L_x = L_y$ and rearrage the equation to get
+$L_x = L_y$ and rearrange the equation to get
 \begin{align*}
-    {L_x}² &= \frac 12 (L² - {L_z}²)
+    {L_x}^2 &= \frac{1}{2}(L^2 - {L_z}^2)
 \end{align*}
 
 The expectation value is then found by the standard method:
 \begin{align*}
-    \braopket{ψ_{ℓ,m}}{L_x²}{ψ_{ℓ,m}} &= \braopket{ψ_{ℓ,m}}
-	{\frac 12 (L² - {L_z}²)}{ψ_{ℓ,m}} \\
-    {} &= \frac 12 (\braopket{ψ_{ℓ,m}}{L²}{ψ_{ℓ,m}} -
-	\braopket{ψ_{ℓ,m}}{{L_z}²}{ψ_{ℓ,m}}) \\
+    \mel{\psi _{\ell,m}}{L_x^2}{\psi _{\ell ,m}} &= \mel{\psi _{\ell ,m}}
+	{\frac{1}{2}(L^2 - {L_z}^2)}{\psi _{\ell ,m}} \\
+    {} &= \frac{1}{2}(\mel{\psi _{\ell ,m}}{L^2}{\psi _{\ell ,m}} -
+	\mel{\psi _{\ell ,m}}{{L_z}^2}{\psi _{\ell ,m}}) \\
 \intertext{Then because we know these quantum numbers}
-    \braopket{ψ_{ℓ,m}}{L_x²}{ψ_{ℓ,m}} &= \frac 12 (ℓ - m²)
+    \mel{\psi _{\ell ,m}}{L_x^2}{\psi _{\ell ,m}} &= \frac 12 \hbar^2(\ell(\ell+1)  - m^2)
 \end{align*}
 
-Therefore with both q ${ℓ_x}²$ and ${ℓ_y}²$ being assumed equation, we conclude
+Therefore with both ${\ell _x}^2$ and ${\ell _y}^2$ being assumed equation, we conclude
 that
 \begin{align}
-    \expect{{ℓ_x}²} = \expect{{ℓ_y}²} = \frac 12 (ℓ - m²)
+    \expval{{\ell _x}^2} = \expval{{\ell _y}^2} = \frac 12 \hbar^2(\ell(\ell+1)  - m^2)
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -224,13 +224,7 @@ ice is \SI{0}{\celsius}. If the air temperature is \SI{-20}{\celsius}, by
 how much will the ice thickness increase in 1 hour? Assuming that the air
 temperature stays the same over a long period, how will the ice thickness
 increase with time? Comment on any approximation that you make in your
-calculation.
-
-Density of ice ${}= \SI{0.9}{\g\per\cm\cubed}$
-
-Thermal conductivity of ice ${}= \SI{0.0005}{\cal\per\cm\per\s\per\celsius}$
-
-Latent heat of fusion of water ${}= \SI{80}{\cal\per\g}$
+calculation. Density of ice ${}= \SI{0.9}{\g\per\cm\cubed}$. Thermal conductivity of ice ${}= \SI{0.0005}{\cal\per\cm\per\s\per\celsius}$. Latent heat of fusion of water ${}= \SI{80}{\cal\per\g}$.
 
 \subsubsection{Answer}
 
@@ -240,48 +234,48 @@ perpendicular to the ice-water interface $dA$. Then we want to know how much
 ice is generated on the surface of the ice. This small ice element's mass is
 simply
 \begin{align*}
-    dm &= ρ\,dA\,dz
+    dm &= \rho \,dA\,dz
 \end{align*}
 where $dz$ is the thickness of the new ice layer. To generate this ice, the
 latent heat of fusion must be conducted away, so the energy released is,
 \begin{align*}
     dE_f &= L_f\,dm \\
-    {} &= L_f ρ \,dA\,dz
+    {} &= L_f \rho  \,dA\,dz
 \end{align*}
 
-The energy flow is through the ice, and we expect this to increase with the
+The energy flow is through the ice, and we expval this to increase with the
 temperature differential across the ice sheet, suggesting that the thermal
-conductivity $κ$ be multiplied by the temperature difference $ΔT$. Furthermore,
+conductivity $\kappa $ be multiplied by the temperature difference $\Delta T$. Furthermore,
 the ice will decrease the rate of heat flow as it becomes thicker, so the
 quantity should also be divided by the thickness $z$. This gives
 \begin{align*}
-    \frac{κ ΔT}{z} &= \left[ \si{\cal\per\cm\squared\per\s}
+    \frac{\kappa  \Delta T}{z} &= \left[ \si{\cal\per\cm\squared\per\s}
 	\right]
 \end{align*}
 This energy is flowing through a surface element $dA$, giving the power flow
 due to heat as
 \begin{align*}
-    \frac{κΔT\,dA}{z} &= \left[ \si{\cal\per\s} \right]
+    \frac{\kappa \Delta T\,dA}{z} &= \left[ \si{\cal\per\s} \right]
 \end{align*}
 
 This power can be matched in units with the energy released from the ice
 calculated above by taking the time derivative of $dE_f$, so equating the two
 we have
 \begin{align*}
-    L_f ρ \,dA\frac{dz}{dt} &= \frac{κΔT\,dA}{z} \\
-    ∫_{z₀}^{z₀+δz} z\,dz &= ∫_0^t \frac{κΔT}{L_f ρ}\,dt \\
-    2z₀ δz + (δz)² &= \frac{κΔT}{L_f ρ}t
+    L_f \rho  \,dA\frac{dz}{dt} &= \frac{\kappa \Delta T\,dA}{z} \\
+    \int_{z_0}^{z_0+\Delta z} z\,dz &= \int_0^t \frac{\kappa \Delta T}{L_f \rho }\,dt \\
+    2z_0 \Delta z + (\Delta z)^2 &= \frac{\kappa \Delta T}{L_f \rho }t
 \end{align*}
-Solving for the length the ice grows $δz$,
+Solving for the length the ice grows $\Delta z$,
 \begin{align*}
-    δz &= \frac{-2z₀ ± \sqrt{4{z₀}² - 4(\frac{κΔT}{L_f ρ})t} }{2} \\
-    δz &= z₀(1 ± \sqrt{1 - \frac{κΔT}{L_f ρ {z₀}²} t})
+    \Delta z &= \frac{-2z_0 \pm \sqrt{4{z_0}^2 - 4(\frac{\kappa \Delta T}{L_f \rho })t} }{2} \\
+    \Delta z &= z_0(1 \pm \sqrt{1 - \frac{\kappa \Delta T}{L_f \rho  {z_0}^2} t})
 \end{align*}
-The two roots give solutions $δz = \{ \SI{0.0501}{\cm}, \SI{19.950}{\cm} \}$.
+The two roots give solutions $\Delta z = \{ \SI{0.0501}{\cm}, \SI{19.950}{\cm} \}$.
 Since the second root is unrealistic, we know that the solution must then be
 \begin{align}
     \boxed{
-    δz = \SI{0.0501}{\cm} \quad\text{in an hour}
+    \Delta z = \SI{0.0501}{\cm} \quad\text{in an hour}
     }
 \end{align}
 
@@ -292,9 +286,9 @@ Since the second root is unrealistic, we know that the solution must then be
 \subsubsection{Question}
 % Keywords
 	\index{statistical mechanics!Carbon-14 dating}
-
+    \index{statistical mechanics!Half Life}
 Carbon-14 is produced by cosmic rays interacting with the nitrogen in the
-Earth's atmosphere. It is eventaully incorporated into all living things,
+Earth's atmosphere. It is eventually incorporated into all living things,
 and since it has a half-life of \SI{5730(40)}{\year}, it is useful for
 dating archaeological specimens up to several tens of thousands of years
 old. The radioactivity of a particular specimen of wood containing \SI{3}{\g}
@@ -302,47 +296,47 @@ of carbon was measured with a counter whose efficiency was
 \SI{18}{\percent}; a count rate of \SI{12.8(1)}{\minute^{-1}} was measured.
 It is known that in \SI{1}{\g} of living wood, there are
 \SI{16.1}{\minute^{-1}} radioactive carbon-14 decays. What is the age of
-this specimen, and its uncertainity? (Where errors are not quoted, they can
+this specimen, and its uncertainty? (Where errors are not quoted, they can
 be assumed to be negligible).
 
 \subsubsection{Answer}
 The rate $N$ after a given time is given by the exponential decay formula
 \begin{align*}
-    N(t) &+= N₀ e^{-t/τ}
+    N(t) &= N_0 e^{-t/\tau}
 \end{align*}
-Since we have the half-life $t_{1/2}$ instead of the decay constant $τ$, we
-use the relation $t_{1/2} = τ\ln 2$ to simplify the expression instead to
+Since we have the half-life $t_{1/2}$ instead of the decay constant $\tau$, we
+use the relation $t_{1/2} = \tau\ln 2$ to simplify the expression instead to
 \begin{align*}
-    N(t) &= N₀ (\frac 12)^{t/t_{1/2}}
+    N(t) &= N_0 (\frac 12)^{t/t_{1/2}}
 \end{align*}
 
-The counter use has an efficiency of $ε = 0.18$, so the measured counting
+The counter use has an efficiency of $\varepsilon  = 0.18$, so the measured counting
 rate $N_m$ must be corrected for that. Furthermore, the sample has a mass of
 \SI{3}{\g} whereas we know the rate for a one gram sample, so we also
 normalize the count rate by the mass of the sample. Plugging this all into
 the exponential decay function above gives
 \begin{align*}
-    \frac{N_m}{3ε} &= N₀ (\frac 12)^{t/t_{1/2}}
+    \frac{N_m}{3\varepsilon } &= N_0 (\frac 12)^{t/t_{1/2}}
 \end{align*}
 The only unknown left in the equation is the time, so solving for it,
 \begin{align*}
-    t &= t_{1/2} \log_{1/2} (\frac{N_m}{3εN₀}) \\
-    t &= t_{1/2} \frac{\ln (\frac{N_m}{3εN₀})}{\ln 2} \\
-    t &= \frac{t_{1/2}}{\ln 2} \ln (\frac{N_m}{3εN₀})
+    t &= t_{1/2} \log_{1/2} (\frac{N_m}{3\varepsilon N_0}) \\
+    t &= t_{1/2} \frac{\ln (\frac{N_m}{3\varepsilon N_0})}{\ln 2} \\
+    t &= \frac{t_{1/2}}{\ln 2} \ln (\frac{N_m}{3\varepsilon N_0})
 \end{align*}
 
 To find the uncertainty, we note that only the quantities $N_m$ and $t_{1/2}$
 have non-negligible uncertainties, so we propagate the errors only over
 these two terms:
 \begin{align*}
-    {σ_t}² &= (-\frac{t_{1/2}}{N_m \ln 2})² {σ_{N_m}}² +
-	(\frac{1}{\ln 2} \ln(\frac{3εN₀}{N_m}))² {σ_{t_{1/2}}}² \\
-    σ_t &= \frac{t_{1/2}}{\ln 2} \sqrt{ (\frac{σ_{N_m}}{N_m})² +
-	(\frac{σ_{t_{1/2}}}{t_{1/2}})² \left[ \ln(\frac{3εN₀}{N_m}) \right]²}
+    {{\sigma}_t}^2 &= (-\frac{t_{1/2}}{N_m \ln 2})^2 {{\sigma}_{N_m}}^2 +
+	(\frac{1}{\ln 2} \ln(\frac{3\varepsilon N_0}{N_m}))^2 {{\sigma}_{t_{1/2}}}^2 \\
+    {\sigma}_t &= \frac{t_{1/2}}{\ln 2} \sqrt{ (\frac{{\sigma}_{N_m}}{N_m})^2 +
+	(\frac{{\sigma}_{t_{1/2}}}{t_{1/2}})^2 \left[ \ln(\frac{3\varepsilon N_0}{N_m}) \right]^2}
 \end{align*}
-Plugging in all the numbers, we get $t = \SI{4248.8435}{\year}$ and $σ_t =
+Plugging in all the numbers, we get $t = \SI{4248.8435}{\year}$ and ${\sigma}_t =
 \SI{161.717}{\year}$. The given uncertainties have a single significant digit,
-so adding an extra significant figure to the uncertainity and matching decimal
+so adding an extra significant figure to the uncertainty and matching decimal
 places in the answer, we conclude that the sample has an age of
 \begin{align}
     \boxed{

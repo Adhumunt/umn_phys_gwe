@@ -19,12 +19,12 @@ hours? Why?
 \subsubsection{Answer}
 The nominal period of a pendulum is
 \begin{align*}
-	T_{nom} &= 2π \sqrt\frac{ℓ}{g}
+	T_{nom} &= 2{\pi} \sqrt\frac{\ell }{g}
 \end{align*}
 but within the elevator, the acceleration $g$ is not going to be constant and
 will rather depend on the acceleration of the elevator. Therefore,
 \begin{align*}
-	T_↑ &= 2π\sqrt\frac{ℓ}{g+a} & T_↓ &= 2π\sqrt\frac{ℓ}{g-a}
+	T_\uparrow &= 2{\pi}\sqrt\frac{\ell }{g+a} & T_\downarrow &= 2{\pi}\sqrt\frac{\ell }{g-a}
 \end{align*}
 for the upward and downward cases, respectively.
 
@@ -33,12 +33,12 @@ spent going down, so he must have observed $N$ oscillations in both cases. In
 order to compare to the actual time, we simply compare the elevator's total time
 measurement with that of a stationary clock.
 \begin{align*}
-	NT_↑ + NT_↓ \stackrel{?}{=} 2NT_{nom}
+	NT_\uparrow + NT_\downarrow \stackrel{?}{=} 2NT_{nom}
 \end{align*}
 
 \begin{align*}
-	2πN\sqrt\frac{ℓ}{g+a} + 2πN\sqrt\frac{ℓ}{g-a}
-		&\stackrel{?}{=} 4πN\sqrt\frac{ℓ}{g}
+	2{\pi} N\sqrt\frac{\ell }{g+a} + 2{\pi} N\sqrt\frac{\ell }{g-a}
+		&\stackrel{?}{=} 4{\pi} N\sqrt\frac{\ell }{g}
 		\\
 	\sqrt\frac{1}{g+a} + \sqrt\frac{1}{g-a} &\stackrel{?}{=} 2\sqrt\frac{1}{g}\\
 	\sqrt\frac{g}{g+a} + \sqrt\frac{g}{g-a} &\stackrel{?}{=} 2 \\
@@ -63,8 +63,8 @@ elevator during his shift.
 	\index{orbits!Central Forces}
 
 A classical particle is subject to an attractive central force proportional to
-$r^α$, where $r$ is the radius and $α$ is a constant. Show by perturbation
-analysis what is required of $α$ in order for the particle to have a stable
+$r^{\alpha}$, where $r$ is the radius and ${\alpha}$ is a constant. Show by perturbation
+analysis what is required of ${\alpha}$ in order for the particle to have a stable
 circular orbit.
 
 \subsubsection{Answer}
@@ -72,59 +72,59 @@ Construct the Lagrangian for the system in order to determine the equations of
 motion for the given central force (noting that we were given the \emph{force}
 so we need to make an appropriate potential).
 \begin{align*}
-	T &= \frac{1}{2}m ( \dot r² + r²\dot θ² )
-		& V &= \frac{k}{α+1}r^{α+1}
+	T &= \frac{1}{2}m ( \dot r^2 + r^2\dot \theta ^2 )
+		& V &= \frac{k}{{\alpha}+1}r^{{\alpha}+1}
 \end{align*}
 \begin{align*}
-	\sL &= \frac{1}{2}m\dot r² + \frac{1}{2}mr²\dot θ² - \frac{k}{α+1}r^{α+1}
+	\mathcal{L} &= \frac{1}{2}m\dot r^2 + \frac{1}{2}mr^2\dot \theta ^2 - \frac{k}{{\alpha}+1}r^{{\alpha}+1}
 \end{align*}
-Conservation of angular momentum is a consequence of the $θ$ and $\dot θ$
+Conservation of angular momentum is a consequence of the $\theta $ and $\dot \theta $
 coordinates:
 \begin{align*}
-	0 &= \frac{∂\sL}{∂θ} - \frac{d}{dt} \left[ \frac{∂\sL}{∂\dot θ} \right] \\
-	0 &= \frac{d}{dt} \left[ mr²\dot θ \right] \\
-\intertext{Nothing that}
-	ℓ &= \left|\frac{\vec r × \vec p}{m}\right| = r²\dot θ
+	0 &= \frac{\partial \mathcal{L}}{\partial \theta } - \frac{d}{dt} \left[ \frac{\partial \mathcal{L}}{\partial \dot \theta } \right] \\
+	0 &= \frac{d}{dt} \left[ mr^2\dot \theta  \right] \\
+\intertext{Noting that}
+	L  &= \left|{\vec r \times  \vec p}\right| = mr^2\dot \theta 
 \intertext{we can say that}
-	\dot θ &= \frac{ℓ}{r²}
+	\dot \theta  &= \frac{L}{m r^2}
 \end{align*}
 
 Then returning to the $r$ and $\dot r$ coordinates in the Lagrangian,
 \begin{align*}
-	\frac{∂\sL}{∂r} &= mr\dot θ² - kr^α &
-		\frac{∂\sL}{∂\dot r} &= m\dot r
+	\frac{\partial \mathcal{L}}{\partial r} &= mr\dot \theta ^2 - kr^{\alpha} &
+		\frac{\partial \mathcal{L}}{\partial \dot r} &= m\dot r
 	\\
 	{}&{}&
-	\frac{d}{dt}\left[ \frac{∂\sL}{∂\dot φ} \right]
+	\frac{d}{dt}\left[ \frac{\partial \mathcal{L}}{\partial \dot \phi } \right]
 		&= m \ddot r
 \end{align*}
 Putting the differential equation together and substituting for the angular
-momentum per unit mass gives
+momentum gives
 \begin{align}
-	m\ddot r &= \frac{mℓ²}{r³} - kr^α
+	m\ddot r &= \frac{L ^2}{mr^3 } - kr^{\alpha}
 \end{align}
 
 In the case that the orbit is circular, $r$ must be a constant, so let $r = a$
 and note that $\ddot r = 0$ necessarily.
 \begin{align*}
-	\frac{mℓ²}{a³} &= ka^α
+	\frac{L^2}{ma^3 } &= ka^{\alpha}
 \end{align*}
+For simplicity, we introduce $\ell = L/m$ for the following calculation.
 
 Returning to the differential equation, let the actual distance $r$ be a
 perturbation from a circular orbit, and Taylor expand in $x$ where $x = r - a$.
 \begin{align*}
-	m\ddot x &= \frac{mℓ²}{a³} (1 + \frac{x}{a} )^{-3} -
-		ka^α \left(1 + \frac{x}{a} \right)^α \\
-	m\ddot x &≈ \frac{mℓ²}{a³} (1 - 3\frac{x}{a} + \ldots ) -
-		ka^α (1 + α\frac{x}{a} + \ldots ) \\
-	m\ddot x &≈ ka^α (1 - 3\frac{x}{a} ) -
-		ka^α (1 + α\frac{x}{a} ) \\
-	m\ddot x &≈ -3ka^α \frac{x}{a} - αka^α\frac{x}{a} \\
-	m\ddot x &≈ -ka^{α-1} (3+α)x \\
+	m\ddot x &= \frac{m\ell ^2}{a^3 } (1 + \frac{x}{a} )^{-3} -
+		ka^{\alpha} \left(1 + \frac{x}{a} \right)^{\alpha} \\
+	m\ddot x &\approx \frac{m\ell ^2}{a^3 } (1 - 3\frac{x}{a} + \ldots ) -
+		ka^{\alpha} (1 + {\alpha}\frac{x}{a} + \ldots ) \\
+	m\ddot x &\approx ka^{\alpha} (1 - 3\frac{x}{a} ) -
+		ka^{\alpha} (1 + {\alpha}\frac{x}{a} ) \\
+	m\ddot x &\approx -3ka^{\alpha} \frac{x}{a} - {\alpha}ka^{\alpha}\frac{x}{a} \\
+	m\ddot x &\approx -ka^{{\alpha}-1} (3+{\alpha})x 
 \end{align*}
-
 To form a stable orbit, the coefficient on $x$ must be negative, giving a simple
-harmonic solution. Therefore $3+α > 0$ to keep the coefficient negative and
+harmonic solution. Therefore $3+{\alpha} > 0$ to keep the coefficient negative and
 \begin{align}
 	\boxed{
 	a > -3
@@ -163,19 +163,19 @@ of cavities B and C will have a surface charge to cancel the electric fields
 emminating from $q_B$ and $q_C$ respectively.
 \begin{itemize}
 	\item
-		Cavity B will have a uniform surface charge density of $-q_B/4πr²_B$,
+		Cavity B will have a uniform surface charge density of $-q_B/4{\pi} r^2_B$,
 		where $r_B$ is the radius of cavity B, with total induced charge $-q_B$
 		(because of symmetry and use of a Gaussian surface).
 	\item
-		Cavity C will have a uniform surface charge density of $-q_C/4πr²_C$,
+		Cavity C will have a uniform surface charge density of $-q_C/4{\pi} r^2_C$,
 		where $r_C$ is the radius of cavity B, with total induced charge $-q_C$
 		(because of symmetry and use of a Gaussian surface).
 \end{itemize}
-Cavity D will not have a surface charge since a Guassian surface coincident with
+Cavity D will not have a surface charge since a Gaussian surface coincident with
 its boundary contains no charge.
 
 The surface A will have total charge $q_B + q_C$ with uniform surface charge
-density of $(q_B + q_C) / 4πR²$ in accordance with the symmetry of a Gaussian
+density of $(q_B + q_C) / 4{\pi} r^2$ in accordance with the symmetry of a Gaussian
 surface containing the sphere as well as properties of an ideal conductor.
 
 \subsubsection{Answer (2)}
@@ -201,7 +201,7 @@ conductor A, the total charges along their surfaces remains unchanged as well.
 
 The dielectric strength of air at standard temperature and pressure is
 \SI{3e6}{\V\per\m}. What is the maximum intensity in units of \si{\W\per\m^2}
-for a monocromatic laser that can be used in the laboratory?
+for a monochromatic laser that can be used in the laboratory?
 
 \subsubsection{Answer}
 Failure of a dielectric occurs when the energy density in the dielectric is
@@ -212,10 +212,10 @@ this ionization to occur.
 Starting here, We can calculate the energy density of the electric field at any
 point in space by
 \begin{align*}
-	U_{em} = \frac{ε₀}{2}E²
+	U_{em} = \frac{\varepsilon _0}{2}E^2
 \end{align*}
 (where we've used the vacuum energy density since air differs very little from
-the vacuum permittivity).
+the vacuum permitivity).
 
 Then the power transmitted by the laser is $P = cU_{em}$, so plugging in the
 numbers,
@@ -224,7 +224,7 @@ numbers,
 		\left( \SI[per-mode=fraction]{8.854e-12}
 			{\coulomb\squared\per\N\per\m\squared} \right)
 		\left( \SI{3e8}{\m\per\s} \vphantom{\frac{V}{V}} \right)
-		\left( \SI{3e6}{\V\per\m} \right)² \\
+		\left( \SI{3e6}{\V\per\m} \right)^2 \\
 	P &= \SI{1.19e10}{\W\per\m\squared}
 \end{align*}
 
@@ -247,8 +247,8 @@ reaction $p + p \rightarrow p + p + p + \bar p$ if the target proton is at rest?
 
 \subsubsection{Answer}
 Energy and momentum must be conserved. At the minimum allowed energy, the
-resultant 4 proton/anti-protons will be colinear with no relative momentum with
-respect to one another, so the momenum equation in the lab frame is simply
+resultant 4 proton/anti-protons will be collinear with no relative momentum with
+respect to one another, so the momentum equation in the lab frame is simply
 \begin{align}
 	p_i = 4p_f
 \end{align}
@@ -257,28 +257,59 @@ all have equivalent energy $E_f$. The initial protons have different energies
 since one is at rest in the lab frame while the other is moving, leading to
 the energy equation
 \begin{align*}
-	\sqrt{p²_i c² + m²_p c⁴} + m_p c² &= 4\sqrt{p²_f c² + m²_p c⁴}
+	\sqrt{p^2_i c^2 + m^2_p c^4} + m_p c^2 &= 4\sqrt{p^2_f c^2 + m^2_p c^4}
 \end{align*}
 Substituting the momentum relation into the equation, squaring, and simplifying,
 \begin{align*}
-	\sqrt{16p²_f c² + m²_p c⁴} + m_p c² &= 4\sqrt{p²_f c² + m²_p c⁴} \\
-	16p²_f c² + m²_p c⁴ + m²_p c⁴ + 2\sqrt{m²_p c⁴(16p²_f c² + m²_p c⁴)}
-		&= 16p²_f c² + 16m²_p c⁴ \\
-	2\sqrt{m²_p c⁴(16p²_f c² + m²_p c⁴)} &= 14m²_p c⁴ \\
-	16p²_f c² + m²_p c⁴ &= 49m²_p c⁴ \\
-	p²_f &= 3m²_p c⁴
+	\sqrt{16p^2_f c^2 + m^2_p c^4} + m_p c^2 &= 4\sqrt{p^2_f c^2 + m^2_p c^4} \\
+	16p^2_f c^2 + m^2_p c^4 + m^2_p c^4 + 2\sqrt{m^2_p c^4(16p^2_f c^2 + m^2_p c^4)}
+		&= 16p^2_f c^2 + 16m^2_p c^4 \\
+	2\sqrt{m^2_p c^4(16p^2_f c^2 + m^2_p c^4)} &= 14m^2_p c^4 \\
+	16p^2_f c^2 + m^2_p c^4 &= 49m^2_p c^4 \\
+	p^2_f &= 3m^2_p c^4
 \end{align*}
 Therefore,
 \begin{align*}
-	p²_i &= 48m²_p c⁴ \\
+	p^2_i &= 48m^2_p c^4 \\
 \intertext{and}
-	E₁ &= \sqrt{49m²_p c⁴}
+	E_1 &= \sqrt{49m^2_p c^4}
 \end{align*}
 \begin{align}
 	\boxed{
-	E₁ ≈ \SI{6.567}{\GeV\per c\squared}
+	E_1 \approx \SI{6.567}{\GeV\per c\squared}
 	}
 \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 6}
+\problem{6}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Fall 2011 I.P6}
+A subatomic particle has spin 1 and negative parity. It decays at rest into an $e^+ e^-$ pair, which is produced in the $s$ and $d$ waves. From these data determine (1) the total spin of the $e^+ e^-$ pair and (2) the intrinsic parity of $e^+$ relative to $e^-$.
+\subsubsection{Answer}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 7}
+\problem{7}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Fall 2011 I.P7}
+
+There is a uniform, vertical gravitational field with a downward acceleration of gravity g above a horizontal, perfectly elastic surface. A particle of mass m can only move above the surface. Give a rough estimate of the energy eigenvalue for the ground state of the particle.
+
+\subsubsection{Answer}
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Problem 8
@@ -299,7 +330,7 @@ given point. Then by moving an infinitesimal distance vertically, the total
 mass is changed by the density of the air (which is affected by the
 gravitational force). This leads to the differential equation
 \begin{align*}
-	\frac{dP}{dz} &= ρg
+	\frac{dP}{dz} &= \rho g
 \end{align*}
 Then using the ideal gas equation
 \begin{align*}
@@ -310,8 +341,8 @@ Then using the ideal gas equation
 \intertext{and then divide by the volume to get the ideal gas equation in terms
 of the mass density}
 	P &= \frac{Nm}{V} \frac{1}{m} k_B T \\
-	P &= ρ \frac{k_B T}{m} \\
-	ρ &= \frac{P m}{k_B T}
+	P &= \rho  \frac{k_B T}{m} \\
+	\rho  &= \frac{P m}{k_B T}
 \end{align*}
 Finally, substitute this into the differential equation above and solve to
 get the atmospheric scale height equation.
@@ -321,7 +352,37 @@ get the atmospheric scale height equation.
 \end{align*}
 \begin{align}
 	\boxed{
-	P(z) = P₀ e^{z/ξ}
-		\quad\quad\text{where }ξ = \frac{k_B T}{mg}
+	P(z) = P_0 e^{z/{\xi}}
+		\quad\quad\text{where }{\xi} = \frac{k_B T}{mg}
 	}
 \end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 9
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 9}
+\problem{9}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Fall 2011 I.P9}
+
+Consider a gas of atoms in a magnetic field of 10 Tesla. The nucleus of the atom has spin 1/2, magnetic moment $\mu\approx10^{-26}$J/Tesla, and mass $m\approx5\times10^{-27}$kg. The electrons in the atom have zero total angular momentum. What is the maximum number density of the gas for which the nuclei are completely polarized by the magnetic field at zero temperature?
+
+\subsubsection{Answer}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 10
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 10}
+\problem{10}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Fall 2011 I.P10}
+
+A new long-lived particle $X$ is observed to decay via $X \to K^+ + K^-$ . The mass of $X$ is about 1.2 GeV/$c^2$ . You wish to determine this mass to within 1\% using the momenta of the $K^+$ and $K^-$ from decay of $X$ at rest. What should be the maximum relative error on your momentum measurements if you use only a single decay event? You know that the mass of $K^+$ and $K^-$ is $493.677\pm0.013$MeV/$c^2$ .
+
+\subsubsection{Answer}
+

@@ -4,7 +4,11 @@
 \usetikzlibrary{intersections}
 
 \title{University of Minnesota Physics GWE Solutions}
+% Original Author
 \author{Justin Willmert}
+% Maintained By
+\author{Aditya Dhumuntarao}
+
 
 % Extend the capabilities of enumerations and itemized lists
 	\usepackage{enumerate}
@@ -55,8 +59,8 @@
 		\cfoot{%
 			\color{black!30!white}
 			These solutions are compiled in a \texttt{git} repository available
-			at \href{https://github.com/jmert/umn_phys_gwe}
-			{https://github.com/jmert/umn\_phys\_gwe}.
+			at \href{https://github.com/adhumunt/umn_phys_gwe}
+			{https://github.com/adhumunt/umn\_phys\_gwe}.
 		}
 	}
 	\pagestyle{plain}
@@ -194,27 +198,6 @@
 	}
 	\makeatother
 
-%% Convenience macros
-	% Script L used for Lagrangian
-	\newcommand{\sL}{\ensuremath{\mathcal L}}
-	% Derivative shortcut
-	\newcommand{\dd}{\ensuremath{\,\mathrm{d}}}
-	% Quantum bra-ket notation can be annoying, so make that more convenient
-	% to type
-	% · First, have macros for lone bras and kets
-	\newcommand{\bra}[1]{\ensuremath{\left\langle #1 \right|}}
-	\newcommand{\ket}[1]{\ensuremath{\left| #1 \right\rangle}}
-	% · Next, make a bra-ket pair so that all three < | > are the same sizes
-	\newcommand{\braket}[2]{\ensuremath{%
-		\left\langle #1 \middle| #2 \right\rangle%
-	}}
-	% · Also have one that can sandwich an operator expression in the middle.
-	\newcommand{\braopket}[3]{\ensuremath{%
-		\left\langle #1 \middle| #2 \middle| #3 \right\rangle
-	}}
-	% · Finally, expectation values
-	\newcommand{\expect}[1]{\ensuremath{\left\langle #1 \right\rangle}}
-
 \begin{document}
 
 \begingroup
@@ -237,6 +220,20 @@
 	\printindex
 	\clearpage
 \endgroup
+
+% --- Source Code ---
+
+% \fallexam{}{1}
+% input{}
+
+% \fallexam{}{2}
+% input{}
+
+% \springexam{}{1}
+% input{}
+
+% \springexam{}{2}
+% input{}
 
 \fallexam{2000}{1}
 \input{2000fall_p1}
@@ -262,6 +259,24 @@
 \fallexam{2008}{2}
 \input{2008fall_p2}
 
+\springexam{2010}{1}
+\input{2010spring_p1}
+
+\springexam{2010}{2}
+\input{2010spring_p2}
+
+\fallexam{2010}{1}
+\input{2010fall_p1}
+
+\fallexam{2010}{2}
+\input{2010fall_p2}
+
+\springexam{2011}{1}
+\input{2011spring_p1}
+
+\springexam{2011}{2}
+\input{2011spring_p2}
+
 \fallexam{2011}{1}
 \input{2011fall_p1}
 
@@ -277,7 +292,79 @@
 \fallexam{2012}{1}
 \input{2012fall_p1}
 
+\fallexam{2012}{2}
+\input{2012fall_p2}
+
+\springexam{2013}{1}
+\input{2013spring_p1}
+
+\springexam{2013}{2}
+\input{2013spring_p2}
+
 \fallexam{2013}{1}
 \input{2013fall_p1}
+
+\fallexam{2013}{2}
+\input{2013fall_p2}
+
+\springexam{2014}{1}
+\input{2014spring_p1}
+
+\springexam{2014}{2}
+\input{2014spring_p2}
+
+\fallexam{2014}{1}
+\input{2014fall_p1}
+
+\fallexam{2014}{2}
+\input{2014fall_p2}
+
+% \springexam{2015}{1}
+% \input{2015spring_p1}
+
+% \springexam{2015}{2}
+% \input{2015spring_p2}
+
+\fallexam{2015}{1}
+\input{2015fall_p1}
+
+\fallexam{2015}{2}
+\input{2015fall_p2}
+
+% \springexam{2016}{1}
+% \input{2016spring_p1}
+
+% \springexam{2016}{2}
+% \input{2016spring_p2}
+
+\fallexam{2016}{1}
+\input{2016fall_p1}
+
+\fallexam{2016}{2}
+\input{2016fall_p2}
+
+% \springexam{2017}{1}
+% \input{2017spring_p1}
+
+% \springexam{2017}{2}
+% \input{2017spring_p2}
+
+\fallexam{2017}{1}
+\input{2017fall_p1}
+
+\fallexam{2017}{2}
+\input{2017fall_p2}
+
+\springexam{2018}{1}
+\input{2018spring_p1}
+
+\springexam{2018}{2}
+\input{2018spring_p2}
+
+\fallexam{2018}{1}
+\input{2018fall_p1}
+
+\fallexam{2018}{2}
+\input{2018fall_p2}
 
 \end{document}

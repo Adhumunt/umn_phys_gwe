@@ -6,13 +6,13 @@
 % Keywords
 	\index{mechanics!Impulse on a rod}
 
-If an impulse is delivered to the end of a uniform rod of length $ℓ$, lying on
+If an impulse is delivered to the end of a uniform rod of length $\ell $, lying on
 a frictionless plane, how far will it travel while making one revolution? The
 impulse is in the plane of the table and perpendicular to the rod.
 
 \subsubsection{Answer}
 
-For a given impulse $\vec J$, the change in the motion is $\vec J = Δ\vec p$.
+For a given impulse $\vec J$, the change in the motion is $\vec J = \Delta \vec p$.
 If the rod start at rest, then the final momentum must be $\vec p = \vec J$.
 This means the rod is moving laterally with a velocity
 \begin{align*}
@@ -24,43 +24,43 @@ which when integrated over a time $t$ gives the distance it has moved $\vec x$.
 \end{align*}
 
 The impulse also imparts a rotation on the rod because the force was not
-applied at the rod's center of mass. The torque $\vec τ$ relates the force
+applied at the rod's center of mass. The torque $\vec \tau$ relates the force
 to the angular momentum $\vec L$ by
 \begin{align*}
-    \vec r × \vec F &= \vec τ = \dot{\vec L}
+    \vec r \times  \vec F &= \vec \tau = \dot{\vec L}
 \end{align*}
 Integrating both sides of the equation, we can write the equation in terms of
 the given impulse:
 \begin{align*}
-    \vec r × \int \vec F \,dt &= \int \dot{\vec L} \,dt \\
-    \vec r × \vec J &= Δ\vec L
+    \vec r \times  \int \vec F \,dt &= \int \dot{\vec L} \,dt \\
+    \vec r \times  \vec J &= \Delta \vec L
 \end{align*}
 Again, since the rod starts at rest, we know that the final angular momentum
 must be
 \begin{align*}
-    \vec L = \vec r × \vec J
+    \vec{L} = \vec{r} \times \vec{J}
 \end{align*}
-The rotation about the rod's center of mass  occurs at a rate $\vec ω$
-dependent on the moment of inertia $I = \frac{1}{12} mℓ²$, so
+The rotation about the rod's center of mass  occurs at a rate $\vec {\omega}$
+dependent on the moment of inertia $I = \frac{1}{12} m\ell ^2$, so
 \begin{align*}
-    \vec ω = \frac{12}{mℓ²} \vec r × \vec J
+    \vec {\omega} = \frac{12}{m\ell^2} \vec{r} \times \vec{J}
 \end{align*}
 We know that the impulse is applied perpendicular to the rod, so we can easily
 integrate the expression in time and solve for the time it takes to revolve
-$2π$ radians:
+$2{\pi}$ radians:
 \begin{align*}
-    θ = 2π &= \frac{12}{mℓ²} rJt \\
-    t &= \frac{πmℓ²}{6 rJ}
+    \theta  = 2{\pi} &= \frac{12}{m\ell ^2} rJt \\
+    t &= \frac{{\pi} m\ell ^2}{6 rJ}
 \end{align*}
 
 Plugging this back into the linear motion equation, the rod travels
 \begin{align*}
-    \vec x = \frac{1}{m} \vec J ⋅ \frac{πmℓ²}{6 rJ}
+    \vec x = \frac{1}{m} \vec J \cdot  \frac{{\pi} m\ell ^2}{6 rJ}
 \end{align*}
-where we can set $r = \frac 12 ℓ$ and therefore simplifies to
+where we can set $r = \frac 12 \ell $ and therefore simplifies to
 \begin{align}
     \boxed{
-    \vec x = \frac{πℓ}{3} \hat J
+    \vec x = \frac{{\pi}\ell }{3} \hat J
     }
 \end{align}
 where $\hat J$ is the direction of the applied impulse.
@@ -73,21 +73,19 @@ where $\hat J$ is the direction of the applied impulse.
 % Keywords
 	\index{electrodynamics!Properties of a magnetic field}
 
-A time-indpendent magnetic field is given by $\vec B = 2bxy \,\hat ı +
-ay² \,\hat ȷ$.
+A time-independent magnetic field is given by $\vec B = 2bxy \,\hat i  +
+ay^2 \,\hat j$.
 \begin{enumerate}[a)]
-    \item
-        What is the relationship between the constants $a$ and $b$?
-    \item
-        Determine the steady current density $J$ that gives rise to this field.
+    \item What is the relationship between the constants $a$ and $b$?
+    \item Determine the steady current density $J$ that gives rise to this field.
 \end{enumerate}
 
 \subsubsection{Answer}
-For part (a), we realize that all magnetic fields must be divergenceless.
+For part (a), we realize that all magnetic fields must be divergence-less.
 Therefore we can find the requirements on the constants $a$ and $b$ by
 constraining the divergence to be zero.
 \begin{align*}
-    \vec ∇ ⋅ \vec B = 0 &= \frac{∂}{∂x}(2bxy) + \frac{∂}{∂y}(ay²) \\
+    \vec \nabla \cdot \vec B = 0 &= \frac{\partial }{\partial x}(2bxy) + \frac{\partial }{\partial y}(ay^2) \\
     0 &= 2by + 2ay \\
     b &= -a
 \end{align*}
@@ -99,12 +97,12 @@ Therefore the relation between the constants is that
 For the second part, we make use of Maxwell's equations. Assuming that none of
 the field is due to a time-varying electric field, we make use of
 \begin{align*}
-    \vec ∇ × \vec B &= μ₀ \vec J
+    \vec \nabla  \times  \vec B &= {\mu}_0 \vec J
 \end{align*}
 to calculate the current that generates the field. Doing so, we find that the
 solution is
 \begin{align}
-    \boxed{ \vec J = \frac{2a}{μ₀} x \,\hat k }
+    \boxed{ \vec J = \frac{2a}{{\mu}_0} x \,\hat k }
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -115,17 +113,17 @@ solution is
 % Keywords
 	\index{electrodynamics!Charges from multipole moments}
 
-A set of four point charges $q₁$, $q₂$, $q₃$, and $q₄$ are arranged
-collinearly along the $z$-axis at $z₁ = 0$, $z₂ = a$, $z₃ = 2a$, $z₄ = 4a$,
+A set of four point charges $q_1$, $q_2$, $q_3$, and $q_4$ are arranged
+collinearly along the $z$-axis at $z_1 = 0$, $z_2 = a$, $z_3 = 2a$, $z_4 = 4a$,
 respectively and the resulting electric field at a distant point $\vec r$ ($r
-≫ a$) decays \emph{faster} than $1/r³$. Determine the values of $q₁$ and $q₄$
-which $q₂ = +2$ and $q₃ = +4$. Units for all charges are Coulombs.
+\gg a$) decays \emph{faster} than $1/r^3 $. Determine the values of $q_1$ and $q_4$
+which $q_2 = +2$ and $q_3 = +4$. Units for all charges are Coulombs.
 
 \subsubsection{Answer}
 
-Given that the electric field must fall off faster than $1/r³$, this
-corresponds to a potential which drops off faster than $1/r²$. We know that
-the monopole moment drops off like $1/r$ and the dipole like $1/r²$, so we
+Given that the electric field must fall off faster than $1/r^3 $, this
+corresponds to a potential which drops off faster than $1/R^2$. We know that
+the monopole moment drops off like $1/r$ and the dipole like $1/R^2$, so we
 conclude that the first configuration which could satisfy the given
 requirement is that of a quadrupole moment.
 
@@ -136,8 +134,8 @@ we have two unknown charges and the two equations will allow us to solve them.
 For the monopole, the sum of all charges must simply equal zero. Therefore
 we immediately know that
 \begin{align*}
-    0 &= q₁ + q₄ + 6 \\
-    -6 &= q₁ + q₄
+    0 &= q_1 + q_4 + 6 \\
+    -6 &= q_1 + q_4
 \end{align*}
 
 The dipole moment (where we take the dipole considered at the origin) is given
@@ -147,18 +145,18 @@ by
 \end{align*}
 This gives us the equation
 \begin{align*}
-    0 &= 10a + 4aq₄ \\
-    q₄ &= -\frac 52
+    0 &= 10a + 4aq_4 \\
+    q_4 &= -\frac{5}{2}
 \end{align*}
-The charge $q₁$ does not show up in the equation since it is located at the
-origin. This lets us very simply then solve for $q₁$ as
+The charge $q_1$ does not show up in the equation since it is located at the
+origin. This lets us very simply then solve for $q_1$ as
 \begin{align*}
-    -6 &= q₁ - \frac 52
+    -6 &= q_1 - \frac{5}{2}
 \end{align*}
 Therefore, the solution is that the charges have values of
 \begin{align}
-    \boxed{ q₁ = -\frac 72 } \\
-    \boxed{ q₄ = -\frac 52 }
+    \boxed{ q_1 = -\frac{7}{2} } \\
+    \boxed{ q_4 = -\frac{5}{2} }
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -169,34 +167,34 @@ Therefore, the solution is that the charges have values of
 % Keywords
 	\index{quantum!Spectral emission line width}
 
-The Lyman-α transition in atomic hydrogen has a wavelength $λ =
+The Lyman-${\alpha}$ transition in atomic hydrogen has a wavelength ${\lambda} =
 \SI{121.5}{\nm}$, and a transition rate of \SI{0.6e9}{\s^{-1}}. Estimate the
-minimum value of $Δλ/λ$.
+minimum value of $\Delta {\lambda}/{\lambda}$.
 
 \subsubsection{Answer}
 
-We can make an estimate of the spread $Δλ$ by making use of the Heisenberg
+We can make an estimate of the spread $\Delta {\lambda}$ by making use of the Heisenberg
 uncertainty relation for energy-time. Starting with the variation in
 wavelength,
 \begin{align*}
-    Δλ &= λ - λ' \\
+    \Delta {\lambda} &= {\lambda} - {\lambda}' \\
     {} &= \frac{hc}{E} - \frac{hc}{E'} \\
     {} &= \frac{hc(E' - E)}{E E'}
-\intertext{Making use of the approximation that $E ≈ E'$,}
-    {} &= \frac{hcΔE}{E²}
+\intertext{Making use of the approximation that $E \approx E'$,}
+    {} &= \frac{hc\Delta E}{E^2}
 \end{align*}
-Dividing by the frequency and substituting in the uncertainty relation $ΔEΔt =
-\frac{ℏ}{2}$,
+Dividing by the frequency and substituting in the uncertainty relation $\Delta E\Delta t =
+\frac{{\hbar}}{2}$,
 \begin{align*}
-    \frac{Δλ}{λ} &= \frac{hc}{λ} ⋅ \frac{1}{E²}\frac{ℏ}{2Δt} \\
-    {} &= \frac{λ}{4πcΔt}
+    \frac{\Delta {\lambda}}{{\lambda}} &= \frac{hc}{{\lambda}} \cdot  \frac{1}{E^2}\frac{{\hbar}}{2\Delta t} \\
+    {} &= \frac{{\lambda}}{4{\pi} c\Delta t}
 \end{align*}
-For the time, we estimate the transition rate is occuring as fast as it can
-within the limits of the uncertainty relation, so we can let $Δt ≈ \SI{0.6e9}
+For the time, we estimate the transition rate is occurring as fast as it can
+within the limits of the uncertainty relation, so we can let $\Delta t \approx \SI{0.6e9}
 {\s^{-1}}$. Plugging in the other values, we find the fractional line width
 to be estimated as
 \begin{align}
-    \boxed{ \frac{Δλ}{λ} ≈ \num{1.935e-8} ≈ \text{1 part in 50 million} }
+    \boxed{ \frac{\Delta {\lambda}}{{\lambda}} \approx \num{1.935e-8} \approx \text{1 part in 50 million} }
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -206,11 +204,11 @@ to be estimated as
 \subsubsection{Question}
 % Keywords
 	\index{statistical mechanics!Radiometric dating from mass ratios}
-
+	\index{statistical mechanics!Half Life}
 A rock is found to contain \SI{4.20}{\mg} of ${}^{238}U$ and \SI{2.00}{\mg}
-of ${}^{206}Pb$. Assume tha the rock contained no lead at the time of its
-formation, so that all the lead now present is due to th decay of the
-uranium orignally present in the rock. Find the age of the rock given that
+of ${}^{206}Pb$. Assume that the rock contained no lead at the time of its
+formation, so that all the lead now present is due to the decay of the
+Uranium originally present in the rock. Find the age of the rock given that
 the half-life of ${}^{238}U$ is \SI{4.47e9}{\year}. The decay times of all
 intermediate elements are negligibly short and ignore any differences in the
 binding energies.
@@ -220,19 +218,19 @@ binding energies.
 From decay processes, we know that the uranium atom count will decrease as an
 exponential according to
 \begin{align*}
-    N_U = N_{U0}e^{-t/τ}
+    N_U = N_{U0}e^{-t/\tau}
 \end{align*}
-where $τ = t_{1/2}/\ln 2$. Likewise, the number of lead atoms will increase
+where $\tau = t_{1/2}/\ln 2$. Likewise, the number of lead atoms will increase
 according to
 \begin{align*}
-    N_{Pb} = N_{U0} (1 - e^{-t/τ})
+    N_{Pb} = N_{U0} (1 - e^{-t/\tau})
 \end{align*}
-Solveing for $N_{U0}$ in the first equation and substituting it into the
+Solving for $N_{U0}$ in the first equation and substituting it into the
 second, we can solve for the time required to generate a specific number of
 uranium and lead atoms in a sample.
 \begin{align*}
-    N_{Pb} &= N_U e^{t/τ} (1 - e^{-t/τ}) \\
-    t &= τ \ln(\frac{N_{Pb}}{N_U} + 1) \\
+    N_{Pb} &= N_U e^{t/\tau} (1 - e^{-t/\tau}) \\
+    t &= \tau \ln(\frac{N_{Pb}}{N_U} + 1) \\
     t &= \frac{t_{1/2}}{\ln 2} \ln(\frac{N_{Pb}}{N_U} + 1)
 \end{align*}
 We were only given the masses, though, so we approximate the mass of each
@@ -255,10 +253,10 @@ Plugging in all the numbers,
 % Keywords
 	\index{circuits!Current amplitude and phase in LRC circuit}
 
-The applied AC voltage in the circuit is given by $V(t) = V₀ \sin ωt$, with 
-a frequency fixed at $ω = 1/(LC)^{1/2}$. Determine the steady state 
+The applied AC voltage in the circuit is given by $V(t) = V_0 \sin {\omega} t$, with 
+a frequency fixed at ${\omega} = 1/(LC)^{1/2}$. Determine the steady state 
 amplitude and phase of the current through the resistor $R$. Express your 
-answer in terms of the amplitude $V₀$ of the applied voltage and the other 
+answer in terms of the amplitude $V_0$ of the applied voltage and the other 
 circuit parameters.
 
 \begin{center}
@@ -286,7 +284,7 @@ circuit parameters.
 AC problems are simplified by using complex impedances, so we first convert 
 the given voltage into a complex one:
 \begin{align*}
-	\tilde V(t) &= V₀ e^{iωt}
+	\tilde V(t) &= V_0 e^{i{\omega} t}
 \end{align*}
 where the physical solution can be recovered by keeping the imaginary 
 component of the complex solution. Then to solve the problem, we realize 
@@ -308,55 +306,55 @@ one with the resistor and capacitor replaced by an effective resistor
 	\vspace{\baselineskip}
 \end{center}
 The inductor has been been replaced by an effective resistor with impedance 
-$Z_L = iωL$. The effective resistor that replaced the capacitor and resistor 
+$Z_L = i{\omega} L$. The effective resistor that replaced the capacitor and resistor 
 is a complex impedance that is calculated the same as for traditional 
 resistors in parallel:
 \begin{align*}
 	Z_{eff} &= ( \frac{1}{Z_C} + \frac{1}{Z_R} )^{-1} \\
-		&= ( iωC + \frac{1}{R} )^{-1} \\
-		&= \frac{R}{iωCR + 1}
+		&= ( i{\omega}C + \frac{1}{R} )^{-1} \\
+		&= \frac{R}{i{\omega}CR + 1}
 \end{align*}
 Now making use of Kirchoff's loop rule on this simplified circuit where the 
-total current passing through the voltage source is labeled $\tilde I₀$,
+total current passing through the voltage source is labeled $\tilde I_0$,
 \begin{align*}
-	0 &= \tilde V - \tilde I₀ (Z_L + Z_{eff}) \\
-	\tilde V &= (iωL + \frac{R}{iωCR + 1}) \tilde I₀ \\
-	\tilde V &= \frac{R(1 - ω²LC) + iωL}{iωRC + 1} \tilde I₀
-\intertext{The first term in the numerator goes to zero since $ω² = 1/LC$,
+	0 &= \tilde V - \tilde I_0 (Z_L + Z_{eff}) \\
+	\tilde V &= (i{\omega} L + \frac{R}{i{\omega}CR + 1}) \tilde I_0 \\
+	\tilde V &= \frac{R(1 - {\omega}^2LC) + i{\omega} L}{i{\omega}RC + 1} \tilde I_0
+\intertext{The first term in the numerator goes to zero since ${\omega}^2 = 1/LC$,
 leaving}
-	\tilde I₀ &= \frac{iωRC + 1}{iωL} V₀ e^{iωt}
+	\tilde I_0 &= \frac{i{\omega}RC + 1}{i{\omega} L} V_0 e^{i{\omega} t}
 \end{align*}
 
 To isolate the current passing through the resistor, we return to the 
 original unsimplified circuit diagram and apply Kirchoff's loop rule to only 
-the inner loop. If we define the current through capacitor to be $I₁$ and
-through the resistor to be $I₂$, we get
+the inner loop. If we define the current through capacitor to be $I_1$ and
+through the resistor to be $I_2$, we get
 \begin{align*}
-	0 &= -\tilde I₂ Z_R + \tilde I₁ Z_C \\
-	\tilde I₁ &= \frac{Z_R}{Z_C} I₂ \\
-	\tilde I₁ &= iωRC I₂ \\	
+	0 &= -\tilde I_2 Z_R + \tilde I_1 Z_C \\
+	\tilde I_1 &= \frac{Z_R}{Z_C} I_2 \\
+	\tilde I_1 &= i{\omega}RC I_2 \\	
 \end{align*}
 Remembering the the current passing into a junction must be conserved, we know
-that $I₀ = I₁ + I₂$ and therefore,
+that $I_0 = I_1 + I_2$ and therefore,
 \begin{align*}
-	\tilde I₀ &= iωRC \tilde I₂ + \tilde I₂ \\
-	\tilde I₂ &= \frac{1}{iωRC + 1} \tilde I₀
+	\tilde I_0 &= i{\omega}RC \tilde I_2 + \tilde I_2 \\
+	\tilde I_2 &= \frac{1}{i{\omega}RC + 1} \tilde I_0
 \end{align*}
-Inserting the solution for $I₀$ from the previous part leaves
+Inserting the solution for $I_0$ from the previous part leaves
 \begin{align*}
-	\tilde I₂ &= \frac{V₀}{iωL} e^{iωt}
+	\tilde I_2 &= \frac{V_0}{i{\omega} L} e^{i{\omega} t}
 \end{align*}
 To prepare for finding the physical solution, we transform the coefficient
 complex polar form.
 \begin{align*}
-	\tilde I₂ &= \left|-\frac{iV₀}{ωL}\right| e^{i\arg(-iV₀/ωL)} e^{iωt} \\
-		&= \frac{V₀}{ωL} e^{-iπ/2} e^{iωt}
+	\tilde I_2 &= \left|-\frac{iV_0}{{\omega} L}\right| e^{i\arg(-iV_0/{\omega} L)} e^{i{\omega} t} \\
+		&= \frac{V_0}{{\omega} L} e^{-i{\pi}/2} e^{i{\omega} t}
 \end{align*}
 Therefore taking the imaginary part of the solution,
 \begin{align}
 	\boxed{
-	I_R(t) = V₀ \sqrt{\frac{C}{L}} \sin(ωt - \frac π2)
+	I_R(t) = V_0 \sqrt{\frac{C}{L}} \sin({\omega} t - \frac {\pi}2)
 	}
 \end{align}
-The current's amplitude is $V₀\sqrt{C/L}$ and has a phase of $-π/2$ with
+The current's amplitude is $V_0\sqrt{C/L}$ and has a phase of $-{\pi}/2$ with
 respect to the voltage.

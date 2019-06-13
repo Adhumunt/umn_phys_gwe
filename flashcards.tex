@@ -1,59 +1,27 @@
-\documentclass[avery5371]{flashcards}
+\documentclass[avery5371,grid]{flashcards}
 \usepackage{defaults-utilities}
-\usepackage{defaults-fonts}
+%\usepackage{defaults-fonts}
 \usepackage{defaults-math}
 \usepackage{defaults-layout}
-
+\usepackage{graphicx,enumitem}
 \title{University of Minnesota Physics GWE Flashcards}
 \author{Justin Willmert}
 
 \begin{document}
 
 \cardfrontstyle{headings}
-
+\cardbackstyle{empty}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Electrodynamics
+%%%% GENERAL MATHEMATICS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\cardfrontfoot{Electrodynamics}
+\cardfrontfoot{Mathematics}
 
-\begin{flashcard}{Electrical component voltages}
+\begin{flashcard}[Formula]{Gaussian Integrals}
 	\begin{align*}
-		V &= IR		&	V = \frac{Q}{C} \\
-		V &= L\frac{dI}{dt}
-	\end{align*}
-\end{flashcard}
-
-\begin{flashcard}{Maxwell's Equations (Guassian)}
-	\begin{align*}
-		\vec ∇ · \vec D &= 4πρ_f
-			& \vec ∇ × \vec E &= -\frac 1c \frac{∂\vec B}{∂t}
-		\\
-		\vec ∇ · \vec B &= 0
-			& \vec ∇ × \vec H &= \frac 1c ( \frac{∂\vec D}{∂t} + 4π \vec{J_f} )
-	\end{align*}
-\end{flashcard}
-
-\begin{flashcard}{Maxwell's Equations (SI)}
-	\begin{align*}
-		\vec ∇ · \vec D &= ρ_f
-			& \vec ∇ × \vec E &= -\frac{∂\vec B}{∂t}
-		\\
-		\vec ∇ · \vec B &= 0
-			& \vec ∇ × \vec H &= \frac{∂\vec D}{∂t} + \vec{J_f}
-	\end{align*}
-\end{flashcard}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% General Math
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\cardfrontfoot{General Math}
-
-\begin{flashcard}{Gaussian Integrals}
-	\begin{align*}
-		I_n(x) = \!\! ∫_0^∞ \!\! x^n e^{-ax²} dx &=
+		I_n(x) = \!\! \int_0^{\infty}  \!\! x^n e^{-ax^2} dx &=
 			\begin{cases}
 				\displaystyle
-				\frac{1}{2} \sqrt{\frac{π}{a^{m+1}}} \frac{(2m)!}{4^m m!}
+				\frac{1}{2} \sqrt{\frac{{\pi}}{a^{m+1}}} \frac{(2m)!}{4^m m!}
 					& \text{$n = 2m$} \\
 				\displaystyle
 				\frac{1}{2} \frac{1}{a^{k+1}} k!
@@ -62,62 +30,373 @@
 	\end{align*}
 	\vspace{-\baselineskip}
 	\begin{align*}
-		I₀(x) &= \frac 12 \sqrt{\frac π a}
-			& I₁(x) &= \frac 1 {2a} \\
-		I₂(x) &= \frac{1}{4a} \sqrt{\frac π a}
-			& I₃(x) &= \frac 1 {2a²}
+		I_0(x) &= \frac 12 \sqrt{\frac{\pi}{a}}
+			& I_1(x) &= \frac {1}{2a} \\
+		I_2(x) &= \frac{1}{4a} \sqrt{\frac{\pi}{a}}
+			& I_3(x) &= \frac {1}{2a^2}
 	\end{align*}
 \end{flashcard}
 
-\begin{flashcard}{Geometric Series}
+\begin{flashcard}[Definition]{Gamma Function}
+	$$\Gamma(n) = \int_0^\infty x^{n-1}e^{-x}\dd x$$ 
+	For half integers, the Gamma function has a special form
+	$$\Gamma\qty(\frac{n}{2}) = \frac{(n-2)!!\sqrt{\pi}}{2^{2(n-1)}}$$ 
+	where $n!! = n\times(n-2)\times\cdots\times3\times 1$ if $n$ is odd and $n!! =n\times(n-2)\times\cdots\times4\times2$ is $n$ is even and $\Gamma(\frac{1}{2}) =\sqrt{\pi}$ and $\Gamma(\frac{3}{2}) = \frac{\sqrt{\pi}}{2}$.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Riemann-Zeta Function}
+	$$\zeta(n) = \sum_{k=0}^{\infty}\frac{1}{(k+1)^n}$$
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Fermi and Bose Integrals: $$\int_0^\infty \frac{x^n}{e^x+1}\dd x$$ }
+	Solution: $$\qty(1-\frac{1}{2^n})\Gamma(n+1)\zeta(n+1)$$
+	where $\Gamma(n)$ and $\zeta(n)$ are the Gamma and Riemann-Zeta functions.
+\end{flashcard}
+
+\begin{flashcard}[Theory]{Residue Theorem}
+	Let $C$ be a simple closed contour, described in the positive sense. If a function $f$ is analytic inside and on C except for a finite number of singular points $z_k\ (k = 1, 2, . . . , n)$ inside $C$, then
+	\begin{equation*}
+		\int_{C}f(z)\dd z = 2\pi i \sum_{k=1}^n\text{Res}_{z=z_k}f(z)
+	\end{equation*}
+\end{flashcard}
+
+\begin{flashcard}[Formula]{Common E\textit{\&}M Integrals}
+	\begin{align*}
+		\int\frac{\dd x}{\sqrt{x^2+a^2}} &= \ln(x+\sqrt{x^2+a^2})+c\\
+		\int\frac{\dd x}{(x^2+a^2)^{3/2}} &= \frac{x}{a^2\sqrt{x^2+a^2}}+c
+	\end{align*}
+\end{flashcard}
+
+\begin{flashcard}[Formula]{Geometric (Partial) Series}
 	\begin{align*}
 		\sum_{i=0}^N r^i &= \frac{1 - r^{N+1}}{1 - r} \\
-		\sum_{i=0}^∞ r^i &= \frac{1}{1 - r}
+		\sum_{i=0}^{\infty}  r^i &= \frac{1}{1 - r}
 	\end{align*}
 \end{flashcard}
 
-\begin{flashcard}{Stirling's Approximation}
-	\[ n! ≈ (\frac ne)^n \sqrt{2πn} \] \\
-	\[ \ln n! ≈ n\ln n - n \]
+\begin{flashcard}[Definition]{Line \textit{\&} Volume Elements}
+	The line elements for planar, spherical and cylindrical geometries are
+	\begin{align*}
+		\dd\boldsymbol{\ell}_P&=\dd x\hat{\boldsymbol{x}} + \dd y\hat{\boldsymbol{y}} + \dd z\hat{\boldsymbol{z}}\\
+		\dd\boldsymbol{\ell}_S&=\dd r\hat{\boldsymbol{r}}+r \dd\theta\hat{\boldsymbol{\theta}} +r\sin(\theta)\dd\varphi\hat{\boldsymbol{\varphi}}\\
+		\dd\boldsymbol{\ell}_C&=\dd s\hat{\boldsymbol{s}} + s\dd\varphi\hat{\boldsymbol{\varphi}}+\dd z\hat{\boldsymbol{z}}
+	\end{align*}
+	The volume elements for planar, spherical and cylindrical geometries are $\dd\tau= \dd x\dd y\dd z$, $\dd\tau=r^2\sin(\theta)\dd r\dd\theta\dd\varphi$, $\dd\tau=s\dd s\dd\varphi\dd z$.
 \end{flashcard}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% MECHANICS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\cardfrontfoot{Mechanics}
-
-\begin{flashcard}{Bernoulli's equation}
-	\[ \frac{v²}{2} + gz + \frac{p}{ρ} = \text{constant} \]
+\begin{flashcard}[Formula]{Stirling's Approximation}
+	\[ n! {\approx}  (\frac ne)^n \sqrt{2{\pi}n} \] \\
+	\[ \ln n! {\approx}  n\ln n - n \]
 \end{flashcard}
+
+\begin{flashcard}[Definition]{Vector Derivatives: Cartesian}
+	\begin{align*}
+		\text{Gradient:}&&\grad f &= \partial_x f\hat{\boldsymbol{x}} + \partial_y f\hat{\boldsymbol{y}} + \partial_z f\hat{\boldsymbol{z}}\\
+		\text{Divergence:}&&\div \mathbf{v} &= \partial_x{v_x}+\partial_y{v_y}+\partial_z{v_z}\\
+		\text{Curl:}&&\curl\mathbf{v} &=\qty(\partial_{y}{v_z}-\partial_{z}{v_y})\hat{\boldsymbol{x}} + \qty(\partial_{z}{v_x}-\partial_{x}{v_z})\hat{\boldsymbol{y}} \\
+		&&&+\qty(\partial_xv_y-\partial_y v_x)\hat{\boldsymbol{z}}\\
+		\text{Laplacian:}&&\grad^2 f &= \partial^2_x f +\partial^2_y f + \partial^2_z f
+	\end{align*}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Fundamental Theorems of Vector Calculus}
+	\begin{align*}
+		\text{Gradient Theorem: }&\int_{\mathbf{a}}^{\mathbf{b}} (\grad f)\cdot \dd\boldsymbol{\ell} = f(\mathbf{b}) - f(\mathbf{a}) \\
+		\text{Divergence Theorem: }&\int \qty(\div \mathbf{A}) \dd\tau = \oint \mathbf{A} \cdot \dd\boldsymbol{a}\\
+		\text{Curl Theorem: }&\int\qty(\curl\mathbf{A})\cdot\dd\boldsymbol{a} = \oint\mathbf{A}\cdot\dd\boldsymbol{\ell} \\
+	\end{align*}
+\end{flashcard}		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% CLASSICAL MECHANICS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cardfrontfoot{Classical Mechanics}
+
+\begin{flashcard}[Definition]{Bernoulli's equation*}
+The Bernoulli's equation is given as
+	\[ \frac{v^2}{2} + gz + \frac{p}{{\rho}} = \text{constant} \]
+	where $p$ is pressure, $\rho$ is density, $g$ is gravity, and $v^2$ is velocity of the fluid. Another way to write it is
+	\begin{equation*}
+		p + \frac{1}{2}\rho v^2 + \rho g h = \text{constant}
+	\end{equation*}
+	which has a familiar form to classical mechanics.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{COM and Displacement Coordinates}
+	The center of mass is given by
+	\begin{equation*}
+		q_c = \frac{\sum_{i}m_i q_i}{\sum_{i}m_i}
+	\end{equation*}
+	while the displacement coordinate is given by
+	\begin{equation*}
+		q_d = q_{ij} = q_i - q_j.
+	\end{equation*}
+	Use these to simplify Lagrangian systems.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Moment of Inertia}
+	The moment of inertia has the discrete version $I_P = \sum_{i} m_i r_i^2$. For a continuous rigid body, let $\rho(\mathbf{x})$ be the mass density at each point in the body, $\mathbf{r}$ be a vector perpendicular to the axis of rotation, extending from a point on the rotation axis to a point in the solid, and $\dd V$ be the volume of the body $Q$, then
+	\begin{equation*}
+		I = \iiint\limits_{Q} \rho(x,y,z) \abs{\mathbf{r}^2}\dd V
+	\end{equation*}
+	
+\end{flashcard}
+
+\begin{flashcard}[Formula]{Common Moments of Inertia}
+	Solid Cylinder: $I = \tfrac{1}{2}MR^2$\\
+	Symmetric Loop: $I = MR^2$\\
+	Solid Sphere: $I = \tfrac{2}{5}MR^2$\\
+	Rod about Center: $I = \tfrac{1}{12}M L^2$\\
+	Solid Cylinder about $z$: $I = \tfrac{1}{4}MR^2+\tfrac{1}{12}ML^2$\\
+	Loop about diameter: $I = \tfrac{1}{2}MR^2$\\
+	Thin Spherical Shell: $I = \tfrac{2}{3}MR^2$\\
+	Rod about End: $I = \frac{1}{3}ML^2$\\
+\end{flashcard}
+
+\begin{flashcard}[Theory]{Perpendicular-Axis Theorem for a Plane Lamina}
+	Let $I_i$ be the moment of inertia about the $i$-axis, then
+	\begin{equation*}
+		I_z = I_x + I_y
+	\end{equation*}
+	\textit{The moment of inertia of any plane lamina about an axis normal to the plane of the lamina is equal to the sum of the moments of inertia about any two mutually perpendicular axes passing through the given axis and lying in the plane of the lamina.}
+\end{flashcard}
+
+\begin{flashcard}[Theory]{Parallel-Axis Theorem for Any Rigid Body}
+	We may in general say that
+	\begin{equation*}
+		I = I_{cm} + m l^2
+	\end{equation*}
+	\textit{The moment of inertia of a rigid body about any axis is equal to the moment of inertia about a parallel axis passing through the center of mass plus the product of the mass of the body and the square of the distance between the two axes.}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Euler-Lagrange Equations}
+	In classical mechanics, the Euler-Lagrange equations are a set of differential equations of second order given by
+	\begin{equation*}
+		\dv{t}\qty(\pdv{\mathcal{L}}{\dot{q}_i}) - \pdv{\mathcal{L}}{q_i}=0
+	\end{equation*}
+	where $\mathcal{L}(\dot{q}_i,q_i)$ is the Lagrangian of the system depending on the velocities $\dot{q}_i$ and positions $q_i$.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Lagrangian: Single Harmonic Oscillator}
+	The Lagrangian for this system is
+	\begin{align*}
+		\mathcal{L} = \frac{1}{2}m\dot{q}^2 - \frac{1}{2}k q^2
+	\end{align*}
+	where $m$ is the mass of the point attached to the spring whose constant is $k$.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Lagrangian: Single Coupled Harmonic Oscillator}
+	Let two mass points $m_1, m_2$ be coupled with a spring $k$, 
+	then the Lagrangian for this system is
+	\begin{align*}
+		\mathcal{L} = \frac{1}{2}m_1 \dot{q}_1^2 + \frac{1}{2}m_2\dot{q}_2^2 - \frac{1}{2}k(q_2-q_1)^2
+	\end{align*}
+	where $q_1(t)$ and $q_2(t)$ are the positions of the mass points.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Lagrangian: Triatomic Model}
+	Let three mass points $m_1,\ m_2,\ m_3$ be given and two springs with constants $k_{12}$ and $k_{13}$ connect two masses. The Lagrangian for this system is given by
+	\begin{align*}
+		\mathcal{L} &= \frac{1}{2}m_1\dot{q}_1^2 + \frac{1}{2}m_1\dot{q}_1^2 + \frac{1}{2}m_1\dot{q}_1^2 \\
+		&- \frac{1}{2}k_{12}\qty(q_2-q_1-d)^2 - \frac{1}{2}k_{23}\qty(q_2-q_3-d)^2
+	\end{align*}
+	where $d$ is the equilibrium distance for the springs.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Lagrangian: Single Pendulum}
+	The Lagrangian for a single mass $m$ attached to a ceiling with a thin massless rope of length $r=\ell$ moving in a fixed plane is given by
+	\begin{equation*}
+		\mathcal{L} = \frac{1}{2}m(\dot{q}_x^2 + \dot{q}_y^2) - m g(\ell-q_y)
+	\end{equation*}
+	In spherical polar coordinates, this becomes 
+	\begin{equation*}
+		\mathcal{L} = \frac{1}{2}m\ell^2\dot{\theta}^2 - m g\ell(1-\cos\theta)
+	\end{equation*}
+	where $\theta$ is taken with respect to the vertical.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Lagrangian: Heavy Symmetric Top}
+	The Lagrangian for a heavy symmetric top with one point fixed on the $x-y$ plane is given by
+	\begin{equation*}
+		\mathcal{L} = \frac{I_1}{2}\qty(\dot{\theta}^2+\dot{\phi}^2\sin^2\theta)+\frac{I_3}{2}\qty(\dot{\psi}+\dot{\phi}\cos\theta)^2-Mgl\cos\theta
+	\end{equation*}
+	where $M$ is the mass of the top as located at the COM, $\dot{\psi}$ is the rotation of the top about its figure axis $z$, $\dot{\phi}$ is the precession or rotation of the figure axis $z$ about the vertical $z^\prime$, and $\dot{\theta}$ is the nutation of $z$ with respect to $z^\prime$. The angular velocity $\boldsymbol{\omega} = \boldsymbol{\dot{\theta}}+\boldsymbol{\dot{\phi}}+\boldsymbol{\dot{\psi}}$.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Lagrangian: Double Pendulum}
+	The Lagrangian for a double pendulum of lengths $\ell_1$ and $\ell_2$ attached to the ceiling with masses $m_1, m_2$ making angles $\theta_1, \theta_2$ with the vertical is given by
+	\begin{align*}
+		\mathcal{L} &= \frac{1}{2}M\ell_1^2\dot{\theta}_1^2 + \frac{1}{2}m_2\ell_2^2\dot{\theta}_2^2 + m_2\ell_1\ell_2\dot{\theta}_1\dot{\theta}_2\cos(\theta_1-\theta_2)\\
+		&+Mg\ell_1\cos(\theta_1)+m_2g \ell_2\cos(\theta_2)
+	\end{align*}
+	where $M = m_1+m_2$.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Lagrangian: Coupled Pendulums}
+	The Lagrangian for two pendulums coupled with a spring is given by the two pendulum Lagrangians along with another interaction term; $\mathcal{L} = \mathcal{L}_{p1} + \mathcal{L}_{p2} + \mathcal{L}_{int}$ where
+	\begin{equation*}
+		\mathcal{L}_{int} = -\frac{1}{2}k(q_2 - q_1)^2.
+	\end{equation*}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Lagrangian: Thin Circular Loop on an Inclined Plane}
+	The Lagrangian for a thin circular loop on an inclined plane which rolls under the influence of gravity is given by
+	\begin{equation*}
+		\mathcal{L} = \frac{1}{2}\qty(m\dot{x}^2 + I\dot{\theta}^2)-(mg(1-x)\sin(\alpha)).
+	\end{equation*}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Lagrangian: Central Force \textit{\&} Orbital Conditions}
+	The Lagrangian for a particle under the influence of a central force $V(r)$ is given by
+	\begin{equation*}
+		\mathcal{L} = \frac{1}{2}m(\dot{r}^2+ r^2\dot{\theta}^2 + r^2\sin^2(\theta)\dot{\phi}^2) - V(r)
+	\end{equation*}
+	where $\theta$ is measured from the $z$ axis and $\phi$ draws a circle in the $x$-y plane. Choose the equatorial plane, so $\theta = \pi/2$, and the note that $\ddot{r}=0$ since $r=a$ has to be constant for orbital motion.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Differential Scattering Cross Section}
+	The differential cross section $\sigma(\Omega)$ is given by
+	\begin{align*}
+		\sigma(\Omega)&\text{d}\Omega =\\
+		&\frac{P_{\#}\text{ scattered into solid angle $\text{d}\Omega$ per unit time}}{\text{incident intensity}}
+	\end{align*}
+	where $P_{\#}$ is the number of particles.
+\end{flashcard}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% ELECTRICITY \& MAGNETISM
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cardfrontfoot{Electricity \textit{\&} Magnetism}
+
+\begin{flashcard}[Theory]{Physical Principles of Electrostatics}
+	Coulomb's law and the principle of superposition constitute the physical input for electrostatics.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Coulomb's Law for $N$ particles}
+	\begin{align*}
+		\mathbf{F} = Q\mathbf{E} = Q\left(\frac{1}{4\pi \epsilon_0}\sum_{i=1}^{N}\frac{q_i}{r_i^2}\hat{\mathbf{r}_i}\right)
+	\end{align*}
+	where $\epsilon_0$ is the permitivity of free space, $\mathbf{E}$ is the electric field, $q_i$ are the point charges, and $r_i$ are the distances from $Q$.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Electric Field (Continuous)}
+	The electric field for a continuous charge distribution is 
+	\begin{align*}
+		\mathbf{E} = \frac{1}{4\pi\epsilon_0}\int_{\Sigma} \frac{\dd q_\Sigma}{r^2}\hat{\boldsymbol{r}}
+	\end{align*}
+	where $\Sigma$ is a $n$-dimensional spatial manifold, and $\epsilon_0$ is a constant, $r^2 = r_F^2-r_S^2$ is the radial distance from the field point $r_F$ to the source distribution $r_S$, and $\dd q\in\qty{\lambda\dd\ell,\sigma\dd a,\rho\dd\tau}$ depending on the manifold.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Gauss' Law: Integral \textit{\&} Differential}
+	For any closed surface, the following is true
+	\begin{align*}
+		\oint\mathbf{E}\cdot\dd\mathbf{a} &= \frac{Q_{enc}}{\epsilon_0}\\
+		\div\mathbf{E} &= \frac{\rho_{enc}}{\epsilon_0}
+	\end{align*}
+	where $Q_{enc}\ (\rho_{enc})$ is the total charge (density) enclosed within the surface. 
+\end{flashcard}
+
+\begin{flashcard}[Theory]{Properties of Conductor}
+	\begin{enumerate}[label=(\itshape\roman*)]
+		\item $\mathbf{E}=0$ inside the conducting material.
+		\item $\rho=0$ which follows from $\div\mathbf{E}=\rho/\epsilon_0$.
+		\item The only remaining charge is on the surface.
+		\item A conductor has an equipotential surface.
+		\item The electric field is normal to the surface just outside the conductor.
+	\end{enumerate}
+\end{flashcard}
+
+\begin{flashcard}[Theory]{Electrical Component Voltages}
+	\begin{align*}
+		V &= IR		&	V = \frac{Q}{C} \\
+		V &= L\frac{dI}{dt}
+	\end{align*}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Maxwell's Equations (Guassian)}
+	\begin{align*}
+		\div\mathbf{D} &= 4\pi\rho_f
+			& \curl \mathbf{E} &= -\frac{1}{c} \pdv{\mathbf{B}}{t}
+		\\
+		\div\mathbf{B} &= 0
+			& \curl \mathbf{H} &= \frac{1}{c}\qty( \pdv{\mathbf{D}}{t} + 4\pi \mathbf{J} )
+	\end{align*}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Maxwell's Equations (SI)}
+	\begin{align*}
+		\div\mathbf{D} &= \rho_f
+			& \curl \mathbf{E} &= -\pdv{\mathbf{B}}{t}
+		\\
+		\div\mathbf{B} &= 0
+			& \curl \mathbf{H} &= \qty( \pdv{\mathbf{D}}{t} + 4\pi \mathbf{J} )
+	\end{align*}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Poynting Vector}
+	The directional energy flux of an electromagnetic field. The SI unit is Watt per square meter and is defined by
+	\begin{equation*}
+		\mathbf{S} = \frac{1}{\mu_0}\mathbf{E}\times\mathbf{B}
+	\end{equation*}
+	where $\mu_0$ is the vacuum permeability.
+\end{flashcard}
+
+\begin{flashcard}[Theory]{Poynting's Theorem}
+	The rate of energy transfer (per unit volume) from a region of space equals the rate of work done on a charge distribution plus the energy flux leaving that region
+	\begin{align*}
+		-\pdv{u}{t} = \div\mathbf{S} + \mathbf{J}\cdot \mathbf{E}
+	\end{align*}
+	This is analogous to the work-energy theorem in classical mechanics and similar to the continuity equation.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Monopole Moment}
+	The monopole moment is simply given by the sum of charges $$q_m = \sum_i q_i$$.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Electric Torque \textit{\&} Dipole Moment}
+	The electric dipole moment $\mathbf{p}_d$ is a measure of the system's overall polarity given by
+	\begin{equation*}
+		\mathbf{p}_d = q \mathbf{d}
+	\end{equation*}
+	where $\mathbf{d}$ is the displacement vector pointing from the \textit{negative} charge to the positive charge. This can be used to define the torque as well
+	\begin{equation*}
+		\boldsymbol{\tau} = \mathbf{p}\times\mathbf{E}
+	\end{equation*}
+	where $\mathbf{E}$ is the electric field.
+\end{flashcard}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% THERMODYNAMICS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \cardfrontfoot{Thermodynamics}
 
-\begin{flashcard}{Adiabatic Process}
-	Also called \emph{isentropic}. $ΔS = 0$ in the process. Use the
+\begin{flashcard}[Theory]{Adiabatic Process}
+	Also called \emph{isentropic}. ${\Delta} S = 0$ in the process. Use the
 	thermodynamic identity at constant volume and a systems internal energy
 	equation to derive properties about the entropy of the system.
 \end{flashcard}
 
-\begin{flashcard}{Adiabatic Properties of Ideal Gas}
+\begin{flashcard}[Formula]{Adiabatic Properties of Ideal Gas}
 	\begin{align*}
-		T₁ {V₁}^{γ-1} &= \text{const} \\
-		{T₁}^{γ/(1-γ)} P₁ &= \text{const} \\
-		P₁ {V₁}^γ &= \text{const}
+		T_1 {V_1}^{{\gamma}-1} &= \text{const} \\
+		{T_1}^{{\gamma}/(1-{\gamma})} P_1 &= \text{const} \\
+		P_1 {V_1}^{\gamma} &= \text{const}
 	\end{align*}
 \end{flashcard}
 
-\begin{flashcard}{Bose-Einstein Distribution}
-	\[ f(ε) = \frac{1}{e^{(ε-μ)/k_B T} - 1} \]
+\begin{flashcard}[Formula]{Indistinguishable (Identical) Particle Statistical Distributions}
+	Bose-Einstein:
+		\[ f({\varepsilon}) = \frac{1}{e^{({\varepsilon}-{\mu})/k_B T} - 1} \]
+	Fermi-Dirac:
+		\[ f({\varepsilon}) = \frac{1}{e^{({\varepsilon}-{\mu})/k_B T} + 1} \]
 \end{flashcard}
 
-\begin{flashcard}{Carnot Efficiency}
-	\[ η = 1 - \frac{T_l}{T_h} \]
+\begin{flashcard}[Formula]{Carnot Efficiency}
+	\[ {\eta}  = 1 - \frac{T_l}{T_h} \]
 \end{flashcard}
 
-\begin{flashcard}{Carnot Cycle}
+\begin{flashcard}[Theory]{Carnot Cycle}
 	Characterized by alternating stages of isothermal and isentropic expansion
 	and compression. Work done is
 	\[ W = (T_h - T_l)(S_H - S_L) \]
@@ -126,7 +405,7 @@
 	substance.
 \end{flashcard}
 
-\begin{flashcard}{Equipartition Theorem}
+\begin{flashcard}[Theory]{Equipartition Theorem}
 	A classical gas's energy gains $\frac 12 k_B T$ for each degree of
 	freedom. An ideal monotomic gas has
 		$ U = \frac 32 k_B T $
@@ -136,104 +415,418 @@
 	from an additional two degrees of rotational freedom.
 \end{flashcard}
 
-\begin{flashcard}{Fermi Gasses}
+\begin{flashcard}[Theory]{Fermi Gases}
 	\begin{enumerate}
 		\item High kinetic energy
 		\item Low heat capacity
 		\item Low magnetic susceptibility
 		\item Low interparticle collision rate
 		\item High pressure
+		\item Low temperature
 	\end{enumerate}
 \end{flashcard}
 
-\begin{flashcard}{Fermi-Dirac Distribution}
-	\[ f(ε) = \frac{1}{e^{(ε-μ)/k_B T} + 1} \]
+\begin{flashcard}[Theory]{Gibbs Free Energy}
+	\[ G \equiv U + PV - TS \]
 \end{flashcard}
 
-\begin{flashcard}{Gibbs Free Energy}
-	\[ G ≡ U + PV - TS \]
-\end{flashcard}
-
-\begin{flashcard}{Helmholtz Free Energy}
+\begin{flashcard}[Theory]{Helmholtz Free Energy}
 	Acts as effective energy in isothermal changes of volume.
-	\[ F ≡ U - TS \]
+	\[ F \equiv U - TS \]
 	\[ dF = dU - S dT \]
 \end{flashcard}
 
-\begin{flashcard}{Ideal Gasses}
+\begin{flashcard}[Theory]{Ideal Gasses}
 	\[ PV = nRT \]
 	\[ PV = N k_B T \]
-	\[ Z_N = \frac{Z₁^N}{N!} \]	
+	\[ Z_N = \frac{Z_1^N}{N!} \]	
 \end{flashcard}
 
-\begin{flashcard}{Ideal Gas (RMS Average Speed)}
+\begin{flashcard}[Theory]{Ideal Gas (RMS Average Speed)}
 	Derived by considering a single particle. For translation in three
-	dimensions $KE = \frac 32 k_B T$  and also $KE = \frac 12 mv²$ so that
+	dimensions $KE = \frac 32 k_B T$  and also $KE = \frac 12 mv^2$ so that
 	when combined,
 	\begin{align*}
-		\frac 12 mv² &= \frac 32 k_B T \\
-		v &= \sqrt{\frac{3 k_B T}{m}}
+		\frac 12 mv^2 = \frac 32 k_B T \implies \boxed{v = \sqrt{\frac{3 k_B T}{m}}}
 	\end{align*}
+	Note that $m=\sum_{i}m^p_{i}$ where $m^p$ is the mass of the proton. For example, a nitrogen molecule, $N_2$, has the mass which is twice of $N_1$ which has $14$ protons. Thus $m_{N_2} = 28m^p$.
 \end{flashcard}
 
-\begin{flashcard}{Ideal Monoatomic Gas}
+\begin{flashcard}[Theory]{Ideal Monoatomic Gas}
 	\begin{align*}
-		C_V &= \frac 32 Nk_B
-			& C_P &= \frac 52 Nk_B \\
-		U &= \frac 32 Nk_B T
-			& γ &= \frac 53
+		C_V &= \frac{3}{2} Nk_B
+			& C_P &= \frac{5}{2} Nk_B \\
+		U &= \frac{3}{2} Nk_B T
+			& {\gamma} &= \frac{5}{3}
 	\end{align*}
 \end{flashcard}
 
-\begin{flashcard}{Maxwell Speed Distribution}
-	\[ f(v) = \sqrt{ (\frac{m}{2π k_B T})³ } 4πv² \exp(-\frac{mv²}{2k_B T}) \]
+\begin{flashcard}[Definition]{Maxwell Speed Distribution}
+	\[ f(v) = \sqrt{ (\frac{m}{2{\pi} k_B T})^3 } 4{\pi}v^2 \exp(-\frac{mv^2}{2k_B T}) \]
 	\begin{align*}
 		v_\mathrm{rms} &= \sqrt{\frac{3k_B T}{m}}
-			& ⟨v⟩ &= \sqrt{\frac{8k_B T}{πm}}
+			& \langle v\rangle  &= \sqrt{\frac{8k_B T}{{\pi}m}}
 	\end{align*}
 \end{flashcard}
 
-\begin{flashcard}{Partition Function}
-	\[ Z = \sum_n e^{-ε_n / k_B T} \]
+\begin{flashcard}[Definition]{Mean Free Path}
+	The mean free path is the average distance $\ell$ an object has traveled before an interaction has occurred. Let $N=n_V V$ be the number of interactions where $n$ is the interaction density. In the case of a cylindrical volume $V = A\ell$, then $\lambda = \frac{\ell}{n_VV} = \frac{1}{n_V A}.$ Often, one can use the ideal gas formula to estimate $n_V = N_A(n/V) = N_AP/RT$ where $N_A$ is Avogadro's number.
+\end{flashcard}
+
+\begin{flashcard}[Formula]{Partition Function Properties}
+	\[ Z = \sum_n e^{-{\varepsilon}_n / k_B T} \]
 	\begin{align*}
-		U &= k_B T² \frac{∂ \ln Z}{∂T}
+		U &= k_B T^2 \frac{{\partial} \ln Z}{{\partial}T}
 			& F = -k_B T \ln Z
 	\end{align*}
 \end{flashcard}
 
-\begin{flashcard}{Photon Gasses}
-	\[ U = σ_b VT⁴ \]
-	\[ P = \frac 13 σ_b VT⁴ \]
-	\[ μ = 0 \]
+\begin{flashcard}[Theory]{Photon Gases}
+	\[ U = {\sigma}_b VT^4 \]
+	\[ P = \frac 13 {\sigma}_b VT^4 \]
+	\[ {\mu} = 0 \]
 \end{flashcard}
 
-\begin{flashcard}{Planck Distribution function}
-	\[ ⟨s⟩ = \frac{1}{e^{ℏω/k_B T} - 1} \]
+\begin{flashcard}[Formula]{Planck Distribution Function}
+	\[ \langle s\rangle  = \frac{1}{e^{{\hbar}{\omega}/k_B T} - 1} \]
 \end{flashcard}
 
-\begin{flashcard}{Planck Spectral Density (frequency)}
-	\[ u_ω = \frac{ℏ}{π²c³} \frac{ω³}{e^{ℏω/k_B T} - 1} \]
+\begin{flashcard}[Formula]{Planck Spectral Density (frequency)}
+	\[ u_{\omega} = \frac{{\hbar}}{{\pi}^2c^3} \frac{{\omega}^3}{e^{{\hbar}{\omega}/k_B T} - 1} \]
 \end{flashcard}
 
-\begin{flashcard}{Radiant Energy Flux (blackbody)}
-	\[ J_u = \frac{π²{k_B}⁴}{60ℏ³c²} T⁴ \]
+\begin{flashcard}[Formula]{Radiant Energy Flux (blackbody)}
+	\[ J_u = \frac{{\pi}^2{k_B}^4}{60{\hbar}^3c^2} T^4 \]
 	\[ J_u = \frac{c}{4} u \]
 \end{flashcard}
 
-\begin{flashcard}{Stefan-Boltzmann Law (energy density)}
+\begin{flashcard}[Formula]{Stefan-Boltzmann Law (energy density)}
 	\begin{align*}
-		\frac{U}{V} = u &= \frac{π²{k_B}³}{15ℏ³c³} T⁴ \\
-			u &= σ_B T⁴
+		\frac{U}{V} = u &= \frac{{\pi}^2{k_B}^3}{15{\hbar}^3c^3} T^4 \\
+			u &= {\sigma}_B T^4
 	\end{align*}
 	\[ u = \frac{4}{c} J_u \]
 \end{flashcard}
 
-\begin{flashcard}{Thermodynamic Identity}
-	\[ dU = T dS - P dV + μ dN \]
+\begin{flashcard}[Definition]{Thermodynamic Identity}
+	\[ dU = T dS - P dV + {\mu} dN \]
 	\begin{align*}
-		C_V &= (\frac{∂U}{∂T})_V = T (\frac{∂S}{∂T})_V
-			& P = -(\frac{∂U}{∂V})_S
+		C_V &= (\frac{{\partial}U}{{\partial}T})_V = T (\frac{{\partial}S}{{\partial}T})_V\\
+		P   &= -(\frac{{\partial}U}{{\partial}V})_S
 	\end{align*}
 \end{flashcard}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% QUANTUM MECHANICS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cardfrontfoot{Quantum}
+\begin{flashcard}[Definition]{Planck Formula}
+	The energy of a photon is proportional to its frequency: $$E_{\gamma} = hf = \hbar\omega = pc$$
+\end{flashcard}
+
+\begin{flashcard}[Formula]{Classical Electron Radius Formula}
+	If the electron were a classical solid sphere with angular momentum $L = \frac{1}{2}\hbar$, then the radius is given by $$r_c = \frac{e^2}{4\pi \epsilon_0 mc^2}$$.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Momentum Operator: Position Basis}
+	For $1$D: 
+	$$\hat{p} = \frac{\hbar}{i}\pdv{x}$$
+	For $3$D:
+	$$\hat{p} = \frac{\hbar}{i}\grad$$
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Hamiltonian Operator: Time Basis}
+	For any dimension: $$H=-\frac{\hbar}{i}\pdv{t}$$
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Angular Momentum Operator: Properties}
+	Def: $\mathbf{L} = \mathbf{r}\times\mathbf{p}=(yp_z - zp_y, zp_x-xp_z, xp_y - yp_x).$
+	Commutation: $[L_i,L_j] = i\hbar L_k$.\\
+	Magnitude: $\mathbf{L}^2 = \mathbf{L}_x^2+\mathbf{L}_y^2 + \mathbf{L}_z^2$. $[\mathbf{L}^2,\mathbf{L}] = \boldsymbol{0}$.\\
+	$\pm$ Basis: $L_{\pm} = L_x \pm iL_y$. $[\mathbf{L}^2, L_{\pm}]= 0$.\\
+	Eigenvalues: \\
+	$L_z f_\ell^m = \hbar m  f_\ell^m$, where $m$ is the magnetic quantum number.\\
+	$\mathbf{L}^2  f_\ell^m = \hbar^2\ell(\ell+1) f_\ell^m$ and $\ell$ is the azimuthal quantum number.\\
+	$L_{\pm}f^m_\ell = \hbar\sqrt{\ell(\ell+1)-m(m\pm1)}f^{m\pm1}_{\ell}$ 
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Spin Operator: Properties}
+	Def: $\mathbf{S}= I\mathbf{\omega}$.\\
+	Commutation: $[S_i,S_j] = i\hbar S_k$.\\
+	Magnitude: $\mathbf{S}^2 = \mathbf{S}_x^2+\mathbf{S}_y^2 + \mathbf{S}_z^2$. $[\mathbf{S}^2,\mathbf{S}] = \mathbf{0}$.\\
+	$\pm$ Basis: $S_{\pm} = S_x \pm iS_y$. $[\mathbf{S}^2, S_{\pm}]= 0$.\\
+	Eigenvalues: \\
+	$\mathbf{S}^2  \ket{s,m_s} = \hbar^2s (s+1) \ket{s,m_s}$ and $s$ is the spin quantum number.\\
+	$S_z \ket{s,m_s} = \hbar m_s \ket{s,m_s}$, where $m_s$ is the secondary spin quantum number.\\
+	$L_{\pm}\ket{s,m_s}= \hbar\sqrt{s(s+1)-m_s(m_s\pm1)}\ket{s,m_s}$ 
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Time-Dependent Schr\"odinger equation*}
+	The full time dependent Schr\"odinger equation is given by 
+	\begin{equation*}
+		i\hbar\pdv{\Psi}{t} (\mathbf{r},t) = H\Psi = \qty(- \frac{\hbar^2}{2m}\grad^2 + V(\mathbf{r},t))\Psi 
+	\end{equation*}
+\end{flashcard}
+
+\begin{flashcard}[Theory]{Bound State}
+	A \textbf{bound state} occurs when a particle is unable to escape a region defined by the background potential. Particles in bound states oscillate between their turning points and have discrete energy spectra. The mathematical criteria is $E<0 \implies$ a bound state.
+\end{flashcard}
+
+\begin{flashcard}[Theory]{Scattering State}
+	A \textbf{scattering state} occurs when the energy of a particle is always larger than the background potential. Particles in scattering states are usually free, have a continuous energy spectra. The mathematical criteria is $E>0 \implies$ a scattering state.
+\end{flashcard}
+
+\begin{flashcard}[Theory]{Quantum Numbers\ $\ket{n,\ell,m,\pm}$}
+	Four quantum numbers (QNs) exactly determine a 3D electron's wavefunction. The \textbf{Principle} QN $(n)$ describes the energy level. The \textbf{Azimuthal} QN $(\ell)$ describes the magnitude of the orbital angular momentum. The \textbf{Magnetic} QN $(m)$ describes the projection of the orbital angular momentum along a specified axis. The \textbf{Spin} QN $(\pm)$ describes the spin of the electron within that orbital shell. The \textbf{Secondary} spin QN $(m_s)$ describes the projection of the spin of the electron along a specific axis.
+\end{flashcard}
+
+\begin{flashcard}[Theory]{Principle Quantum Number: Hydrogen}
+	The principal quantum number $(n)$ describes the electron shell, or energy level, of an electron. The value of n ranges from 1 to the shell containing the outermost electron of that atom, that is $n\in\qty{1,2,\cdots,n_s}$ where $n_s$ is the outermost electron shell. 
+\end{flashcard}
+
+\begin{flashcard}[Theory]{Azimuthal Quantum Number: Hydrogen}
+	The azimuthal quantum number $(\ell)$ describes the magnitude of the orbital angular momentum and has the upper bound
+	\begin{equation*}
+		\ell = 0, 1, 2,\cdots, n-1
+	\end{equation*}
+	where $n$ is the principle quantum number.
+\end{flashcard}
+
+\begin{flashcard}[Theory]{Magnetic Quantum Number: Hydrogen}
+	The magnetic quantum number $(m)$ describes the projection of the orbital angular momentum along a specified axis and belongs to the set
+	\begin{equation*}
+		m = -\ell, -\ell+1,\cdots,\ell-1,\ell = (-\ell,\ell)_{\mathbb{N}}
+	\end{equation*}
+	where $\ell$ is the azimuthal quantum number.
+\end{flashcard}
+
+\begin{flashcard}[Theory]{Primary and Secondary Spin Quantum Number}
+	The \textbf{primary} spin quantum number $(s)$ describes the spin orientation of the electron within its orbital shell. Usually $s = \pm \frac{1}{2}$. The \textbf{secondary} spin quantum number $m_z$ which ranges from
+	\begin{equation*}
+		m_z = -s, -s + 1, \cdots, s-1, s = [-s,s]_{\mathbb{N}}
+	\end{equation*}
+\end{flashcard}
+
+\begin{flashcard}[Formula]{Bohr Radius}
+	The general formula for the Bohr radius of an electron in a bound state with another positively charged particle is
+	\begin{equation*}
+		a = \frac{4\pi \epsilon_0\hbar^2}{\mu e^2}
+	\end{equation*}
+	where $\mu = m_1m_2/(m_1+m_2)$ is the reduced mass.
+\end{flashcard}
+
+\begin{flashcard}[Formula]{Bohr Energies}
+	The general energy transition formula for two particles in a bound state is
+	\begin{equation*}
+		E_n = -\qty[\frac{m}{2\hbar^2}\qty(\frac{e^2}{4\pi \epsilon_0})^2]= \frac{E_1}{n^2}
+	\end{equation*} 
+	where $n$ denotes the stating energy level and $E_1=-13.6$ eV is the ground state binding energy.
+\end{flashcard}
+
+\begin{flashcard}[Theory]{Hydrogen Spectrum: Transition Series}
+	\begin{enumerate}
+		\item \textbf{Lyman Series}: Transitions to the ground state $(n_f=1)$, lie in the ultraviolet.
+		\item \textbf{Balmer Series}: Transitions to the first excited state $(n_f=2)$, fall in the visible region.
+		\item \textbf{Paschen Series}: Transitions to the second excited state $(n_f=3)$, fall in the infrared.
+	\end{enumerate}
+\end{flashcard}
+
+\begin{flashcard}[Formula]{Hydrogen Spectrum: Rydberg's Constant}
+	The Rydberg constant is determined by using Planck's formula with the Bohr energies;
+	\begin{equation*}
+		R = \frac{m}{4\pi c\hbar^3}\qty(\frac{e^2}{4\pi \epsilon_0})^2 = 1.097\times 10^{7}\text{ m}^{-1}
+	\end{equation*}
+\end{flashcard}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% OPTICS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cardfrontfoot{Optics}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% RELATIVITY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cardfrontfoot{Relativity}
+
+\begin{flashcard}[Definition]{Lorentz Transformations}
+	A Lorentz transformation from the inertial $S^\prime$ frame to the lab $S$ frame is given by
+	\begin{align*}
+		t &= \gamma\qty(t^\prime + \frac{v}{c^2}x) \\
+		x &= \gamma\qty(x^\prime + c t^\prime)\\
+		y &= y^\prime\\
+		z &= z^\prime 
+	\end{align*}
+\end{flashcard}
+
+\begin{flashcard}[Formula]{Velocity Addition Rule}
+	Suppose a particle moves a distance $\dd x$ in $S$ in time $\dd t$. If its velocity is $u_S$ in the S frame, then the velocity in the $S^\prime$ frame is
+	\begin{align*}
+		u_{S^\prime} = \dv{x^\prime}{t^\prime} = \frac{u_S - v}{1- uv/c^2}
+	\end{align*}
+	where $v$ is the speed of $S^\prime$ with respect to $S$.
+\end{flashcard}
+
+\begin{flashcard}[Formula]{Relativistic Energy/3-Momentum}
+	The relativistic energy formula is given by
+	\begin{equation*}
+		E = \gamma m c^2 = mc^2 + (\gamma - 1)m c^2 = R + T
+	\end{equation*}
+	where $R$ denotes the rest energy and $T$ is the kinetic energy. The relativistic momentum is given by
+	\begin{equation*}
+		\mathbf{p} = m \dv{\mathbf{x}}{t^\prime}=\gamma m \mathbf{v}
+	\end{equation*}
+	where $\mathbf{v}$ is the velocity of the object in the lab frame.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Relativistic Invariant}
+	The {four-momentum} is given by $p^\mu = \qty(E/c,\mathbf{p})$. The relativistic invariant constructed from the four-momentum is the modulus (signature $(-,+,+,+)$);
+	\begin{equation*}
+		p^\mu p_{\mu} = (\frac{E}{c})^2 - (\mathbf{p}\cdot\mathbf{p}) = m^2 c^2
+	\end{equation*}
+	This is an invariant in any frame and conserved since the energy and 3-momentum are conserved.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{(Doppler) Compton Scattering\\ $\gamma + e^{-} \to \gamma + e^{-}$}
+	Compton scattering occurs when an incoming photon scatters off of an electron at rest. The wavelength of the photon after scattering is
+	\begin{equation*}
+		\lambda^\prime = \lambda + \frac{h}{mc}(1-\cos(\theta))
+	\end{equation*}
+	If the electron has an initial velocity, then we have to transform into the electron's rest frame. In this case, it's easier to work with energy
+\end{flashcard}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problems
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cardfrontfoot{\ }
+
+\begin{flashcard}[Problem]{Contour Integration: $$\int_0^\infty \frac{\cos(x)}{1+x^2}\dd x$$}
+	Solution:
+	$$\frac{\pi}{2e}$$
+\end{flashcard}
+
+\begin{flashcard}[Problem]{Contour Integration: $$\oint_C \frac{\dd z}{z}$$}
+	Solution: $$2\pi i$$
+\end{flashcard}
+
+\begin{flashcard}[Problem]{Contour Integration: $$\int_{-\infty}^{\infty}\frac{\dd x}{(x^2+1)^2}$$}
+	Solution: $$\frac{\pi}{2}$$
+\end{flashcard}
+
+\begin{flashcard}[Problem]{Contour Integration: $$\int_{-\pi}^{\pi} \frac{\dd t}{1+3(\cos t)^2}$$}
+	Solution: $$\pi$$
+\end{flashcard}
+
+\begin{flashcard}[Problem]{Contour Integration: $$\int^{\infty}_{0} \frac{\log(x)}{(1+x^2)^2}\dd x$$}
+	Solution: $$-\frac{\pi}{4}$$
+\end{flashcard}
+
+\begin{flashcard}[Problem]{Contour Integration: $$\int_{0}^{2\pi} \frac{\dd\theta}{1+a\cos(\theta)}\dd x$$}
+	Solution: $$\frac{2\pi}{\sqrt{1-a^2}}$$
+\end{flashcard}
+
+\begin{flashcard}[Problem]{Fermi and Bose Integral: $\int_0^\infty\frac{x^3}{e^x+1}$}
+	Solution: $$\frac{\pi^4}{15}$$
+\end{flashcard}
+
+\begin{flashcard}[Problem]{Central Force: $V(r) = r^\alpha$\\What is the condition on $\alpha$ for a stable orbit?}
+	Use the central force Lagrangian, find the equations of motion, and then substitute the angular momentum into the radial equation and integrate to find an effective Lagrangian. This effective Lagrangian has an effective potential, $V_\text{eff}$. Conditions on stability;
+	\begin{align*}
+		\boxed{\dv{V_\text{eff}}{r}\eval_{r_0} = 0}\hspace{.5in} \boxed{\dv[2]{V_\text{eff}}{r}\eval_{r_0} > 0}
+	\end{align*}
+\end{flashcard}
+
+\begin{flashcard}[Problem]{Rigid Rolling Without Slipping: Friction Coefficient}
+	Set up a Lagrangian for the system and obtain the Euler-Lagrange equations along the incline plane and normal to the incline plane. The rolling without slipping condition is 
+	$$\dot{x} = R\dot{\theta}$$ where $R$ is the distance from the central axis to the boundary. Use that the sum of the forces must be zero to find the coefficient of friction. \\
+
+	Solution for hoop: $\mu = \frac{1}{2}\tan(\alpha)$ for the incline angle $\alpha$.
+\end{flashcard}
+
+\begin{flashcard}[Problem]{Ball Rolling off a Hemisphere: Angle}
+	Set up a Lagrangian and a constraint equation. Find the two Euler-Lagrange equations carefully and apply the constraints $r=a,\ \dot{r}=0,\ \ddot{r}=0$ at the point when the particle leaves the surface. Find when the constraint $\lambda=0$ and solve for the angle.\\
+
+	Solution: $-ma\dot{\theta}^2 + mg\cos(\theta)=\lambda$ and $\ddot{\theta} = \frac{g}{a}\sin(\theta)$ and the departure angle $$\abs{\theta_c} = 48.2^{\circ}$$ 
+\end{flashcard}
+
+\begin{flashcard}[Problem]{Threshold Energy\\ $A+B\to\sum_{i} C_i$}
+	The threshold energy for parents $A$ and $B$ to source daughters $C_i$ is given by
+	\begin{equation*}
+		E_A = \qty(\frac{M^2 - m_A^2 - m_B^2}{2m_B})c
+	\end{equation*}
+	where $M= \sum_i m_{C_i}$. 
+\end{flashcard}
+
+\begin{flashcard}[Problem]{Threshold Energy\\$A \to B + C$}
+	The threshold energy for parent $A$ to source daughters $B$ and $C$ is given by
+	\begin{equation*}
+		E_B = \qty(\frac{m_A^2 + m_B^2 - m_C^2}{2m_A})c.
+	\end{equation*}
+	Parent $A$ is at rest, but one can use a cyclic rotation if $B$ or $C$ are at rest instead.
+\end{flashcard}
+
+\cardfrontfoot{Electricity \textit{\&} Magnetism}
+
+\begin{flashcard}[Definition]{Monopole Moment}
+	The monopole moment is simply given by the sum of charges $$Q = \sum_i q_i.$$ The monopole term in the multipole expansion is dominated by
+	\begin{equation*}
+		V_{\text{mon}}(\mathbf{r}) = \frac{1}{4\pi \epsilon_0} \frac{Q}{r}
+	\end{equation*}
+	where $Q$ is the total charge.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Electric Torque \textit{\&} Dipole Moment}
+	The physical dipole moment $\mathbf{p}_d$ is a measure of the system's overall polarity given by 
+	\[
+		\mathbf{p}_d \equiv \int \mathbf{r}^\prime\rho(r^\prime)\dd\tau^\prime,\hspace{.5in} \mathbf{p}_{d} = \sum_{i=1}^{n}q_i {\mathbf{r}}_i^\prime
+	\]
+	where $\mathbf{r}^\prime$ is the distance between the origin and the charge. The dipole term in the multipole expansion goes as
+	\begin{equation*}
+		V_{\text{dip}}(\mathbf{r}) = \frac{1}{4\pi \epsilon_0}\frac{\mathbf{p}\cdot\hat{\mathbf{r}}}{r^2}
+	\end{equation*}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Conductors, Insulators, and Polarization}
+	A conductor has an infinite supply of free, unbound, electrons.\\
+
+	An insulator, or dielectric, all charges are attached to specific atoms or molecules, they're on a tight leash. The two mechanisms by which electric fields deform a dielectric atom are \textit{stretching} and \textit{rotating}.\\
+
+	By applying an external electric field, dielectrics atoms attain a new equilibrium configuration which is referred to as ``becoming polarized.''
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Electric Torque}
+	Using the electric dipole, we may defined the electric torque as
+	\begin{equation*}
+		\boldsymbol{\tau} = \mathbf{p}\times\mathbf{E}
+	\end{equation*}
+	where $\mathbf{E}$ is the electric field.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Atomic Polarizability}
+	An external electric field polarizes an atom and induces a dipole moment. In the weak electric field limit, we may approximate
+	\begin{equation*}
+		\mathbf{p} = \alpha \mathbf{E} = \alpha_\perp\mathbf{E}_{\perp} + \alpha_{\parallel}\mathbf{E}_{\parallel}
+	\end{equation*}
+	Furthermore, the polarization (density) $\mathbf{P}$ is usually given by $\mathbf{p} = \mathbf{P}\dd\tau^\prime$.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Dipole Potentials in Bound Charges}
+	The dipole potential in a bound charge is given by
+	\begin{equation*}
+		V(\mathbf{r}) = \frac{1}{4\pi\epsilon_0} \oint_{\mathcal{S}}\frac{\sigma_b}{\ell} \dd a^\prime + \frac{1}{4\pi\epsilon_0} \int_{\mathcal{V}} \frac{\rho_b}{\ell}\dd\tau^\prime
+	\end{equation*}
+	where $\ell$ is the distance between the dipole and the field point, $\sigma_b = \mathbf{P}\cdot\hat{\mathbf{n}}$ and $\rho_b = -\div\mathbf{P}$ are the surface and volume bound charges.
+\end{flashcard}
+
+\begin{flashcard}[Definition]{General Solution to Laplace's Equation in Spherical Coordinates}
+	Laplace's equation is $\grad^2 V = 0$. The general solution is given by
+	\begin{equation}
+		V(r,\theta) = \sum_{\ell =0}^\infty\qty(A_\ell r^\ell + \frac{B_{\ell}}{r^{\ell+1}}) P_{\ell}(\cos(\theta))
+	\end{equation}
+	where $P_\ell(\cos(\theta))$ are Legendre polynomials.
+\end{flashcard}
+
+\cardfrontstyle{Thermodynamics}
+
+
 
 \end{document}

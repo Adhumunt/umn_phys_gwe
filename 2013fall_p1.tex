@@ -9,22 +9,22 @@
 
 Assuming the electron to be a classical particle, a sphere of radius 
 \SI{e-15}{\m} and of a uniform mass density with an intrinsic angular 
-momentum of order $ℏ$, compute the speed of rotation at the electron's 
+momentum of order ${\hbar}$, compute the speed of rotation at the electron's 
 equator. How does your result compare with the speed of light?
 
 \subsubsection{Answer}
 
 Since we're assuming the electron is a classical sphere, we can equate the 
-angular momentum of a spinning sphere to the intrinsic angular momentum $ℏ$. 
-Knowing that the moment of inertia of a sphere is $I = \frac 25 m r²$ for a 
+angular momentum of a spinning sphere to the intrinsic angular momentum ${\hbar}$. 
+Knowing that the moment of inertia of a sphere is $I = \frac 25 m R^2$ for a 
 sphere of uniform density, that means the momentum equation is,
 \begin{align*}
-	ℏ &= \frac 25 m R² ω
+	\hbar &= \frac{2}{5}mR^2 \omega
 \end{align*}
 Then solving for the frequency and relating it to the velocity of a point on
 the equator,
 \begin{align*}
-	v &= \frac 52 \frac{ℏ}{mR}
+	v &= \frac 52 \frac{{\hbar}}{mR}
 \end{align*}
 Plugging in the values,
 \begin{align}
@@ -42,28 +42,28 @@ Plugging in the values,
 
 Two electrons can be considered distinguishable if they are well separated 
 in space from each other, that is, their single particle wavefunctions are 
-non-overlapping. In that case, for every possible $x₁$ value, either 
-$ψ_α(x₁)$ and $ψ_β(x₁)$ is zero. Show that for non-overlapping wavefunctions 
+non-overlapping. In that case, for every possible $x_1$ value, either 
+$\psi_{\alpha}(x_1)$ or $\psi_\beta(x_1)$ is zero. Show that for non-overlapping wavefunctions 
 as defined above, the probability density for the total antisymmetric 
-wavefunction $ψ^*_Aψ_A$ is equal to the probability density of the total 
-symmetric wavefunction $ψ^*_Sψ_S$.
+wavefunction $\psi^*_A\psi_A$ is equal to the probability density of the total 
+symmetric wavefunction $\psi^*_S\psi_S$.
 
 \subsubsection{Answer}
 
 We start by constructing the antisymmetric and symmetric wavefunctions:
 \begin{align*}
-	ψ_A &= \frac{1}{\sqrt 2}( ψ_α(x₁)ψ_β(x₂) - ψ_α(x₂)ψ_β(x₁) ) \\
-	ψ_S &= \frac{1}{\sqrt 2}( ψ_α(x₁)ψ_β(x₂) + ψ_α(x₂)ψ_β(x₁) )
+	\psi_A &= \frac{1}{\sqrt 2}( \psi_{\alpha}(x_1)\psi_\beta(x_2) - \psi_{\alpha}(x_2)\psi_\beta(x_1) ) \\
+	\psi_S &= \frac{1}{\sqrt 2}( \psi_{\alpha}(x_1)\psi_\beta(x_2) + \psi_{\alpha}(x_2)\psi_\beta(x_1) )
 \end{align*}
 Then calculating the complex square of both (where the $A/S$ indicates the 
-choice of $±$),
+choice of $\pm$),
 \begin{align*}
 	\resetparens
-	ψ^*_{A/S}ψ_{A/S} = \frac 12 \Big(
-		&  ψ^*_α(x₁)ψ^*_β(x₂)ψ_α(x₁)ψ_β(x₂) \\
-		&∓ ψ^*_α(x₁)ψ^*_β(x₂)ψ_α(x₂)ψ_β(x₁) \\
-		&∓ ψ^*_α(x₂)ψ^*_β(x₁)ψ_α(x₁)ψ_β(x₂) \\
-		&+ ψ^*_α(x₂)ψ^*_β(x₁)ψ_α(x₂)ψ_β(x₁)
+	\psi^*_{A/S}\psi_{A/S} = \frac 12 \Big(
+		&  \psi^*_{\alpha}(x_1)\psi^*_\beta(x_2)\psi_{\alpha}(x_1)\psi_\beta(x_2) \\
+		&\mp \psi^*_{\alpha}(x_1)\psi^*_\beta(x_2)\psi_{\alpha}(x_2)\psi_\beta(x_1) \\
+		&\mp \psi^*_{\alpha}(x_2)\psi^*_\beta(x_1)\psi_{\alpha}(x_1)\psi_\beta(x_2) \\
+		&+ \psi^*_{\alpha}(x_2)\psi^*_\beta(x_1)\psi_{\alpha}(x_2)\psi_\beta(x_1)
 	\Big)
 \end{align*}
 The first and fourth lines are simply the complex square of each 
@@ -74,7 +74,7 @@ space must be zero. Therefore both the second and third lines result in a
 value of 0, thus simplifying the expression to,
 \begin{align}
 	\boxed{
-	ψ^*ψ = \frac 12 \Big( |ψ_α(x₁)|² |ψ_β(x₂)|² + |ψ_α(x₂)|² |ψ_β(x₁)|² \Big)
+	\psi^*\psi = \frac 12 \Big( |\psi_{\alpha}(x_1)|^2 |\psi_\beta(x_2)|^2 + |\psi_{\alpha}(x_2)|^2 |\psi_\beta(x_1)|^2 \Big)
 	}
 \end{align}
 
@@ -89,46 +89,149 @@ value of 0, thus simplifying the expression to,
 
 A particle of mass $m$ moves in a circular orbit of radius $r$ in a 
 hypothetical atom where the force on the particle is in the form of a 
-generalized Hooke's alw: $F = -Cr$ directed towards the center of the atom, 
+generalized Hooke's law: $F = -Cr$ directed towards the center of the atom, 
 where $C$ is the `spring constant'. Assuming that Bohr's postulates for the 
 atom apply in this case, in particular, that the orbital angular momentum 
 is quantized with a quantum number $n$, derive:
 \begin{enumerate}[(a)]
 	\item The radii of the allowed orbits
-	\item
-		The energies of these orbits in terms of the quantum number $n$. 
-		(You may take the potential energy of this ``spring atom'' to be 
-		$V(r) = \frac 12 Cr²$.)
+	\item The energies of these orbits in terms of the quantum number $n$. (You may take the potential energy of this ``spring atom'' to be $V(r) = \frac 12 Cr^2$.)
 \end{enumerate}
 
 \subsubsection{Answer}
 
 With the assumption that the orbits are circular, we know that the Hooke 
-force must provide the centripital acceleration. Setting them equal and 
-solving for the angular frequency by $v = ωr$,
+force must provide the centripetal acceleration. Setting them equal and 
+solving for the angular frequency by $v = {\omega}r$,
 \begin{align*}
-	m \frac{v²}{r} &= Cr \\
-	ω &= \sqrt{\frac{C}{m}}
+	m \frac{v^2}{r} &= Cr \\
+	{\omega} &= \sqrt{\frac{C}{m}}
 \end{align*}
 The point-particle electron then has an associated moment of inertia and 
 angular momentum as it orbits the nucleus.
 \begin{align*}
-	L &= mr² ⋅ \sqrt{\frac{C}{m}} \\
-	nℏ &= r² \sqrt{Cm}
+	L &= mr^2 \cdot  \sqrt{\frac{C}{m}} \\
+	n{\hbar} &= r^2 \sqrt{Cm}
 \end{align*}
 The quantization condition on the orbital radii is
 \begin{align}
-	\boxed{ r = (\frac{ℏ²}{Cm})^{1/4} \sqrt{n} }
+	\boxed{ r = (\frac{{\hbar}^2}{Cm})^{1/4} \sqrt{n} }
 \end{align}
 
 To find the energies, we simply sum the kinetic energy from the orbital 
 motion with the potential energy contained in the ``spring''.
 \begin{align*}
-	E_n &= \frac 12 I ω² + \frac 12 C r² \\
-	&= \frac 12 m r² \frac{C}{m} + \frac 12 C r² \\
-	&= C r² = C ⋅ \sqrt{\frac{ℏ²}{Cm}} n
+	E_n &= \frac 12 I {\omega}^2 + \frac 12 C R^2 \\
+	&= \frac 12 m R^2 \frac{C}{m} + \frac 12 C R^2 \\
+	&= C R^2 = C \cdot  \sqrt{\frac{{\hbar}^2}{Cm}} n
 \end{align*}
 Therefore the associated energy states are
 \begin{align}
-	\boxed{ E_n = ℏn\sqrt{\frac{C}{m}} }
+	\boxed{ E_n = {\hbar}n\sqrt{\frac{C}{m}} }
 \end{align}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 4}
+\problem{4}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Fall 2013 I.P4}
+A vertical cylinder contains $1.0$ mole of an ideal gas at temperature $T$ under a light piston. The top of the piston is at atmospheric pressure. Find the work needed to increase the ideal gas volume by a factor of $\beta$ at $T =$ const.
+\subsubsection{Answer}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 5}
+\problem{5}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Fall 2013 I.P5}
+	\index{optics!Index of Refraction}
+The index of refraction of glass can be increased by diffusing in impurities. It is then possible to make a lens of constant thickness. Given a disk of radius $a$ and thickness $d$, find the radial variation of the index of refraction, $n(r)$, that will bring rays emitted from $A$ in the diagram below to a focus at $B$. Assume that the lens is thin ($d \ll a$ or $b$). Note that there are two approaches to image focusing problems. You may be more familiar with one, where you would trace light rays using Snell’s law, and two rays converge to a point. This approach will lead to a very complex solution.
+\subsubsection{Answer}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 6}
+\problem{6}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Fall 2013 I.P6}
+	\index{statistical mechanics!One Particle System (4 Levels)}
+	\index{thermodynamics!One Particle System (4 Levels)}
+Consider one-particle system capable of four states $\left(\epsilon m = m \Delta\right.$ where $\left.m=-\frac{3}{2},-\frac{1}{2},\frac{1}{2},\text{ and }\frac{3}{2})$ in thermal contact with a reservoir at temperature $T$. For specific cases of $T = 0$ and $T \to \infty$, find the average energy, entropy and heat capacity.
+\subsubsection{Answer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 7}
+\problem{7}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Fall 2013 I.P7}
+A lambda baryon traveling through a laboratory decays into a proton and a $\pi$ meson. The $\pi$ meson is left at rest. Find the initial laboratory kinetic energy of the lambda baryon. $m_p = 940$MeV/$c^2$, $m_{\pi} = 140$MeV/$c^2$ , $m_\Lambda = 1120$ MeV/$c^2$.
+\subsubsection{Answer}
+% Aditya
+For the decay process $A\to B+C$ to occur, the energy of the outgoing particle (say $B$) must be
+\begin{equation*}
+	E_B = \frac{m_A^2 + m_B^2 - m_C^2}{2m_A} c^2.
+\end{equation*}
+where $A$ was at rest and $B$ and $C$ are moving in opposite directions. Since $A$ is moving and $C$ is stationary, we perform a cyclic rotation $C\to B\to A\to C$ to obtain
+\begin{equation*}
+	E_A = \frac{m_C^2+m_A^2-m_B^2}{2m_C} c^2.
+\end{equation*}
+To find the kinetic energy of $A$, we need to subtract the rest energy from $E_A$ thus
+\begin{equation}
+	K = E_\Lambda - m_\Lambda c^2 = \qty(\frac{m_{\Lambda}^2+m_{\pi}^2-m_p^2}{2m_\pi}) - m_{\Lambda}c^2 \approx 274\frac{\text{MeV}}{c^2}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 8}
+\problem{8}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Fall 2013 I.P8}
+A metal can be thought of as a box filled with atoms. For each atom one electron is bound with a spring-like force (i.e. like Hookes' Law) such that when the electron is displaced from its equilibrium location it experiences a restoring force that is proportional to the displacement. This gives rise to a natural frequency of oscillation $\omega_0$. Now consider these atoms under the influence of an external electric field of amplitude $E_0$ and frequency $\omega$. Calculate the electric polarization of the metal as a function of frequency and $E_0$ if the density of these electrons is n cm$^{-­3}$.
+\subsubsection{Answer}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 9
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 9}
+\problem{9}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Fall 2013 I.P9}
+In the circuit depicted on the right, the voltage source generates an AC voltage $V(t)=V_0\cos(\omega t)$, where $V_0$ is fixed to a specific value while $\omega$ can be adjusted to any value. What is the power (averaged over a long time, $T\gg1/\omega$) that is consumed by the circuit as a function of $\omega$? When $\omega\to0$ or $\omega\to\infty$, what will happen? Is there any other case(s) when an interesting thing will happen to the power consumption?
+\subsubsection{Answer}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Problem 10
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Problem 10}
+\problem{10}
+\subsubsection{Question}
+% Keywords
+	\index{unsolved!Fall 2013 I.P10}
+A planet of mass $m$ orbiting a star of mass $M$ revolves around the center-of-mass of the system. This introduces a “reflex oscillation” of the star of amplitude $R$ (see the diagram below where the motion of the star and the planet is illustrated as seen by the observer at the center of mass of the system. $R$ and $r$ are the radii of the orbits of $m$ and $M$) and $T$ is the period of the stellar motion, viewed from outside the system.
+
+An observer searching for extrasolar planets with an astrometric telescope (measuring positions of astronomical objects with high precision) detects a stellar reflex motion of period $T = 1$ year and an amplitude $R$ that subtend an angle of $7.0\times10^{-9}$ radians in a star $10$ light years from the earth. Assume circular orbit.
+
+If the reflex motion is caused by an orbiting planet with Jupiter’s mass ($10^{-3}$ of the solar mass), what is the planet-star distance in AU (one AU = earth-sun distance = 8.3 light minutes)?
+\subsubsection{Answer}
