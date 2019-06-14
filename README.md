@@ -9,7 +9,7 @@ This is a fork of JMERT's existing GWE solutions and is largely a continuation o
 
 In this fork, you will find the following updates;
 - Expanded solutions from 2010 - 2018.
-- Expanded flashcards.
+- Expanded flashcard categories.
 - Expanded index of problems.
 - Expanded question bank from 2000 - 2018.
 - Removal of deprecated fonts and Greco-Roman glyphs.
